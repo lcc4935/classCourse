@@ -59,5 +59,17 @@ namespace classCourse
         {
             this.Hide();
         }
+
+        private void gradeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (gradeCheckBox.Checked) {
+                lblLetterGrade.Show();
+                txtGrade.Show();
+            }
+            else {
+                lblLetterGrade.Hide();
+                txtGrade.Hide();
+            }
+        }
     }
 }
