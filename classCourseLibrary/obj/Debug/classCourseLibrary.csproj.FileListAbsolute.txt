@@ -4,3 +4,9 @@ C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourseLibrary\obj
 C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourseLibrary\obj\Debug\classCourseLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourseLibrary\obj\Debug\classCourseLibrary.dll
 C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourseLibrary\obj\Debug\classCourseLibrary.pdb
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourseLibrary\bin\Debug\classCourseLibrary.dll
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourseLibrary\bin\Debug\classCourseLibrary.pdb
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourseLibrary\obj\Debug\classCourseLibrary.csprojAssemblyReference.cache
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourseLibrary\obj\Debug\classCourseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourseLibrary\obj\Debug\classCourseLibrary.dll
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourseLibrary\obj\Debug\classCourseLibrary.pdb
