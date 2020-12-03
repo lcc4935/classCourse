@@ -208,7 +208,7 @@ namespace classCourse
 
 
 
-
+            
             TextBox tb = (TextBox)sender;
 
             //tb.Text = formInfo.credit;
