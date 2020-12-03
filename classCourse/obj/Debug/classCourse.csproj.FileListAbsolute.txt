@@ -13,3 +13,33 @@ C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourse\obj\Debug\
 C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourse\obj\Debug\classCourse.classCourse.resources
 C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourse\obj\Debug\classCourse.AddEditClass.resources
 C:\Users\Lauren Casale\Desktop\IGME201\lcc4935\myIGME-201\classCourse\obj\Debug\classCourse.PersonalInfo.resources
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.csprojAssemblyReference.cache
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.classCourse.resources
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.AddEditClass.resources
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.PersonalInfo.resources
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.Properties.Resources.resources
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.csproj.GenerateResource.cache
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.csproj.CoreCompileInputs.cache
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.exe
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.pdb
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\bin\Debug\classCourse.exe.config
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\bin\Debug\classCourse.exe
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\bin\Debug\classCourse.pdb
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\bin\Debug\classCourseLibrary.dll
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\bin\Debug\classCourseLibrary.pdb
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\classCourse.csproj.CopyComplete
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\bin\Debug\classCourse.exe.config
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\bin\Debug\classCourse.exe
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\bin\Debug\classCourse.pdb
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\bin\Debug\classCourseLibrary.dll
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\bin\Debug\classCourseLibrary.pdb
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.csprojAssemblyReference.cache
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.classCourse.resources
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.AddEditClass.resources
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.PersonalInfo.resources
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.Properties.Resources.resources
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.csproj.GenerateResource.cache
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.csproj.CoreCompileInputs.cache
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.csproj.CopyComplete
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.exe
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.pdb

@@ -23,6 +23,9 @@ namespace classCourse
 
             this.addClassButton.Click += new EventHandler(AddClassButton__Click);
             this.infoButton.Click += new EventHandler(InfoButton__Click);
+            this.adElToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.otherToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+
 
             /*
             this.nameTextBox.Text = basicInfo.name;
@@ -48,14 +51,25 @@ namespace classCourse
 
         private void AddClassButton__Click(object sender, EventArgs e)  //LC
         {
-            AddEditClass addEditClass = new AddEditClass();
+            Button b = (Button)sender;
+            Panel p = (Panel)b.Tag;
+
+            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this);
             addEditClass.ShowDialog();
         }
 
         private void InfoButton__Click(object sender, EventArgs e)  //LC
         {
-            PersonalInfo personalInfo = new PersonalInfo();
+            Button b = (Button)sender;
+
+            PersonalInfo personalInfo = new PersonalInfo((BasicInfo)b.Tag, this); //System.NullReferenceException: 'Object reference not set to an instance of an object.'   p was null
             personalInfo.ShowDialog();
+
+            /*
+            this.yourNameLabel.Text = BasicInfo.name;
+            this.MMILabel.Text = BasicInfo.major, BasicInfo.minor, BasicInfo.immersion;
+            this.yourCreditLabel.Text = BasicInfo.credit;
+            */
         }
 
         private void classToolStripButton__Click(object sender, EventArgs e) // different sizes for class
@@ -72,7 +86,7 @@ namespace classCourse
             else
             {
                 tbs.Image = global::classCourse.Properties.Resources.minus;
-                p.Size = new System.Drawing.Size(330, 103);
+                p.Size = new System.Drawing.Size(330, 103); // System.NullReferenceException: 'Object reference not set to an instance of an object.'    p was null 
                 tbs.Checked = true;
             }
 
@@ -109,20 +123,21 @@ namespace classCourse
             ToolStripLabel tsl = (ToolStripLabel)sender;
             Panel p = (Panel)tsl.Tag;
 
-            AddEditClass cef = new AddEditClass((Class)p.Tag, this);
+            AddEditClass cef = new AddEditClass((ClassInfo)p.Tag, this);
             cef.Visible = false;
 
             cef.ShowDialog();
 
-            Class class = cef.formClass;
+            ClassInfo classInfo = cef.formClass;
 
             p.Controls.Clear();
 
-            AddClassToPanel(ref p, class);
+            AddClassToPanel(ref p, classInfo);
 
             p.Refresh();
         }
         */
+        
 
         //panels
         /*
@@ -148,7 +163,7 @@ namespace classCourse
 
             // edit background based on class type
 
-        // otherPanel
+            // otherPanel
             // 
             Panel.Controls.Add(ClassTypeLabel);
             Panel.Controls.Add(ClassCreditLabel);
@@ -220,6 +235,19 @@ namespace classCourse
         }
 
         */
+
+        /*
+         * this.FlowLayoutPanel.Controls.Clear();
+            foreach(KeyValuePair<string,Class> keyValuePair in Globals.people.sortedList)
+            {
+                if (keyValuePair.Value.GetType() == typeof("type"))
+                {
+                    AddPanel(keyValuePair.Value);
+                }
+            }
+
+            teacherButton.Text = this.flowLayoutPanel1.Controls.Count.ToString(); -- ?
+         */
 
     }
 }

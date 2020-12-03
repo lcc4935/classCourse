@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using classCourseLibrary;
 
 namespace classCourse
 {
     public partial class AddEditClass : Form
     {
-        public AddEditClass()
+        ClassInfo formClass;
+        public AddEditClass(ClassInfo classInfo, Form parentForm)
         {
             InitializeComponent();
+
+            this.formClass = classInfo;
 
             this.newClassCreditComboBox.SelectedIndexChanged += new EventHandler(NewClassCreditComboBox__SelectedIndexChanged);
             this.newClassTypeComboBox.SelectedIndexChanged += new EventHandler(NewClassTypeComboBox__SelectedIndexChanged);
@@ -58,6 +62,18 @@ namespace classCourse
         private void SubmitButton__Click(object sender, EventArgs e)  //LC
         {
             this.Hide();
+        }
+
+        private void gradeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (gradeCheckBox.Checked) {
+                lblLetterGrade.Show();
+                txtGrade.Show();
+            }
+            else {
+                lblLetterGrade.Hide();
+                txtGrade.Hide();
+            }
         }
     }
 }

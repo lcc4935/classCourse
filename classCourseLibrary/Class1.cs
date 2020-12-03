@@ -12,6 +12,7 @@ namespace classCourseLibrary
         public string major;
         public string minor;
         public string immersion;
+        public int credit;
     }
 
     public abstract class ClassInfo

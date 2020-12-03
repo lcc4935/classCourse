@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using classCourseLibrary;
 
 namespace classCourse
 {
     public partial class PersonalInfo : Form
     {
-        public PersonalInfo()
+        BasicInfo formInfo;
+        public PersonalInfo(BasicInfo basicInfo, Form parentForm)
         {
             InitializeComponent();
+
+            this.formInfo = basicInfo;
 
             this.majorComboBox.SelectedIndexChanged += new EventHandler(MajorComboBox__SelectedIndexChanged);
             this.minorComboBox.SelectedIndexChanged += new EventHandler(MinorComboBox__SelectedIndexChanged);
@@ -81,8 +85,9 @@ namespace classCourse
 
 
 
-
             TextBox tb = (TextBox)sender;
+
+            tb.Text = formInfo.name;
 
             //if empty
             if (tb.Text.Length == 0)
@@ -113,6 +118,8 @@ namespace classCourse
 
             TextBox tb = (TextBox)sender;
 
+            tb.Text = formInfo.major;
+
             //if empty
             if (tb.Text.Length == 0)
             {
@@ -141,6 +148,8 @@ namespace classCourse
 
 
             TextBox tb = (TextBox)sender;
+
+            tb.Text = formInfo.immersion;
 
             //if empty
             if (tb.Text.Length == 0)
@@ -171,6 +180,8 @@ namespace classCourse
 
             TextBox tb = (TextBox)sender;
 
+            tb.Text = formInfo.minor;
+
             //if empty
             if (tb.Text.Length == 0)
             {
@@ -199,6 +210,8 @@ namespace classCourse
 
 
             TextBox tb = (TextBox)sender;
+
+            //tb.Text = formInfo.credit;
 
             //convert to number
             int tbNum = Int32.Parse(tb.Text);
@@ -230,5 +243,6 @@ namespace classCourse
             this.Hide();
 
         }
+
     }
 }
