@@ -211,7 +211,7 @@ namespace classCourse
             
             TextBox tb = (TextBox)sender;
 
-            //tb.Text = formInfo.credit;
+            tb.Text = formInfo.credit;
 
             //convert to number
             int tbNum = Int32.Parse(tb.Text);

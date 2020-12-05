@@ -16,7 +16,8 @@ namespace classCourse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new classCourse());
+            Application.Run(new classCourse()); //System.NullReferenceException: 'Object reference not set to an instance of an object.'
+
         }
     }
 }

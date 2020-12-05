@@ -23,8 +23,28 @@ namespace classCourse
 
             this.addClassButton.Click += new EventHandler(AddClassButton__Click);
             this.infoButton.Click += new EventHandler(InfoButton__Click);
+
+            this.majorToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.minorToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.immersionToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.genEdPerToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.genEdToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.freeToolStripButton.Click += new EventHandler(classToolStripButton__Click);
             this.adElToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.wellnessToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            this.coopToolStripButton.Click += new EventHandler(classToolStripButton__Click);
             this.otherToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+
+            this.majorGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.minorGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.immersionGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.genEdPerGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.genEdGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.freeGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.adElGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.wellnessGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.coopGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
+            this.otherGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
 
 
             /*
@@ -54,7 +74,7 @@ namespace classCourse
             Button b = (Button)sender;
             Panel p = (Panel)b.Tag;
 
-            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this);
+            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this); //System.NullReferenceException: 'Object reference not set to an instance of an object.' p was null
             addEditClass.ShowDialog();
         }
 
@@ -62,7 +82,7 @@ namespace classCourse
         {
             Button b = (Button)sender;
 
-            PersonalInfo personalInfo = new PersonalInfo((BasicInfo)b.Tag, this); //System.NullReferenceException: 'Object reference not set to an instance of an object.'   p was null
+            PersonalInfo personalInfo = new PersonalInfo((BasicInfo)b.Tag, this);
             personalInfo.ShowDialog();
 
             /*
@@ -74,20 +94,20 @@ namespace classCourse
 
         private void classToolStripButton__Click(object sender, EventArgs e) // different sizes for class
         {
-            ToolStripButton tbs = (ToolStripButton)sender;
-            Panel p = (Panel)tbs.Tag;
+            ToolStripButton tsb = (ToolStripButton)sender;
+            Panel p = (Panel)tsb.Tag;
 
-            if (tbs.Checked)
+            if (tsb.Checked)
             {
-                tbs.Image = global::classCourse.Properties.Resources.plus;
+                tsb.Image = global::classCourse.Properties.Resources.plus;
                 p.Size = new System.Drawing.Size(330, 27);
-                tbs.Checked = false;
+                tsb.Checked = false;
             }
             else
             {
-                tbs.Image = global::classCourse.Properties.Resources.minus;
+                tsb.Image = global::classCourse.Properties.Resources.minus;
                 p.Size = new System.Drawing.Size(330, 103); // System.NullReferenceException: 'Object reference not set to an instance of an object.'    p was null 
-                tbs.Checked = true;
+                tsb.Checked = true;
             }
 
             p.Refresh();
@@ -95,29 +115,29 @@ namespace classCourse
 
         private void typesToolStripButton__Click(object sender, EventArgs e) // different sizes for class types - figure out based on number of classes
         {
-            ToolStripButton tbs = (ToolStripButton)sender;
-            Panel p = (Panel)tbs.Tag;
+            ToolStripButton tsb = (ToolStripButton)sender;
+            GroupBox gb = (GroupBox)tsb.Tag;
 
-            if (tbs.Checked)
+            if (tsb.Checked)
             {
-                tbs.Image = global::classCourse.Properties.Resources.plus;
-                p.Size = new System.Drawing.Size(193, 25); //edit size - smaller
-                tbs.Checked = false;
+                tsb.Image = global::classCourse.Properties.Resources.plus;
+                gb.Size = new System.Drawing.Size(333, 47); //edit size - smaller
+                tsb.Checked = false;
             }
             else
             {
-                tbs.Image = global::classCourse.Properties.Resources.minus;
-                p.Size = new System.Drawing.Size(193, 211); //edit size - bigger
-                tbs.Checked = true;
+                tsb.Image = global::classCourse.Properties.Resources.minus;
+                gb.Size = new System.Drawing.Size(333, 500); //edit size - bigger  System.NullReferenceException: 'Object reference not set to an instance of an object.'
+                tsb.Checked = true;
             }
 
-            p.Refresh();
+            gb.Refresh();
         }
 
 
         //labels
 
-        /*
+        
         private void ToolStripLabels__Click(object sender, EventArgs e) // when clicked = edit class  - want to come back to this after library
         {
             ToolStripLabel tsl = (ToolStripLabel)sender;
@@ -128,7 +148,7 @@ namespace classCourse
 
             cef.ShowDialog();
 
-            ClassInfo classInfo = cef.formClass;
+            ClassInfo classInfo = cef.formClass; //inaccessible due to its protection level ??
 
             p.Controls.Clear();
 
@@ -136,105 +156,107 @@ namespace classCourse
 
             p.Refresh();
         }
-        */
+        
         
 
         //panels
-        /*
-        private void AddPanelToClassType(class class)  //LC
+        
+        private void AddPanelToClassType(ClassInfo classInfo)  //LC
         {
             Panel panel = new System.Windows.Forms.Panel();
             //this.otherPanel = new System.Windows.Forms.Panel();
 
-            AddClassToPanel(ref panel, class);
+            AddClassToPanel(ref panel, classInfo);
             
-            this.FlowLayoutPanel.Controls.Add(panel); //flowLayoutPanel depends on class type
-            this.FlowLayoutPanel.Controls.SetChildIndex(panel, flowLayourPanel.Controls.Count);
+            this.otherFlowLayoutPanel.Controls.Add(panel); //flowLayoutPanel depends on class type
+            this.otherFlowLayoutPanel.Controls.SetChildIndex(panel, otherFlowLayoutPanel.Controls.Count);
         }
 
-        private void AddClassToPanel(ref Panel panel, Class class)  //LC
+        private void AddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
         {
-            Label ClassTypeLabel = new System.Windows.Forms.Label();
-            Label ClassCreditLabel = new System.Windows.Forms.Label();
-            Label ClassNameLabel = new System.Windows.Forms.Label();
-            ToolStrip PanelToolStrip = new System.Windows.Forms.ToolStrip();
-            ToolStripLabel ToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            ToolStripButton ToolStripButton = new System.Windows.Forms.ToolStripButton();
+            
+            Label otherClassTypeLabel = new System.Windows.Forms.Label();
+            Label otherClassCreditLabel = new System.Windows.Forms.Label();
+            Label otherClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip otherPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel otherToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton otherToolStripButton = new System.Windows.Forms.ToolStripButton();
 
             // edit background based on class type
 
             // otherPanel
             // 
-            Panel.Controls.Add(ClassTypeLabel);
-            Panel.Controls.Add(ClassCreditLabel);
-            Panel.Controls.Add(ClassNameLabel);
-            Panel.Controls.Add(PanelToolStrip);
-            Panel.Location = new System.Drawing.Point(3, 3);
-            Panel.Name = "otherPanel";
-            Panel.Size = new System.Drawing.Size(330, 27);
-            Panel.TabIndex = 0;
-            Panel.Tag = class;
+            otherPanel.Controls.Add(otherClassTypeLabel);
+            otherPanel.Controls.Add(otherClassCreditLabel);
+            otherPanel.Controls.Add(otherClassNameLabel);
+            otherPanel.Controls.Add(otherPanelToolStrip);
+            otherPanel.Location = new System.Drawing.Point(3, 3);
+            otherPanel.Name = "otherPanel";
+            otherPanel.Size = new System.Drawing.Size(330, 27);
+            otherPanel.TabIndex = 0;
+            otherPanel.Tag = classInfo;
             // 
             // otherClassTypeLabel
             // 
-            ClassTypeLabel.AutoSize = true;
-            ClassTypeLabel.Location = new System.Drawing.Point(7, 77);
-            ClassTypeLabel.Name = "otherClassTypeLabel";
-            ClassTypeLabel.Size = new System.Drawing.Size(112, 13);
-            ClassTypeLabel.TabIndex = 3;
-            ClassTypeLabel.Text = "Counts towards: " + class.classType; //library variables
+            otherClassTypeLabel.AutoSize = true;
+            otherClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            otherClassTypeLabel.Name = "otherClassTypeLabel";
+            otherClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            otherClassTypeLabel.TabIndex = 3;
+            otherClassTypeLabel.Text = "Counts towards: " + classInfo.classType; //library variables
             // 
             // otherClassCreditLabel
             // 
-            ClassCreditLabel.AutoSize = true;
-            ClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            ClassCreditLabel.Name = "otherClassCreditLabel";
-            ClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            ClassCreditLabel.TabIndex = 2;
-            ClassCreditLabel.Text = class.Credits; //library variables
+            otherClassCreditLabel.AutoSize = true;
+            otherClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            otherClassCreditLabel.Name = "otherClassCreditLabel";
+            otherClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            otherClassCreditLabel.TabIndex = 2;
+            otherClassCreditLabel.Text = classInfo.classCredit; //library variables
             // 
             // otherClassNameLabel
             // 
-            ClassNameLabel.AutoSize = true;
-            ClassNameLabel.Location = new System.Drawing.Point(4, 29);
-            ClassNameLabel.Name = "otherClassNameLabel";
-            ClassNameLabel.Size = new System.Drawing.Size(60, 13);
-            ClassNameLabel.TabIndex = 1;
-            ClassNameLabel.Text = class.className; //library variables
+            otherClassNameLabel.AutoSize = true;
+            otherClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            otherClassNameLabel.Name = "otherClassNameLabel";
+            otherClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            otherClassNameLabel.TabIndex = 1;
+            otherClassNameLabel.Text = classInfo.className; //library variables
             // 
             // otherPanelToolStrip
             // 
-            PanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            ToolStripButton,
-            ToolStripLabel});
-            PanelToolStrip.Location = new System.Drawing.Point(0, 0);
-            PanelToolStrip.Name = "otherPanelToolStrip";
-            PanelToolStrip.Size = new System.Drawing.Size(330, 25);
-            PanelToolStrip.TabIndex = 0;
-            PanelToolStrip.Text = "toolStrip1";
+            otherPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            otherToolStripButton,
+            otherToolStripLabel});
+            otherPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            otherPanelToolStrip.Name = "otherPanelToolStrip";
+            otherPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            otherPanelToolStrip.TabIndex = 0;
+            otherPanelToolStrip.Text = "toolStrip1";
             // 
             // otherToolStripLabel
             // 
-            ToolStripLabel.IsLink = true;
-            ToolStripLabel.Name = "otherToolStripLabel";
-            ToolStripLabel.Size = new System.Drawing.Size(134, 22);
-            ToolStripLabel.Text = class.department, class.couseCode; //library variables
-            ToolStripLabel.Click += new EventHandler(ToolStripLabel__Click); //potentially edit name of event after write this
-            ToolStripLabel.Tag = panel;
+            otherToolStripLabel.IsLink = true;
+            otherToolStripLabel.Name = "otherToolStripLabel";
+            otherToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            otherToolStripLabel.Text = classInfo.department + classInfo.courseCode; //library variables
+            otherToolStripLabel.Click += new EventHandler(ToolStripLabels__Click); //potentially edit name of event after write this
+            otherToolStripLabel.Tag = panel;
             //
             // otherToolStripButton
             // 
-            ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            ToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            ToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            ToolStripButton.Name = "otherToolStripButton";
-            ToolStripButton.Size = new System.Drawing.Size(23, 22);
-            ToolStripButton.Text = "toolStripButton1";
-            ToolStripButton.Click += new EventHandler(classToolStripButton__Click);
-            ToolStripButton.Tag = panel;
+            otherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            otherToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            otherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            otherToolStripButton.Name = "otherToolStripButton";
+            otherToolStripButton.Size = new System.Drawing.Size(23, 22);
+            otherToolStripButton.Text = "toolStripButton1";
+            otherToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            otherToolStripButton.Tag = panel;
+            
         }
 
-        */
+
 
         /*
          * this.FlowLayoutPanel.Controls.Clear();

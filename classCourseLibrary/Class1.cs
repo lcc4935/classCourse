@@ -12,7 +12,7 @@ namespace classCourseLibrary
         public string major;
         public string minor;
         public string immersion;
-        public int credit;
+        public string credit;
     }
 
     public abstract class ClassInfo
@@ -21,7 +21,7 @@ namespace classCourseLibrary
         public string courseCode; // ex: 201
         public string className;
         public string classType; // ex: minor
-        public int classCredit;
+        public string classCredit;
         public double classGP; // grade points
     }
 
