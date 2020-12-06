@@ -46,6 +46,15 @@ namespace classCourse
             this.coopGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
             this.otherGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
 
+            this.majorToolStripButton.Tag = this.majorPanel;
+            this.minorToolStripButton.Tag = this.minorPanel;
+
+            this.majorGroupBoxToolStripButton.Tag = this.majorGroupBox;
+            //continue these
+
+            //addClassButton - connect button to panels, if statements for type
+
+
 
             /*
             this.nameTextBox.Text = basicInfo.name;
@@ -92,7 +101,7 @@ namespace classCourse
             */
         }
 
-        private void classToolStripButton__Click(object sender, EventArgs e) // different sizes for class
+        private void classToolStripButton__Click(object sender, EventArgs e) // different sizes for class // initally shrink panels
         {
             ToolStripButton tsb = (ToolStripButton)sender;
             Panel p = (Panel)tsb.Tag;
@@ -148,7 +157,7 @@ namespace classCourse
 
             cef.ShowDialog();
 
-            ClassInfo classInfo = cef.formClass; //inaccessible due to its protection level ??
+            ClassInfo classInfo = cef.formClass;
 
             p.Controls.Clear();
 

@@ -13,7 +13,7 @@ namespace classCourse
 {
     public partial class AddEditClass : Form
     {
-        ClassInfo formClass;
+        public ClassInfo formClass;
         public AddEditClass(ClassInfo classInfo, Form parentForm)
         {
             InitializeComponent();
