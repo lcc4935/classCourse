@@ -11,6 +11,9 @@ using classCourseLibrary;
 
 
 /*
+ * All the errors have comments sticking out so they should be easy to locate,
+ * I also have null in all the error comments and questions if that makes it easier to search
+ * 
  * Issues/ Questions:
  * 
  * 1) Don't know how to select the type (functions: ToolStripLabels__Click and AddPanelToClassType)
@@ -28,12 +31,12 @@ using classCourseLibrary;
  *  I phrased an if statement not as intended and don't know if there is a better way to say what I am trying to do
  *  (more clear of a question when you see it)
  *  
- *  6) Not really a question, but I can't determine if I have an issues on the panels being added to the semester slots as
+ *  6) in the function UndecidedRemoveClassToPanel, I didn't know if I ued the right method to do what I want it to do
+ *  (again, more clear when you'll see the code)
+ *  
+ *  7) Not really a question, but I can't determine if I have an issues on the panels being added to the semester slots as
  *  they wouldn't show up until the first panels show up, so I might be asking for more help later if I run into issues there once the rest works
  *  (just as a heads up as I also might've just forgotten some questions as well)
- * 
- * All the errors have comments sticking out so they should be easy to locate,
- * I also have null in all the error comments if that makes it easier to search
  */
 
 
@@ -971,7 +974,7 @@ namespace classCourse
         }
         private void UndecidedRemoveClassToPanel(ref Panel panel, ClassInfo classInfo)
         {
-            panel.Dispose();
+            panel.Dispose(); //(null - for questions sake) is this more or less deleting the panel because that is the goal
         }
 
 
