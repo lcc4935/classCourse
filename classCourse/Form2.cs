@@ -151,7 +151,7 @@ namespace classCourse
             this.Hide();
         }
 
-        private void gradeCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void gradeCheckBox_CheckedChanged(object sender, EventArgs e)  //JLH
         {
             if (gradeCheckBox.Checked) {
                 lblLetterGrade.Show();

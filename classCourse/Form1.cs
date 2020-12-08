@@ -1740,6 +1740,11 @@ namespace classCourse
             otherToolStripButton.Tag = panel;
         }
 
+        private void infoButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
 
 
 
