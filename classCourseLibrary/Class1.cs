@@ -20,18 +20,13 @@ namespace classCourseLibrary
         public string department; // ex: IGME
         public string courseCode; // ex: 201
         public string className;
-        public string classType; // ex: minor
+        public types classType;
         public string classCredit;
+        public semesters semester;
         public double classGP; // grade points
     }
 
-    public abstract class Schedule
-    {
-        public string semester;
-        public int creditCount;
-    }
-
-    public enum type
+    public enum types
     {
         major,
         immersion,
@@ -44,5 +39,18 @@ namespace classCourseLibrary
         coop,
         otherClasses
 
+    }
+
+    public enum semesters
+    {
+        freshFall,
+        freshSpring,
+        sophFall,
+        sophSpring,
+        juniorFall,
+        juniorSpring,
+        seniorFall,
+        seniorSpring,
+        undecided
     }
 }

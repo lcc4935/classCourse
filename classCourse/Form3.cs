@@ -40,7 +40,9 @@ namespace classCourse
             this.immersionTextBox.Text = basicInfo.immersion;
             this.minorTextBox.Text = basicInfo.minor;
             this.creditTextBox.Text = basicInfo.credit;
-            
+
+            this.Show();
+
         }
 
         //Checkboxes

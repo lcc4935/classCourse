@@ -52,15 +52,15 @@
             this.gradeCheckBox = new System.Windows.Forms.CheckBox();
             this.lblLetterGrade = new System.Windows.Forms.Label();
             this.txtGrade = new System.Windows.Forms.TextBox();
+            this.undecidedRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // seniorSpringRadioButton
             // 
             this.seniorSpringRadioButton.AutoSize = true;
-            this.seniorSpringRadioButton.Location = new System.Drawing.Point(808, 223);
-            this.seniorSpringRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.seniorSpringRadioButton.Location = new System.Drawing.Point(539, 145);
             this.seniorSpringRadioButton.Name = "seniorSpringRadioButton";
-            this.seniorSpringRadioButton.Size = new System.Drawing.Size(168, 24);
+            this.seniorSpringRadioButton.Size = new System.Drawing.Size(113, 17);
             this.seniorSpringRadioButton.TabIndex = 77;
             this.seniorSpringRadioButton.TabStop = true;
             this.seniorSpringRadioButton.Text = "Spring Senior Year";
@@ -69,10 +69,9 @@
             // seniorFallRadioButton
             // 
             this.seniorFallRadioButton.AutoSize = true;
-            this.seniorFallRadioButton.Location = new System.Drawing.Point(808, 188);
-            this.seniorFallRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.seniorFallRadioButton.Location = new System.Drawing.Point(539, 122);
             this.seniorFallRadioButton.Name = "seniorFallRadioButton";
-            this.seniorFallRadioButton.Size = new System.Drawing.Size(147, 24);
+            this.seniorFallRadioButton.Size = new System.Drawing.Size(99, 17);
             this.seniorFallRadioButton.TabIndex = 76;
             this.seniorFallRadioButton.TabStop = true;
             this.seniorFallRadioButton.Text = "Fall Senior Year";
@@ -81,10 +80,9 @@
             // juniorSpringRadioButton
             // 
             this.juniorSpringRadioButton.AutoSize = true;
-            this.juniorSpringRadioButton.Location = new System.Drawing.Point(556, 223);
-            this.juniorSpringRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.juniorSpringRadioButton.Location = new System.Drawing.Point(371, 145);
             this.juniorSpringRadioButton.Name = "juniorSpringRadioButton";
-            this.juniorSpringRadioButton.Size = new System.Drawing.Size(165, 24);
+            this.juniorSpringRadioButton.Size = new System.Drawing.Size(111, 17);
             this.juniorSpringRadioButton.TabIndex = 75;
             this.juniorSpringRadioButton.TabStop = true;
             this.juniorSpringRadioButton.Text = "Spring Junior Year";
@@ -93,10 +91,9 @@
             // juniorFallRadioButton
             // 
             this.juniorFallRadioButton.AutoSize = true;
-            this.juniorFallRadioButton.Location = new System.Drawing.Point(556, 188);
-            this.juniorFallRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.juniorFallRadioButton.Location = new System.Drawing.Point(371, 122);
             this.juniorFallRadioButton.Name = "juniorFallRadioButton";
-            this.juniorFallRadioButton.Size = new System.Drawing.Size(144, 24);
+            this.juniorFallRadioButton.Size = new System.Drawing.Size(97, 17);
             this.juniorFallRadioButton.TabIndex = 74;
             this.juniorFallRadioButton.TabStop = true;
             this.juniorFallRadioButton.Text = "Fall Junior Year";
@@ -105,10 +102,9 @@
             // sophSpringRadioButton
             // 
             this.sophSpringRadioButton.AutoSize = true;
-            this.sophSpringRadioButton.Location = new System.Drawing.Point(808, 112);
-            this.sophSpringRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sophSpringRadioButton.Location = new System.Drawing.Point(539, 73);
             this.sophSpringRadioButton.Name = "sophSpringRadioButton";
-            this.sophSpringRadioButton.Size = new System.Drawing.Size(196, 24);
+            this.sophSpringRadioButton.Size = new System.Drawing.Size(131, 17);
             this.sophSpringRadioButton.TabIndex = 73;
             this.sophSpringRadioButton.TabStop = true;
             this.sophSpringRadioButton.Text = "Spring Sophmore Year";
@@ -117,10 +113,9 @@
             // sophFallRadioButton
             // 
             this.sophFallRadioButton.AutoSize = true;
-            this.sophFallRadioButton.Location = new System.Drawing.Point(808, 77);
-            this.sophFallRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sophFallRadioButton.Location = new System.Drawing.Point(539, 50);
             this.sophFallRadioButton.Name = "sophFallRadioButton";
-            this.sophFallRadioButton.Size = new System.Drawing.Size(175, 24);
+            this.sophFallRadioButton.Size = new System.Drawing.Size(117, 17);
             this.sophFallRadioButton.TabIndex = 72;
             this.sophFallRadioButton.TabStop = true;
             this.sophFallRadioButton.Text = "Fall Sophmore Year";
@@ -129,10 +124,9 @@
             // freshSpringRadioButton
             // 
             this.freshSpringRadioButton.AutoSize = true;
-            this.freshSpringRadioButton.Location = new System.Drawing.Point(556, 112);
-            this.freshSpringRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.freshSpringRadioButton.Location = new System.Drawing.Point(371, 73);
             this.freshSpringRadioButton.Name = "freshSpringRadioButton";
-            this.freshSpringRadioButton.Size = new System.Drawing.Size(194, 24);
+            this.freshSpringRadioButton.Size = new System.Drawing.Size(129, 17);
             this.freshSpringRadioButton.TabIndex = 71;
             this.freshSpringRadioButton.TabStop = true;
             this.freshSpringRadioButton.Text = "Spring Freshman Year";
@@ -141,10 +135,9 @@
             // freshFallRadioButton
             // 
             this.freshFallRadioButton.AutoSize = true;
-            this.freshFallRadioButton.Location = new System.Drawing.Point(556, 77);
-            this.freshFallRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.freshFallRadioButton.Location = new System.Drawing.Point(371, 50);
             this.freshFallRadioButton.Name = "freshFallRadioButton";
-            this.freshFallRadioButton.Size = new System.Drawing.Size(173, 24);
+            this.freshFallRadioButton.Size = new System.Drawing.Size(115, 17);
             this.freshFallRadioButton.TabIndex = 70;
             this.freshFallRadioButton.TabStop = true;
             this.freshFallRadioButton.Text = "Fall Freshman Year";
@@ -153,56 +146,50 @@
             // semesterLabel
             // 
             this.semesterLabel.AutoSize = true;
-            this.semesterLabel.Location = new System.Drawing.Point(552, 14);
-            this.semesterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.semesterLabel.Location = new System.Drawing.Point(368, 9);
             this.semesterLabel.Name = "semesterLabel";
-            this.semesterLabel.Size = new System.Drawing.Size(339, 20);
+            this.semesterLabel.Size = new System.Drawing.Size(229, 13);
             this.semesterLabel.TabIndex = 69;
             this.semesterLabel.Text = "Which semester do you plan to take this class?";
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(556, 405);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.submitButton.Location = new System.Drawing.Point(371, 287);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(112, 35);
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 68;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             // 
             // newCourseCodeTextBox
             // 
-            this.newCourseCodeTextBox.Location = new System.Drawing.Point(170, 109);
-            this.newCourseCodeTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newCourseCodeTextBox.Location = new System.Drawing.Point(113, 71);
             this.newCourseCodeTextBox.Name = "newCourseCodeTextBox";
-            this.newCourseCodeTextBox.Size = new System.Drawing.Size(148, 26);
+            this.newCourseCodeTextBox.Size = new System.Drawing.Size(100, 20);
             this.newCourseCodeTextBox.TabIndex = 67;
             // 
             // newDepartmentTextBox
             // 
-            this.newDepartmentTextBox.Location = new System.Drawing.Point(170, 69);
-            this.newDepartmentTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newDepartmentTextBox.Location = new System.Drawing.Point(113, 45);
             this.newDepartmentTextBox.Name = "newDepartmentTextBox";
-            this.newDepartmentTextBox.Size = new System.Drawing.Size(148, 26);
+            this.newDepartmentTextBox.Size = new System.Drawing.Size(100, 20);
             this.newDepartmentTextBox.TabIndex = 66;
             // 
             // newCourseCodeLabel
             // 
             this.newCourseCodeLabel.AutoSize = true;
-            this.newCourseCodeLabel.Location = new System.Drawing.Point(18, 109);
-            this.newCourseCodeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newCourseCodeLabel.Location = new System.Drawing.Point(12, 71);
             this.newCourseCodeLabel.Name = "newCourseCodeLabel";
-            this.newCourseCodeLabel.Size = new System.Drawing.Size(115, 20);
+            this.newCourseCodeLabel.Size = new System.Drawing.Size(78, 13);
             this.newCourseCodeLabel.TabIndex = 65;
             this.newCourseCodeLabel.Text = "Course Code #";
             // 
             // newDepartmentLabel
             // 
             this.newDepartmentLabel.AutoSize = true;
-            this.newDepartmentLabel.Location = new System.Drawing.Point(18, 69);
-            this.newDepartmentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newDepartmentLabel.Location = new System.Drawing.Point(12, 45);
             this.newDepartmentLabel.Name = "newDepartmentLabel";
-            this.newDepartmentLabel.Size = new System.Drawing.Size(94, 20);
+            this.newDepartmentLabel.Size = new System.Drawing.Size(62, 13);
             this.newDepartmentLabel.TabIndex = 64;
             this.newDepartmentLabel.Text = "Department";
             // 
@@ -220,19 +207,17 @@
             "Wellness",
             "Co-op",
             "Other"});
-            this.newClassTypeComboBox.Location = new System.Drawing.Point(170, 203);
-            this.newClassTypeComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newClassTypeComboBox.Location = new System.Drawing.Point(113, 132);
             this.newClassTypeComboBox.Name = "newClassTypeComboBox";
-            this.newClassTypeComboBox.Size = new System.Drawing.Size(180, 28);
+            this.newClassTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.newClassTypeComboBox.TabIndex = 63;
             // 
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Location = new System.Drawing.Point(18, 203);
-            this.typeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.typeLabel.Location = new System.Drawing.Point(12, 132);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(86, 20);
+            this.typeLabel.Size = new System.Drawing.Size(59, 13);
             this.typeLabel.TabIndex = 62;
             this.typeLabel.Text = "Class Type";
             // 
@@ -244,57 +229,51 @@
             "1",
             "3",
             "4"});
-            this.newClassCreditComboBox.Location = new System.Drawing.Point(170, 258);
-            this.newClassCreditComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newClassCreditComboBox.Location = new System.Drawing.Point(113, 168);
             this.newClassCreditComboBox.Name = "newClassCreditComboBox";
-            this.newClassCreditComboBox.Size = new System.Drawing.Size(180, 28);
+            this.newClassCreditComboBox.Size = new System.Drawing.Size(121, 21);
             this.newClassCreditComboBox.TabIndex = 61;
             // 
             // newClassCreditLabel
             // 
             this.newClassCreditLabel.AutoSize = true;
-            this.newClassCreditLabel.Location = new System.Drawing.Point(18, 258);
-            this.newClassCreditLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newClassCreditLabel.Location = new System.Drawing.Point(12, 168);
             this.newClassCreditLabel.Name = "newClassCreditLabel";
-            this.newClassCreditLabel.Size = new System.Drawing.Size(137, 20);
+            this.newClassCreditLabel.Size = new System.Drawing.Size(91, 13);
             this.newClassCreditLabel.TabIndex = 60;
             this.newClassCreditLabel.Text = "Number of Credits";
             // 
             // newClassNameLabel
             // 
             this.newClassNameLabel.AutoSize = true;
-            this.newClassNameLabel.Location = new System.Drawing.Point(18, 149);
-            this.newClassNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newClassNameLabel.Location = new System.Drawing.Point(12, 97);
             this.newClassNameLabel.Name = "newClassNameLabel";
-            this.newClassNameLabel.Size = new System.Drawing.Size(94, 20);
+            this.newClassNameLabel.Size = new System.Drawing.Size(63, 13);
             this.newClassNameLabel.TabIndex = 59;
             this.newClassNameLabel.Text = "Class Name";
             // 
             // newClassNameTextBox
             // 
-            this.newClassNameTextBox.Location = new System.Drawing.Point(170, 149);
-            this.newClassNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newClassNameTextBox.Location = new System.Drawing.Point(113, 97);
             this.newClassNameTextBox.Name = "newClassNameTextBox";
-            this.newClassNameTextBox.Size = new System.Drawing.Size(148, 26);
+            this.newClassNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.newClassNameTextBox.TabIndex = 58;
             // 
             // addClassLabel
             // 
             this.addClassLabel.AutoSize = true;
-            this.addClassLabel.Location = new System.Drawing.Point(18, 14);
-            this.addClassLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addClassLabel.Location = new System.Drawing.Point(12, 9);
             this.addClassLabel.Name = "addClassLabel";
-            this.addClassLabel.Size = new System.Drawing.Size(176, 20);
+            this.addClassLabel.Size = new System.Drawing.Size(120, 13);
             this.addClassLabel.TabIndex = 57;
             this.addClassLabel.Text = "Adding/ Editing a Class:";
             // 
             // gradeCheckBox
             // 
             this.gradeCheckBox.AutoSize = true;
-            this.gradeCheckBox.Location = new System.Drawing.Point(22, 335);
-            this.gradeCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gradeCheckBox.Location = new System.Drawing.Point(15, 218);
             this.gradeCheckBox.Name = "gradeCheckBox";
-            this.gradeCheckBox.Size = new System.Drawing.Size(231, 24);
+            this.gradeCheckBox.Size = new System.Drawing.Size(158, 17);
             this.gradeCheckBox.TabIndex = 78;
             this.gradeCheckBox.Text = "Have a grade for this class?";
             this.gradeCheckBox.UseVisualStyleBackColor = true;
@@ -303,28 +282,38 @@
             // lblLetterGrade
             // 
             this.lblLetterGrade.AutoSize = true;
-            this.lblLetterGrade.Location = new System.Drawing.Point(46, 380);
-            this.lblLetterGrade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLetterGrade.Location = new System.Drawing.Point(31, 247);
             this.lblLetterGrade.Name = "lblLetterGrade";
-            this.lblLetterGrade.Size = new System.Drawing.Size(104, 20);
+            this.lblLetterGrade.Size = new System.Drawing.Size(69, 13);
             this.lblLetterGrade.TabIndex = 79;
             this.lblLetterGrade.Text = "Letter Grade:";
             this.lblLetterGrade.Visible = false;
             // 
             // txtGrade
             // 
-            this.txtGrade.Location = new System.Drawing.Point(158, 377);
-            this.txtGrade.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtGrade.Location = new System.Drawing.Point(105, 245);
             this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(110, 26);
+            this.txtGrade.Size = new System.Drawing.Size(75, 20);
             this.txtGrade.TabIndex = 80;
             this.txtGrade.Visible = false;
             // 
+            // undecidedRadioButton
+            // 
+            this.undecidedRadioButton.AutoSize = true;
+            this.undecidedRadioButton.Location = new System.Drawing.Point(371, 198);
+            this.undecidedRadioButton.Name = "undecidedRadioButton";
+            this.undecidedRadioButton.Size = new System.Drawing.Size(77, 17);
+            this.undecidedRadioButton.TabIndex = 81;
+            this.undecidedRadioButton.TabStop = true;
+            this.undecidedRadioButton.Text = "Undecided";
+            this.undecidedRadioButton.UseVisualStyleBackColor = true;
+            // 
             // AddEditClass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 569);
+            this.ClientSize = new System.Drawing.Size(702, 370);
+            this.Controls.Add(this.undecidedRadioButton);
             this.Controls.Add(this.txtGrade);
             this.Controls.Add(this.lblLetterGrade);
             this.Controls.Add(this.gradeCheckBox);
@@ -349,7 +338,6 @@
             this.Controls.Add(this.newClassNameLabel);
             this.Controls.Add(this.newClassNameTextBox);
             this.Controls.Add(this.addClassLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddEditClass";
             this.Text = "Add/ Edit Class";
             this.ResumeLayout(false);
@@ -383,5 +371,6 @@
         private System.Windows.Forms.CheckBox gradeCheckBox;
         private System.Windows.Forms.Label lblLetterGrade;
         private System.Windows.Forms.TextBox txtGrade;
+        private System.Windows.Forms.RadioButton undecidedRadioButton;
     }
 }

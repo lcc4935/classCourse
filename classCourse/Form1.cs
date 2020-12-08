@@ -11,18 +11,26 @@ using classCourseLibrary;
 
 
 /*
- * Issues:
+ * Issues/ Questions:
  * 
  * 1) Don't know how to select the type (functions: ToolStripLabels__Click and AddPanelToClassType)
  * I tried using .Tag, but I don't think thats right, but I didn't know how else to call it
  * 
- * 2) In forms 2 and 3 I loading the reference variables into the form fields and it's coming up as an error
+ * 2) In forms 2 and 3 I tried loading the reference variables into the form fields and it's coming up as an error
  * 
- * 3) I am getting an error in program.cs
+ * 3) I am getting an error in program.cs, don't know if that will go away when the other errors do, just thought I'd mention it in case that's not the case
  * 
- * 4) in the function AddClassButton__Click like 194 is saying classInfo isn't correct and
+ * 4) in the function AddClassButton__Click (~line 194) is saying classInfo isn't correct and
  * I am getting that same error in the multipe AddClassToPanel functions
- * (well I am getting them in one, but that if because I didn't do the if else statement correctly earlier in the code)
+ * (well I am getting them in one, but that is because I didn't do the if else statement correctly earlier in the code)
+ * 
+ * 5) in the function AddClassButton__Click, I am trying to add another panel to the semester slots
+ *  I phrased an if statement not as intended and don't know if there is a better way to say what I am trying to do
+ *  (more clear of a question when you see it)
+ *  
+ *  6) Not really a question, but I can't determine if I have an issues on the panels being added to the semester slots as
+ *  they wouldn't show up until the first panels show up, so I might be asking for more help later if I run into issues there once the rest works
+ *  (just as a heads up as I also might've just forgotten some questions as well)
  * 
  * All the errors have comments sticking out so they should be easy to locate,
  * I also have null in all the error comments if that makes it easier to search
@@ -50,6 +58,17 @@ namespace classCourse
             this.coopToolStripButton.Click += new EventHandler(classToolStripButton__Click);
             this.otherToolStripButton.Click += new EventHandler(classToolStripButton__Click);
 
+            this.majorToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.minorToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.immersionToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.genEdPerToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.genEdToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.freeToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.adElToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.wellnessToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.coopToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            this.otherToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+
             this.majorGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
             this.minorGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
             this.immersionGroupBoxToolStripButton.Click += new EventHandler(typesToolStripButton__Click);
@@ -71,6 +90,26 @@ namespace classCourse
             this.wellnessToolStripButton.Tag = this.wellnessPanel;
             this.coopToolStripButton.Tag = this.coopPanel;
             this.otherToolStripButton.Tag = this.otherPanel;
+
+            this.majorToolStripLabel.Tag = this.majorPanel;
+            this.minorToolStripLabel.Tag = this.minorPanel;
+            this.immersionToolStripLabel.Tag = this.immersionPanel;
+            this.genEdPerToolStripLabel.Tag = this.genEdPerPanel;
+            this.genEdToolStripLabel.Tag = this.genEdPanel;
+            this.freeToolStripLabel.Tag = this.freePanel;
+            this.adElToolStripLabel.Tag = this.adElPanel;
+            this.wellnessToolStripLabel.Tag = this.wellnessPanel;
+            this.coopToolStripLabel.Tag = this.coopPanel;
+            this.otherToolStripLabel.Tag = this.otherPanel;
+
+            this.freshFallLabel.Tag = this.freshFallPanel;
+            this.freshSpringLabel.Tag = this.freshSpringPanel;
+            this.sophFallLabel.Tag = this.sophFallPanel;
+            this.sophSpringLabel.Tag = this.sophSpringPanel;
+            this.juniorFallLabel.Tag = this.juniorFallPanel;
+            this.juniorSpringLabel.Tag = this.juniorSpringPanel;
+            this.seniorFallLabel.Tag = this.seniorFallPanel;
+            this.seniorSpringLabel.Tag = this.seniorSpringPanel;
 
             this.majorGroupBoxToolStripButton.Tag = this.majorGroupBox;
             this.minorGroupBoxToolStripButton.Tag = this.minorGroupBox;
@@ -106,21 +145,28 @@ namespace classCourse
             this.otherAddClassToolStripButton.Tag = this.otherPanel;
 
             /*
-            this.nameTextBox.Text = basicInfo.name;
-            this.majorTextBox.Text = basicInfo.major;
-            this.minorTextBox.Text = basicInfo.minor;
-            this.immersionTextBox.Text = basicInfo.immersion;
-
-            this.newClassValueTextBox.Text = classInfo.department;
-            this.newCourseCodeTextBox.Text = classInfo.courseCode;
-            this.newClassNameTextBox.Text = classInfo.className;
-            this.newClassTypeComboBox.SelectedItem = classInfo.classType;
-            this.newClassCreditComboBox.SelectedItem = classInfo.classCredit;
-
-            this.creditTextBox.Text = schedule.creditCount;
+             * uncomment after everything works
+             * 
+            majorPanel.Visible = false;
+            minorPanel.Visible = false;
+            immersionPanel.Visible = false;
+            genEdPerPanel.Visible = false;
+            genEdPanel.Visible = false;
+            freePanel.Visible = false;
+            adElPanel.Visible = false;
+            wellnessPanel.Visible = false;
+            coopPanel.Visible = false;
+            otherPanel.Visible = false;
+            //------------------------
+            freshFallPanel.Visible = false;
+            freshSpringPanel.Visible = false;
+            sophFallPanel.Visible = false;
+            sophSpringPanel.Visible = false;
+            juniorFallPanel.Visible = false;
+            juniorSpringPanel.Visible = false;
+            seniorFallPanel.Visible = false;
+            seniorSpringPanel.Visible = false;
             */
-
-            //this.label.Text = department, courseCode, className, creditCount;
 
         }
 
@@ -185,14 +231,6 @@ namespace classCourse
 
         private void AddClassButton__Click(object sender, EventArgs e)  //LC
         {
-            /*
-            Button b = (Button)sender;
-            Panel p = (Panel)b.Tag;
-
-            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this);
-            addEditClass.ShowDialog();
-            */
-
             ToolStripButton tsb = (ToolStripButton)sender;
             Panel p = (Panel)tsb.Tag;
 
@@ -203,11 +241,15 @@ namespace classCourse
 
             ClassInfo classInfo = addEditClass.formClass;
 
-            //p.Controls.Clear();
-
             AddPanelToClassType(sender, e, classInfo);
 
-            //p.Refresh();
+            if (classInfo.semester != semesters.undecided) // (null - actually just a question, just helping find said question) insead of phrasing it like this
+                                                            //is there a way to basically say that if the radio button has been changed or if the classInfo.semester has changed
+            {
+                AddPanelToSemesters(classInfo);
+            }
+
+            p.Refresh();
         }
 
 
@@ -353,6 +395,587 @@ namespace classCourse
             }
 
         }
+
+
+
+        //move to bottom after
+        private void AddPanelToSemesters(ClassInfo classInfo)
+        {
+            Panel panel = new System.Windows.Forms.Panel();
+
+            if (classInfo.semester == semesters.freshFall)
+            {
+                FreshFallAddClassToPanel(ref panel, classInfo);
+
+                this.freshFallFlowLayoutPanel.Controls.Add(panel);
+                this.freshFallFlowLayoutPanel.Controls.SetChildIndex(panel, freshFallFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.freshSpring)
+            {
+                FreshSpringAddClassToPanel(ref panel, classInfo);
+
+                this.freshSpringFlowLayoutPanel.Controls.Add(panel);
+                this.freshSpringFlowLayoutPanel.Controls.SetChildIndex(panel, freshSpringFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.sophFall)
+            {
+                SophFallAddClassToPanel(ref panel, classInfo);
+
+                this.sophFallFlowLayoutPanel.Controls.Add(panel);
+                this.sophFallFlowLayoutPanel.Controls.SetChildIndex(panel, sophFallFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.sophSpring)
+            {
+                SophSpringAddClassToPanel(ref panel, classInfo);
+
+                this.sophSpringFlowLayoutPanel.Controls.Add(panel);
+                this.sophSpringFlowLayoutPanel.Controls.SetChildIndex(panel, sophSpringFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.juniorFall)
+            {
+                JuniorFallAddClassToPanel(ref panel, classInfo);
+
+                this.juniorFallFlowLayoutPanel.Controls.Add(panel);
+                this.juniorFallFlowLayoutPanel.Controls.SetChildIndex(panel, juniorFallFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.juniorSpring)
+            {
+                JuniorSpringAddClassToPanel(ref panel, classInfo);
+
+                this.juniorSpringFlowLayoutPanel.Controls.Add(panel);
+                this.juniorSpringFlowLayoutPanel.Controls.SetChildIndex(panel, juniorSpringFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.seniorFall)
+            {
+                SeniorFallAddClassToPanel(ref panel, classInfo);
+
+                this.seniorFallFlowLayoutPanel.Controls.Add(panel);
+                this.seniorFallFlowLayoutPanel.Controls.SetChildIndex(panel, seniorFallFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.seniorSpring)
+            {
+                SeniorSpringAddClassToPanel(ref panel, classInfo);
+
+                this.seniorSpringFlowLayoutPanel.Controls.Add(panel);
+                this.seniorSpringFlowLayoutPanel.Controls.SetChildIndex(panel, seniorSpringFlowLayoutPanel.Controls.Count);
+            }
+            else if (classInfo.semester == semesters.undecided)
+            {
+                UndecidedRemoveClassToPanel(ref panel, classInfo);
+            }
+
+        }
+        private void FreshFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            freshFallLabel = new System.Windows.Forms.Label();
+
+            // freshFallPanel
+            freshFallPanel.Controls.Add(freshFallLabel);
+            freshFallPanel.Location = new System.Drawing.Point(6, 16);
+            freshFallPanel.Name = "freshFallPanel";
+            freshFallPanel.Size = new System.Drawing.Size(147, 23);
+            freshFallPanel.TabIndex = 0;
+            freshFallPanel.Tag = classInfo;
+
+            // freshFallLabel
+            freshFallLabel.AutoSize = true;
+            freshFallLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            freshFallLabel.Location = new System.Drawing.Point(0, 0);
+            freshFallLabel.Name = "freshFallLabel";
+            freshFallLabel.Size = new System.Drawing.Size(82, 13);
+            freshFallLabel.TabIndex = 0;
+            freshFallLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            freshFallLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                freshFallPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void FreshSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            freshSpringLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            freshSpringPanel.Controls.Add(freshSpringLabel);
+            freshSpringPanel.Location = new System.Drawing.Point(6, 16);
+            freshSpringPanel.Name = "freshSpringPanel";
+            freshSpringPanel.Size = new System.Drawing.Size(147, 23);
+            freshSpringPanel.TabIndex = 0;
+            freshSpringPanel.Tag = classInfo;
+
+            // Label
+            freshSpringLabel.AutoSize = true;
+            freshSpringLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            freshSpringLabel.Location = new System.Drawing.Point(0, 0);
+            freshSpringLabel.Name = "freshSpringLabel";
+            freshSpringLabel.Size = new System.Drawing.Size(82, 13);
+            freshSpringLabel.TabIndex = 0;
+            freshSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            freshSpringLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                freshSpringPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void SophFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            sophFallLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            sophFallPanel.Controls.Add(sophFallLabel);
+            sophFallPanel.Location = new System.Drawing.Point(6, 16);
+            sophFallPanel.Name = "sophFallPanel";
+            sophFallPanel.Size = new System.Drawing.Size(147, 23);
+            sophFallPanel.TabIndex = 0;
+            sophFallPanel.Tag = classInfo;
+
+            // Label
+            sophFallLabel.AutoSize = true;
+            sophFallLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            sophFallLabel.Location = new System.Drawing.Point(0, 0);
+            sophFallLabel.Name = "sophFallLabel";
+            sophFallLabel.Size = new System.Drawing.Size(82, 13);
+            sophFallLabel.TabIndex = 0;
+            sophFallLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            sophFallLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                sophFallPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void SophSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            sophSpringLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            sophSpringPanel.Controls.Add(sophSpringLabel);
+            sophSpringPanel.Location = new System.Drawing.Point(6, 16);
+            sophSpringPanel.Name = "sophSpringPanel";
+            sophSpringPanel.Size = new System.Drawing.Size(147, 23);
+            sophSpringPanel.TabIndex = 0;
+            sophSpringPanel.Tag = classInfo;
+
+            // Label
+            sophSpringLabel.AutoSize = true;
+            sophSpringLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            sophSpringLabel.Location = new System.Drawing.Point(0, 0);
+            sophSpringLabel.Name = "sophSpringLabel";
+            sophSpringLabel.Size = new System.Drawing.Size(82, 13);
+            sophSpringLabel.TabIndex = 0;
+            sophSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            sophSpringLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                sophSpringPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void JuniorFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            juniorFallLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            juniorFallPanel.Controls.Add(juniorFallLabel);
+            juniorFallPanel.Location = new System.Drawing.Point(6, 16);
+            juniorFallPanel.Name = "juniorFallPanel";
+            juniorFallPanel.Size = new System.Drawing.Size(147, 23);
+            juniorFallPanel.TabIndex = 0;
+            juniorFallPanel.Tag = classInfo;
+
+            // Label
+            juniorFallLabel.AutoSize = true;
+            juniorFallLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            juniorFallLabel.Location = new System.Drawing.Point(0, 0);
+            juniorFallLabel.Name = "juniorFallLabel";
+            juniorFallLabel.Size = new System.Drawing.Size(82, 13);
+            juniorFallLabel.TabIndex = 0;
+            juniorFallLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            juniorFallLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                juniorFallPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void JuniorSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            juniorSpringLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            juniorSpringPanel.Controls.Add(juniorSpringLabel);
+            juniorSpringPanel.Location = new System.Drawing.Point(6, 16);
+            juniorSpringPanel.Name = "juniorSpringPanel";
+            juniorSpringPanel.Size = new System.Drawing.Size(147, 23);
+            juniorSpringPanel.TabIndex = 0;
+            juniorSpringPanel.Tag = classInfo;
+
+            // Label
+            juniorSpringLabel.AutoSize = true;
+            juniorSpringLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            juniorSpringLabel.Location = new System.Drawing.Point(0, 0);
+            juniorSpringLabel.Name = "juniorSpringLabel";
+            juniorSpringLabel.Size = new System.Drawing.Size(82, 13);
+            juniorSpringLabel.TabIndex = 0;
+            juniorSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            juniorSpringLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                juniorSpringPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void SeniorFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            seniorFallLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            seniorFallPanel.Controls.Add(seniorFallLabel);
+            seniorFallPanel.Location = new System.Drawing.Point(6, 16);
+            seniorFallPanel.Name = "seniorFallPanel";
+            seniorFallPanel.Size = new System.Drawing.Size(147, 23);
+            seniorFallPanel.TabIndex = 0;
+            seniorFallPanel.Tag = classInfo;
+
+            // Label
+            seniorFallLabel.AutoSize = true;
+            seniorFallLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            seniorFallLabel.Location = new System.Drawing.Point(0, 0);
+            seniorFallLabel.Name = "seniorFallLabel";
+            seniorFallLabel.Size = new System.Drawing.Size(82, 13);
+            seniorFallLabel.TabIndex = 0;
+            seniorFallLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            seniorFallLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                seniorFallPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void SeniorSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            seniorSpringLabel = new System.Windows.Forms.Label();
+
+            // Panel
+            seniorSpringPanel.Controls.Add(seniorSpringLabel);
+            seniorSpringPanel.Location = new System.Drawing.Point(6, 16);
+            seniorSpringPanel.Name = "seniorSpringPanel";
+            seniorSpringPanel.Size = new System.Drawing.Size(147, 23);
+            seniorSpringPanel.TabIndex = 0;
+            seniorSpringPanel.Tag = classInfo;
+
+            // Label
+            seniorSpringLabel.AutoSize = true;
+            seniorSpringLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            seniorSpringLabel.Location = new System.Drawing.Point(0, 0);
+            seniorSpringLabel.Name = "seniorSpringLabel";
+            seniorSpringLabel.Size = new System.Drawing.Size(82, 13);
+            seniorSpringLabel.TabIndex = 0;
+            seniorSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            seniorSpringLabel.Tag = panel;
+
+            if (classInfo.classType == types.major)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (classInfo.classType == types.minor)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            }
+            if (classInfo.classType == types.immersion)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.LightGreen;
+            }
+            if (classInfo.classType == types.genEdPer)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.LightPink;
+            }
+            if (classInfo.classType == types.genEd)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.IndianRed;
+            }
+            if (classInfo.classType == types.free)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.Coral;
+            }
+            if (classInfo.classType == types.adEl)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            }
+            if (classInfo.classType == types.wellness)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.Khaki;
+            }
+            if (classInfo.classType == types.coop)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            }
+            if (classInfo.classType == types.otherClasses)
+            {
+                seniorSpringPanel.BackColor = System.Drawing.Color.Violet;
+            }
+        }
+        private void UndecidedRemoveClassToPanel(ref Panel panel, ClassInfo classInfo)
+        {
+            panel.Dispose();
+        }
+
+
+
 
         private void MajorAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
         {
@@ -1048,7 +1671,7 @@ namespace classCourse
             ToolStripLabel otherToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             ToolStripButton otherToolStripButton = new System.Windows.Forms.ToolStripButton();
 
-            // otherPanel
+            // Panel
             otherPanel.BackColor = System.Drawing.Color.Violet;
             otherPanel.Controls.Add(otherClassTypeLabel);
             otherPanel.Controls.Add(otherClassCreditLabel);
@@ -1060,7 +1683,7 @@ namespace classCourse
             otherPanel.TabIndex = 0;
             otherPanel.Tag = classInfo;
 
-            // otherClassTypeLabel
+            // ClassTypeLabel
             otherClassTypeLabel.AutoSize = true;
             otherClassTypeLabel.Location = new System.Drawing.Point(7, 77);
             otherClassTypeLabel.Name = "otherClassTypeLabel";
@@ -1068,7 +1691,7 @@ namespace classCourse
             otherClassTypeLabel.TabIndex = 3;
             otherClassTypeLabel.Text = "Counts towards: " + classInfo.classType; //System.NullReferenceException: 'Object reference not set to an instance of an object.' classInfo was null
 
-            // otherClassCreditLabel
+            // ClassCreditLabel
             otherClassCreditLabel.AutoSize = true;
             otherClassCreditLabel.Location = new System.Drawing.Point(7, 51);
             otherClassCreditLabel.Name = "otherClassCreditLabel";
@@ -1076,7 +1699,7 @@ namespace classCourse
             otherClassCreditLabel.TabIndex = 2;
             otherClassCreditLabel.Text = classInfo.classCredit;
 
-            // otherClassNameLabel
+            // ClassNameLabel
             otherClassNameLabel.AutoSize = true;
             otherClassNameLabel.Location = new System.Drawing.Point(4, 29);
             otherClassNameLabel.Name = "otherClassNameLabel";
@@ -1084,7 +1707,7 @@ namespace classCourse
             otherClassNameLabel.TabIndex = 1;
             otherClassNameLabel.Text = classInfo.className;
 
-            // otherPanelToolStrip
+            // PanelToolStrip
             otherPanelToolStrip.BackColor = System.Drawing.Color.Violet;
             otherPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             otherToolStripButton,
@@ -1095,7 +1718,7 @@ namespace classCourse
             otherPanelToolStrip.TabIndex = 0;
             otherPanelToolStrip.Text = "toolStrip1";
 
-            // otherToolStripLabel
+            // ToolStripLabel
             otherToolStripLabel.IsLink = true;
             otherToolStripLabel.Name = "otherToolStripLabel";
             otherToolStripLabel.Size = new System.Drawing.Size(134, 22);
@@ -1103,7 +1726,7 @@ namespace classCourse
             otherToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
             otherToolStripLabel.Tag = panel;
 
-            // otherToolStripButton
+            // ToolStripButton
             otherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             otherToolStripButton.Image = global::classCourse.Properties.Resources.plus;
             otherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -1113,6 +1736,7 @@ namespace classCourse
             otherToolStripButton.Click += new EventHandler(classToolStripButton__Click);
             otherToolStripButton.Tag = panel;
         }
+
 
 
 

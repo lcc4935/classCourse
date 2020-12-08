@@ -36,6 +36,48 @@ namespace classCourse
 
             this.newClassCreditComboBox.SelectedItem = classInfo.classCredit;
             this.newClassTypeComboBox.SelectedItem = classInfo.classType;
+
+            // if a new person
+            if (classInfo.department == null)
+            {
+                // default to them
+                this.undecidedRadioButton.Checked = true;
+            }
+            else
+            {
+                switch (classInfo.semester)
+                {
+                    case semesters.freshFall:
+                        this.freshFallRadioButton.Checked = true;
+                        break;
+                    case semesters.freshSpring:
+                        this.freshSpringRadioButton.Checked = true;
+                        break;
+                    case semesters.sophFall:
+                        this.sophFallRadioButton.Checked = true;
+                        break;
+                    case semesters.sophSpring:
+                        this.sophSpringRadioButton.Checked = true;
+                        break;
+                    case semesters.juniorFall:
+                        this.juniorFallRadioButton.Checked = true;
+                        break;
+                    case semesters.juniorSpring:
+                        this.juniorSpringRadioButton.Checked = true;
+                        break;
+                    case semesters.seniorFall:
+                        this.seniorFallRadioButton.Checked = true;
+                        break;
+                    case semesters.seniorSpring:
+                        this.seniorSpringRadioButton.Checked = true;
+                        break;
+                    case semesters.undecided:
+                        this.undecidedRadioButton.Checked = true;
+                        break;
+                }
+
+                this.Show();
+            }
         }
 
         //Comboboxes
@@ -69,6 +111,43 @@ namespace classCourse
 
         private void SubmitButton__Click(object sender, EventArgs e)  //LC
         {
+            if (this.undecidedRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.undecided;
+            }
+            if (this.freshFallRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.freshFall;
+            }
+            if (this.freshSpringRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.freshSpring;
+            }
+            if (this.sophFallRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.sophFall;
+            }
+            if (this.sophSpringRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.sophSpring;
+            }
+            if (this.juniorFallRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.juniorFall;
+            }
+            if (this.juniorSpringRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.juniorSpring;
+            }
+            if (this.seniorFallRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.seniorFall;
+            }
+            if (this.seniorSpringRadioButton.Checked)
+            {
+                this.formClass.semester = semesters.seniorSpring;
+            }
+
             this.Hide();
         }
 
