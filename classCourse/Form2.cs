@@ -28,6 +28,14 @@ namespace classCourse
             this.newClassNameTextBox.TextChanged += new EventHandler(NewClassNameTextBox__TextChanged);
 
             this.submitButton.Click += new EventHandler(SubmitButton__Click);
+
+
+            this.newDepartmentTextBox.Text = classInfo.department; //System.NullReferenceException: 'Object reference not set to an instance of an object.' classInfo was null.
+            this.newCourseCodeTextBox.Text = classInfo.courseCode;
+            this.newClassNameTextBox.Text = classInfo.className;
+
+            this.newClassCreditComboBox.SelectedItem = classInfo.classCredit;
+            this.newClassTypeComboBox.SelectedItem = classInfo.classType;
         }
 
         //Comboboxes

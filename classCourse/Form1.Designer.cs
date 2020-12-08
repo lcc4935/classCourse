@@ -34,116 +34,95 @@
             this.flowLayoutPanelLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.majorGroupBox = new System.Windows.Forms.GroupBox();
             this.majorGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.majorGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.majorFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.majorPanel = new System.Windows.Forms.Panel();
             this.majorClassTypeLabel = new System.Windows.Forms.Label();
             this.majorClassCreditLabel = new System.Windows.Forms.Label();
             this.majorClassNameLabel = new System.Windows.Forms.Label();
             this.majorPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.majorToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.majorToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.minorGroupBox = new System.Windows.Forms.GroupBox();
             this.minorGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.minorGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.minorFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.minorPanel = new System.Windows.Forms.Panel();
             this.minorClassTypeLabel = new System.Windows.Forms.Label();
             this.minorClassCreditLabel = new System.Windows.Forms.Label();
             this.minorClassNameLabel = new System.Windows.Forms.Label();
             this.minorPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.minorToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.minorToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.immersionGroupBox = new System.Windows.Forms.GroupBox();
             this.immersionGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.immersionGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.immersionFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.immersionPanel = new System.Windows.Forms.Panel();
             this.immersionClassTypeLabel = new System.Windows.Forms.Label();
             this.immersionClassCreditLabel = new System.Windows.Forms.Label();
             this.immersionClassNameLabel = new System.Windows.Forms.Label();
             this.immersionPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.immersionToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.immersionToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.genEdPerGroupBox = new System.Windows.Forms.GroupBox();
             this.genEdPerGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.genEdPerGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.genEdPerFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.genEdPerPanel = new System.Windows.Forms.Panel();
             this.genEdPerClassTypeLabel = new System.Windows.Forms.Label();
             this.genEdPerClassCreditLabel = new System.Windows.Forms.Label();
             this.genEdPerClassNameLabel = new System.Windows.Forms.Label();
             this.genEdPerPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.genEdPerToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.genEdPerToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.genEdGroupBox = new System.Windows.Forms.GroupBox();
             this.genEdGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.genEdGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.genEdFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.genEdPanel = new System.Windows.Forms.Panel();
             this.genEdClassTypeLabel = new System.Windows.Forms.Label();
             this.genEdClassCreditLabel = new System.Windows.Forms.Label();
             this.genEdClassNameLabel = new System.Windows.Forms.Label();
             this.genEdPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.genEdToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.genEdToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.freeGroupBox = new System.Windows.Forms.GroupBox();
             this.freeGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.freeGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.freeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.freePanel = new System.Windows.Forms.Panel();
             this.freeClassTypeLabel = new System.Windows.Forms.Label();
             this.freeClassCreditLabel = new System.Windows.Forms.Label();
             this.freeClassNameLabel = new System.Windows.Forms.Label();
             this.freePanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.freeToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.freeToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.adElGroupBox = new System.Windows.Forms.GroupBox();
             this.adElGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.adElGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.adElFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.adElPanel = new System.Windows.Forms.Panel();
             this.adElClassTypeLabel = new System.Windows.Forms.Label();
             this.adElClassCreditLabel = new System.Windows.Forms.Label();
             this.adElClassNameLabel = new System.Windows.Forms.Label();
             this.adElPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.adElToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.adElToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.wellnessGroupBox = new System.Windows.Forms.GroupBox();
             this.wellnessGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.wellnessGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.wellnessFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.wellnessPanel = new System.Windows.Forms.Panel();
             this.wellnessClassTypeLabel = new System.Windows.Forms.Label();
             this.wellnessClassCreditLabel = new System.Windows.Forms.Label();
             this.wellnessClassNameLabel = new System.Windows.Forms.Label();
             this.wellnessPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.wellnessToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.wellnessToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.coopGroupBox = new System.Windows.Forms.GroupBox();
             this.coopGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.coopGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.coopFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.coopPanel = new System.Windows.Forms.Panel();
             this.coopClassTypeLabel = new System.Windows.Forms.Label();
             this.coopClassCreditLabel = new System.Windows.Forms.Label();
             this.coopClassNameLabel = new System.Windows.Forms.Label();
             this.coopPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.coopToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.coopToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.otherGroupBox = new System.Windows.Forms.GroupBox();
             this.otherGroupBoxToolStrip = new System.Windows.Forms.ToolStrip();
-            this.otherGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.otherFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.otherPanel = new System.Windows.Forms.Panel();
             this.otherClassTypeLabel = new System.Windows.Forms.Label();
             this.otherClassCreditLabel = new System.Windows.Forms.Label();
             this.otherClassNameLabel = new System.Windows.Forms.Label();
             this.otherPanelToolStrip = new System.Windows.Forms.ToolStrip();
-            this.otherToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.otherToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.infoButton = new System.Windows.Forms.Button();
-            this.addClassButton = new System.Windows.Forms.Button();
             this.MMILabel = new System.Windows.Forms.Label();
             this.yourCreditLabel = new System.Windows.Forms.Label();
             this.yourNameLabel = new System.Windows.Forms.Label();
@@ -175,6 +154,56 @@
             this.freshFallGroupBox = new System.Windows.Forms.GroupBox();
             this.freshFallFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.freshFallPanel = new System.Windows.Forms.Panel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.majorAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.minorAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.immersionAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.genEdPerAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.genEdAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.freeAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.adElAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.wellnessAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.coopAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.otherAddClassToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.majorGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.majorAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.majorToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.minorGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.minorAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.minorToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.immersionGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.immersionAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.immersionToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.genEdPerGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.genEdPerAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.genEdPerToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.genEdGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.genEdAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.genEdToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.freeGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.freeAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.freeToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.adElGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.adElAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.adElToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.wellnessGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.wellnessAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.wellnessToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.coopGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.coopAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.coopToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.otherGroupBoxToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.otherAddClassToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.otherToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -284,7 +313,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.infoButton);
-            this.splitContainer1.Panel2.Controls.Add(this.addClassButton);
             this.splitContainer1.Panel2.Controls.Add(this.MMILabel);
             this.splitContainer1.Panel2.Controls.Add(this.yourCreditLabel);
             this.splitContainer1.Panel2.Controls.Add(this.yourNameLabel);
@@ -326,9 +354,10 @@
             // 
             // majorGroupBox
             // 
-            this.majorGroupBox.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.majorGroupBox.BackColor = System.Drawing.Color.MediumBlue;
             this.majorGroupBox.Controls.Add(this.majorGroupBoxToolStrip);
             this.majorGroupBox.Controls.Add(this.majorFlowLayoutPanel);
+            this.majorGroupBox.ForeColor = System.Drawing.Color.White;
             this.majorGroupBox.Location = new System.Drawing.Point(3, 3);
             this.majorGroupBox.Name = "majorGroupBox";
             this.majorGroupBox.Size = new System.Drawing.Size(333, 47);
@@ -338,22 +367,17 @@
             // 
             // majorGroupBoxToolStrip
             // 
+            this.majorGroupBoxToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.majorGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.majorGroupBoxToolStripButton});
+            this.majorGroupBoxToolStripButton,
+            this.toolStripSeparator1,
+            this.majorAddClassToolStripLabel,
+            this.majorAddClassToolStripButton});
             this.majorGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.majorGroupBoxToolStrip.Name = "majorGroupBoxToolStrip";
             this.majorGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.majorGroupBoxToolStrip.TabIndex = 1;
             this.majorGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // majorGroupBoxToolStripButton
-            // 
-            this.majorGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.majorGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.majorGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.majorGroupBoxToolStripButton.Name = "majorGroupBoxToolStripButton";
-            this.majorGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.majorGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // majorFlowLayoutPanel
             // 
@@ -366,13 +390,14 @@
             // 
             // majorPanel
             // 
+            this.majorPanel.BackColor = System.Drawing.Color.DodgerBlue;
             this.majorPanel.Controls.Add(this.majorClassTypeLabel);
             this.majorPanel.Controls.Add(this.majorClassCreditLabel);
             this.majorPanel.Controls.Add(this.majorClassNameLabel);
             this.majorPanel.Controls.Add(this.majorPanelToolStrip);
             this.majorPanel.Location = new System.Drawing.Point(3, 3);
             this.majorPanel.Name = "majorPanel";
-            this.majorPanel.Size = new System.Drawing.Size(330, 103);
+            this.majorPanel.Size = new System.Drawing.Size(330, 27);
             this.majorPanel.TabIndex = 0;
             // 
             // majorClassTypeLabel
@@ -404,6 +429,7 @@
             // 
             // majorPanelToolStrip
             // 
+            this.majorPanelToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.majorPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.majorToolStripButton,
             this.majorToolStripLabel});
@@ -412,15 +438,6 @@
             this.majorPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.majorPanelToolStrip.TabIndex = 0;
             this.majorPanelToolStrip.Text = "toolStrip1";
-            // 
-            // majorToolStripButton
-            // 
-            this.majorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.majorToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.majorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.majorToolStripButton.Name = "majorToolStripButton";
-            this.majorToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.majorToolStripButton.Text = "toolStripButton1";
             // 
             // majorToolStripLabel
             // 
@@ -431,34 +448,30 @@
             // 
             // minorGroupBox
             // 
-            this.minorGroupBox.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.minorGroupBox.BackColor = System.Drawing.Color.DarkCyan;
             this.minorGroupBox.Controls.Add(this.minorGroupBoxToolStrip);
             this.minorGroupBox.Controls.Add(this.minorFlowLayoutPanel);
+            this.minorGroupBox.ForeColor = System.Drawing.Color.White;
             this.minorGroupBox.Location = new System.Drawing.Point(3, 56);
             this.minorGroupBox.Name = "minorGroupBox";
-            this.minorGroupBox.Size = new System.Drawing.Size(333, 43);
+            this.minorGroupBox.Size = new System.Drawing.Size(333, 47);
             this.minorGroupBox.TabIndex = 2;
             this.minorGroupBox.TabStop = false;
             this.minorGroupBox.Text = "Minor Classes";
             // 
             // minorGroupBoxToolStrip
             // 
+            this.minorGroupBoxToolStrip.BackColor = System.Drawing.Color.MediumTurquoise;
             this.minorGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.minorGroupBoxToolStripButton});
+            this.minorGroupBoxToolStripButton,
+            this.toolStripSeparator2,
+            this.minorAddClassToolStripLabel,
+            this.minorAddClassToolStripButton});
             this.minorGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.minorGroupBoxToolStrip.Name = "minorGroupBoxToolStrip";
             this.minorGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.minorGroupBoxToolStrip.TabIndex = 1;
             this.minorGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // minorGroupBoxToolStripButton
-            // 
-            this.minorGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.minorGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.minorGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.minorGroupBoxToolStripButton.Name = "minorGroupBoxToolStripButton";
-            this.minorGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.minorGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // minorFlowLayoutPanel
             // 
@@ -471,13 +484,14 @@
             // 
             // minorPanel
             // 
+            this.minorPanel.BackColor = System.Drawing.Color.MediumTurquoise;
             this.minorPanel.Controls.Add(this.minorClassTypeLabel);
             this.minorPanel.Controls.Add(this.minorClassCreditLabel);
             this.minorPanel.Controls.Add(this.minorClassNameLabel);
             this.minorPanel.Controls.Add(this.minorPanelToolStrip);
             this.minorPanel.Location = new System.Drawing.Point(3, 3);
             this.minorPanel.Name = "minorPanel";
-            this.minorPanel.Size = new System.Drawing.Size(330, 109);
+            this.minorPanel.Size = new System.Drawing.Size(330, 27);
             this.minorPanel.TabIndex = 0;
             // 
             // minorClassTypeLabel
@@ -509,6 +523,7 @@
             // 
             // minorPanelToolStrip
             // 
+            this.minorPanelToolStrip.BackColor = System.Drawing.Color.MediumTurquoise;
             this.minorPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.minorToolStripButton,
             this.minorToolStripLabel});
@@ -517,15 +532,6 @@
             this.minorPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.minorPanelToolStrip.TabIndex = 0;
             this.minorPanelToolStrip.Text = "toolStrip1";
-            // 
-            // minorToolStripButton
-            // 
-            this.minorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.minorToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.minorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.minorToolStripButton.Name = "minorToolStripButton";
-            this.minorToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.minorToolStripButton.Text = "toolStripButton1";
             // 
             // minorToolStripLabel
             // 
@@ -536,34 +542,30 @@
             // 
             // immersionGroupBox
             // 
-            this.immersionGroupBox.BackColor = System.Drawing.Color.LightGreen;
+            this.immersionGroupBox.BackColor = System.Drawing.Color.SeaGreen;
             this.immersionGroupBox.Controls.Add(this.immersionGroupBoxToolStrip);
             this.immersionGroupBox.Controls.Add(this.immersionFlowLayoutPanel);
-            this.immersionGroupBox.Location = new System.Drawing.Point(3, 105);
+            this.immersionGroupBox.ForeColor = System.Drawing.Color.White;
+            this.immersionGroupBox.Location = new System.Drawing.Point(3, 109);
             this.immersionGroupBox.Name = "immersionGroupBox";
-            this.immersionGroupBox.Size = new System.Drawing.Size(333, 42);
+            this.immersionGroupBox.Size = new System.Drawing.Size(333, 47);
             this.immersionGroupBox.TabIndex = 2;
             this.immersionGroupBox.TabStop = false;
             this.immersionGroupBox.Text = "Immersion Classes";
             // 
             // immersionGroupBoxToolStrip
             // 
+            this.immersionGroupBoxToolStrip.BackColor = System.Drawing.Color.LightGreen;
             this.immersionGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.immersionGroupBoxToolStripButton});
+            this.immersionGroupBoxToolStripButton,
+            this.toolStripSeparator3,
+            this.immersionAddClassToolStripLabel,
+            this.immersionAddClassToolStripButton});
             this.immersionGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.immersionGroupBoxToolStrip.Name = "immersionGroupBoxToolStrip";
             this.immersionGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.immersionGroupBoxToolStrip.TabIndex = 1;
             this.immersionGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // immersionGroupBoxToolStripButton
-            // 
-            this.immersionGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.immersionGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.immersionGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.immersionGroupBoxToolStripButton.Name = "immersionGroupBoxToolStripButton";
-            this.immersionGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.immersionGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // immersionFlowLayoutPanel
             // 
@@ -576,13 +578,14 @@
             // 
             // immersionPanel
             // 
+            this.immersionPanel.BackColor = System.Drawing.Color.LightGreen;
             this.immersionPanel.Controls.Add(this.immersionClassTypeLabel);
             this.immersionPanel.Controls.Add(this.immersionClassCreditLabel);
             this.immersionPanel.Controls.Add(this.immersionClassNameLabel);
             this.immersionPanel.Controls.Add(this.immersionPanelToolStrip);
             this.immersionPanel.Location = new System.Drawing.Point(3, 3);
             this.immersionPanel.Name = "immersionPanel";
-            this.immersionPanel.Size = new System.Drawing.Size(330, 110);
+            this.immersionPanel.Size = new System.Drawing.Size(330, 27);
             this.immersionPanel.TabIndex = 0;
             // 
             // immersionClassTypeLabel
@@ -614,6 +617,7 @@
             // 
             // immersionPanelToolStrip
             // 
+            this.immersionPanelToolStrip.BackColor = System.Drawing.Color.LightGreen;
             this.immersionPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.immersionToolStripButton,
             this.immersionToolStripLabel});
@@ -622,15 +626,6 @@
             this.immersionPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.immersionPanelToolStrip.TabIndex = 0;
             this.immersionPanelToolStrip.Text = "toolStrip1";
-            // 
-            // immersionToolStripButton
-            // 
-            this.immersionToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.immersionToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.immersionToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.immersionToolStripButton.Name = "immersionToolStripButton";
-            this.immersionToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.immersionToolStripButton.Text = "toolStripButton1";
             // 
             // immersionToolStripLabel
             // 
@@ -641,34 +636,30 @@
             // 
             // genEdPerGroupBox
             // 
-            this.genEdPerGroupBox.BackColor = System.Drawing.Color.Brown;
+            this.genEdPerGroupBox.BackColor = System.Drawing.Color.MediumVioletRed;
             this.genEdPerGroupBox.Controls.Add(this.genEdPerGroupBoxToolStrip);
             this.genEdPerGroupBox.Controls.Add(this.genEdPerFlowLayoutPanel);
-            this.genEdPerGroupBox.Location = new System.Drawing.Point(3, 153);
+            this.genEdPerGroupBox.ForeColor = System.Drawing.Color.White;
+            this.genEdPerGroupBox.Location = new System.Drawing.Point(3, 162);
             this.genEdPerGroupBox.Name = "genEdPerGroupBox";
-            this.genEdPerGroupBox.Size = new System.Drawing.Size(333, 46);
+            this.genEdPerGroupBox.Size = new System.Drawing.Size(333, 47);
             this.genEdPerGroupBox.TabIndex = 2;
             this.genEdPerGroupBox.TabStop = false;
             this.genEdPerGroupBox.Text = "Gen Ed Perspective Classes";
             // 
             // genEdPerGroupBoxToolStrip
             // 
+            this.genEdPerGroupBoxToolStrip.BackColor = System.Drawing.Color.LightPink;
             this.genEdPerGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.genEdPerGroupBoxToolStripButton});
+            this.genEdPerGroupBoxToolStripButton,
+            this.toolStripSeparator4,
+            this.genEdPerAddClassToolStripLabel,
+            this.genEdPerAddClassToolStripButton});
             this.genEdPerGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.genEdPerGroupBoxToolStrip.Name = "genEdPerGroupBoxToolStrip";
             this.genEdPerGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.genEdPerGroupBoxToolStrip.TabIndex = 1;
             this.genEdPerGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // genEdPerGroupBoxToolStripButton
-            // 
-            this.genEdPerGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.genEdPerGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.genEdPerGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.genEdPerGroupBoxToolStripButton.Name = "genEdPerGroupBoxToolStripButton";
-            this.genEdPerGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.genEdPerGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // genEdPerFlowLayoutPanel
             // 
@@ -681,13 +672,14 @@
             // 
             // genEdPerPanel
             // 
+            this.genEdPerPanel.BackColor = System.Drawing.Color.LightPink;
             this.genEdPerPanel.Controls.Add(this.genEdPerClassTypeLabel);
             this.genEdPerPanel.Controls.Add(this.genEdPerClassCreditLabel);
             this.genEdPerPanel.Controls.Add(this.genEdPerClassNameLabel);
             this.genEdPerPanel.Controls.Add(this.genEdPerPanelToolStrip);
             this.genEdPerPanel.Location = new System.Drawing.Point(3, 3);
             this.genEdPerPanel.Name = "genEdPerPanel";
-            this.genEdPerPanel.Size = new System.Drawing.Size(330, 103);
+            this.genEdPerPanel.Size = new System.Drawing.Size(330, 27);
             this.genEdPerPanel.TabIndex = 0;
             // 
             // genEdPerClassTypeLabel
@@ -719,6 +711,7 @@
             // 
             // genEdPerPanelToolStrip
             // 
+            this.genEdPerPanelToolStrip.BackColor = System.Drawing.Color.LightPink;
             this.genEdPerPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.genEdPerToolStripButton,
             this.genEdPerToolStripLabel});
@@ -727,15 +720,6 @@
             this.genEdPerPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.genEdPerPanelToolStrip.TabIndex = 0;
             this.genEdPerPanelToolStrip.Text = "toolStrip1";
-            // 
-            // genEdPerToolStripButton
-            // 
-            this.genEdPerToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.genEdPerToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.genEdPerToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.genEdPerToolStripButton.Name = "genEdPerToolStripButton";
-            this.genEdPerToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.genEdPerToolStripButton.Text = "toolStripButton1";
             // 
             // genEdPerToolStripLabel
             // 
@@ -746,34 +730,30 @@
             // 
             // genEdGroupBox
             // 
-            this.genEdGroupBox.BackColor = System.Drawing.Color.IndianRed;
+            this.genEdGroupBox.BackColor = System.Drawing.Color.DarkRed;
             this.genEdGroupBox.Controls.Add(this.genEdGroupBoxToolStrip);
             this.genEdGroupBox.Controls.Add(this.genEdFlowLayoutPanel);
-            this.genEdGroupBox.Location = new System.Drawing.Point(3, 205);
+            this.genEdGroupBox.ForeColor = System.Drawing.Color.White;
+            this.genEdGroupBox.Location = new System.Drawing.Point(3, 215);
             this.genEdGroupBox.Name = "genEdGroupBox";
-            this.genEdGroupBox.Size = new System.Drawing.Size(333, 43);
+            this.genEdGroupBox.Size = new System.Drawing.Size(333, 47);
             this.genEdGroupBox.TabIndex = 2;
             this.genEdGroupBox.TabStop = false;
             this.genEdGroupBox.Text = "Gen Ed Classes";
             // 
             // genEdGroupBoxToolStrip
             // 
+            this.genEdGroupBoxToolStrip.BackColor = System.Drawing.Color.IndianRed;
             this.genEdGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.genEdGroupBoxToolStripButton});
+            this.genEdGroupBoxToolStripButton,
+            this.toolStripSeparator5,
+            this.genEdAddClassToolStripLabel,
+            this.genEdAddClassToolStripButton});
             this.genEdGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.genEdGroupBoxToolStrip.Name = "genEdGroupBoxToolStrip";
             this.genEdGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.genEdGroupBoxToolStrip.TabIndex = 1;
             this.genEdGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // genEdGroupBoxToolStripButton
-            // 
-            this.genEdGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.genEdGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.genEdGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.genEdGroupBoxToolStripButton.Name = "genEdGroupBoxToolStripButton";
-            this.genEdGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.genEdGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // genEdFlowLayoutPanel
             // 
@@ -786,13 +766,14 @@
             // 
             // genEdPanel
             // 
+            this.genEdPanel.BackColor = System.Drawing.Color.IndianRed;
             this.genEdPanel.Controls.Add(this.genEdClassTypeLabel);
             this.genEdPanel.Controls.Add(this.genEdClassCreditLabel);
             this.genEdPanel.Controls.Add(this.genEdClassNameLabel);
             this.genEdPanel.Controls.Add(this.genEdPanelToolStrip);
             this.genEdPanel.Location = new System.Drawing.Point(3, 3);
             this.genEdPanel.Name = "genEdPanel";
-            this.genEdPanel.Size = new System.Drawing.Size(330, 103);
+            this.genEdPanel.Size = new System.Drawing.Size(330, 27);
             this.genEdPanel.TabIndex = 0;
             // 
             // genEdClassTypeLabel
@@ -824,6 +805,7 @@
             // 
             // genEdPanelToolStrip
             // 
+            this.genEdPanelToolStrip.BackColor = System.Drawing.Color.IndianRed;
             this.genEdPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.genEdToolStripButton,
             this.genEdToolStripLabel});
@@ -832,15 +814,6 @@
             this.genEdPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.genEdPanelToolStrip.TabIndex = 0;
             this.genEdPanelToolStrip.Text = "toolStrip1";
-            // 
-            // genEdToolStripButton
-            // 
-            this.genEdToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.genEdToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.genEdToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.genEdToolStripButton.Name = "genEdToolStripButton";
-            this.genEdToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.genEdToolStripButton.Text = "toolStripButton1";
             // 
             // genEdToolStripLabel
             // 
@@ -851,10 +824,11 @@
             // 
             // freeGroupBox
             // 
-            this.freeGroupBox.BackColor = System.Drawing.Color.Coral;
+            this.freeGroupBox.BackColor = System.Drawing.Color.Sienna;
             this.freeGroupBox.Controls.Add(this.freeGroupBoxToolStrip);
             this.freeGroupBox.Controls.Add(this.freeFlowLayoutPanel);
-            this.freeGroupBox.Location = new System.Drawing.Point(3, 254);
+            this.freeGroupBox.ForeColor = System.Drawing.Color.White;
+            this.freeGroupBox.Location = new System.Drawing.Point(3, 268);
             this.freeGroupBox.Name = "freeGroupBox";
             this.freeGroupBox.Size = new System.Drawing.Size(333, 47);
             this.freeGroupBox.TabIndex = 2;
@@ -863,22 +837,17 @@
             // 
             // freeGroupBoxToolStrip
             // 
+            this.freeGroupBoxToolStrip.BackColor = System.Drawing.Color.Coral;
             this.freeGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.freeGroupBoxToolStripButton});
+            this.freeGroupBoxToolStripButton,
+            this.toolStripSeparator6,
+            this.freeAddClassToolStripLabel,
+            this.freeAddClassToolStripButton});
             this.freeGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.freeGroupBoxToolStrip.Name = "freeGroupBoxToolStrip";
             this.freeGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.freeGroupBoxToolStrip.TabIndex = 1;
             this.freeGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // freeGroupBoxToolStripButton
-            // 
-            this.freeGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.freeGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.freeGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.freeGroupBoxToolStripButton.Name = "freeGroupBoxToolStripButton";
-            this.freeGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.freeGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // freeFlowLayoutPanel
             // 
@@ -891,13 +860,14 @@
             // 
             // freePanel
             // 
+            this.freePanel.BackColor = System.Drawing.Color.Coral;
             this.freePanel.Controls.Add(this.freeClassTypeLabel);
             this.freePanel.Controls.Add(this.freeClassCreditLabel);
             this.freePanel.Controls.Add(this.freeClassNameLabel);
             this.freePanel.Controls.Add(this.freePanelToolStrip);
             this.freePanel.Location = new System.Drawing.Point(3, 3);
             this.freePanel.Name = "freePanel";
-            this.freePanel.Size = new System.Drawing.Size(330, 103);
+            this.freePanel.Size = new System.Drawing.Size(330, 27);
             this.freePanel.TabIndex = 0;
             // 
             // freeClassTypeLabel
@@ -929,6 +899,7 @@
             // 
             // freePanelToolStrip
             // 
+            this.freePanelToolStrip.BackColor = System.Drawing.Color.Coral;
             this.freePanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.freeToolStripButton,
             this.freeToolStripLabel});
@@ -937,15 +908,6 @@
             this.freePanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.freePanelToolStrip.TabIndex = 0;
             this.freePanelToolStrip.Text = "toolStrip1";
-            // 
-            // freeToolStripButton
-            // 
-            this.freeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.freeToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.freeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.freeToolStripButton.Name = "freeToolStripButton";
-            this.freeToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.freeToolStripButton.Text = "toolStripButton1";
             // 
             // freeToolStripLabel
             // 
@@ -956,10 +918,11 @@
             // 
             // adElGroupBox
             // 
-            this.adElGroupBox.BackColor = System.Drawing.Color.SeaGreen;
+            this.adElGroupBox.BackColor = System.Drawing.Color.DarkGreen;
             this.adElGroupBox.Controls.Add(this.adElGroupBoxToolStrip);
             this.adElGroupBox.Controls.Add(this.adElFlowLayoutPanel);
-            this.adElGroupBox.Location = new System.Drawing.Point(3, 307);
+            this.adElGroupBox.ForeColor = System.Drawing.Color.White;
+            this.adElGroupBox.Location = new System.Drawing.Point(3, 321);
             this.adElGroupBox.Name = "adElGroupBox";
             this.adElGroupBox.Size = new System.Drawing.Size(333, 47);
             this.adElGroupBox.TabIndex = 2;
@@ -968,22 +931,17 @@
             // 
             // adElGroupBoxToolStrip
             // 
+            this.adElGroupBoxToolStrip.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.adElGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adElGroupBoxToolStripButton});
+            this.adElGroupBoxToolStripButton,
+            this.toolStripSeparator7,
+            this.adElAddClassToolStripLabel,
+            this.adElAddClassToolStripButton});
             this.adElGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.adElGroupBoxToolStrip.Name = "adElGroupBoxToolStrip";
             this.adElGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.adElGroupBoxToolStrip.TabIndex = 1;
             this.adElGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // adElGroupBoxToolStripButton
-            // 
-            this.adElGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.adElGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.adElGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.adElGroupBoxToolStripButton.Name = "adElGroupBoxToolStripButton";
-            this.adElGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.adElGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // adElFlowLayoutPanel
             // 
@@ -996,13 +954,14 @@
             // 
             // adElPanel
             // 
+            this.adElPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.adElPanel.Controls.Add(this.adElClassTypeLabel);
             this.adElPanel.Controls.Add(this.adElClassCreditLabel);
             this.adElPanel.Controls.Add(this.adElClassNameLabel);
             this.adElPanel.Controls.Add(this.adElPanelToolStrip);
             this.adElPanel.Location = new System.Drawing.Point(3, 3);
             this.adElPanel.Name = "adElPanel";
-            this.adElPanel.Size = new System.Drawing.Size(330, 103);
+            this.adElPanel.Size = new System.Drawing.Size(330, 27);
             this.adElPanel.TabIndex = 0;
             // 
             // adElClassTypeLabel
@@ -1034,6 +993,7 @@
             // 
             // adElPanelToolStrip
             // 
+            this.adElPanelToolStrip.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.adElPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adElToolStripButton,
             this.adElToolStripLabel});
@@ -1042,15 +1002,6 @@
             this.adElPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.adElPanelToolStrip.TabIndex = 0;
             this.adElPanelToolStrip.Text = "toolStrip1";
-            // 
-            // adElToolStripButton
-            // 
-            this.adElToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.adElToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.adElToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.adElToolStripButton.Name = "adElToolStripButton";
-            this.adElToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.adElToolStripButton.Text = "toolStripButton1";
             // 
             // adElToolStripLabel
             // 
@@ -1061,34 +1012,30 @@
             // 
             // wellnessGroupBox
             // 
-            this.wellnessGroupBox.BackColor = System.Drawing.Color.Khaki;
+            this.wellnessGroupBox.BackColor = System.Drawing.Color.Olive;
             this.wellnessGroupBox.Controls.Add(this.wellnessGroupBoxToolStrip);
             this.wellnessGroupBox.Controls.Add(this.wellnessFlowLayoutPanel);
-            this.wellnessGroupBox.Location = new System.Drawing.Point(3, 360);
+            this.wellnessGroupBox.ForeColor = System.Drawing.Color.White;
+            this.wellnessGroupBox.Location = new System.Drawing.Point(3, 374);
             this.wellnessGroupBox.Name = "wellnessGroupBox";
-            this.wellnessGroupBox.Size = new System.Drawing.Size(333, 48);
+            this.wellnessGroupBox.Size = new System.Drawing.Size(333, 47);
             this.wellnessGroupBox.TabIndex = 2;
             this.wellnessGroupBox.TabStop = false;
             this.wellnessGroupBox.Text = "Wellness Classes";
             // 
             // wellnessGroupBoxToolStrip
             // 
+            this.wellnessGroupBoxToolStrip.BackColor = System.Drawing.Color.Khaki;
             this.wellnessGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.wellnessGroupBoxToolStripButton});
+            this.wellnessGroupBoxToolStripButton,
+            this.toolStripSeparator8,
+            this.wellnessAddClassToolStripLabel,
+            this.wellnessAddClassToolStripButton});
             this.wellnessGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.wellnessGroupBoxToolStrip.Name = "wellnessGroupBoxToolStrip";
             this.wellnessGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.wellnessGroupBoxToolStrip.TabIndex = 1;
             this.wellnessGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // wellnessGroupBoxToolStripButton
-            // 
-            this.wellnessGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.wellnessGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.wellnessGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.wellnessGroupBoxToolStripButton.Name = "wellnessGroupBoxToolStripButton";
-            this.wellnessGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.wellnessGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // wellnessFlowLayoutPanel
             // 
@@ -1101,13 +1048,14 @@
             // 
             // wellnessPanel
             // 
+            this.wellnessPanel.BackColor = System.Drawing.Color.Khaki;
             this.wellnessPanel.Controls.Add(this.wellnessClassTypeLabel);
             this.wellnessPanel.Controls.Add(this.wellnessClassCreditLabel);
             this.wellnessPanel.Controls.Add(this.wellnessClassNameLabel);
             this.wellnessPanel.Controls.Add(this.wellnessPanelToolStrip);
             this.wellnessPanel.Location = new System.Drawing.Point(3, 3);
             this.wellnessPanel.Name = "wellnessPanel";
-            this.wellnessPanel.Size = new System.Drawing.Size(330, 103);
+            this.wellnessPanel.Size = new System.Drawing.Size(330, 27);
             this.wellnessPanel.TabIndex = 0;
             // 
             // wellnessClassTypeLabel
@@ -1139,6 +1087,7 @@
             // 
             // wellnessPanelToolStrip
             // 
+            this.wellnessPanelToolStrip.BackColor = System.Drawing.Color.Khaki;
             this.wellnessPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.wellnessToolStripButton,
             this.wellnessToolStripLabel});
@@ -1147,15 +1096,6 @@
             this.wellnessPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.wellnessPanelToolStrip.TabIndex = 0;
             this.wellnessPanelToolStrip.Text = "toolStrip1";
-            // 
-            // wellnessToolStripButton
-            // 
-            this.wellnessToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.wellnessToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.wellnessToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.wellnessToolStripButton.Name = "wellnessToolStripButton";
-            this.wellnessToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.wellnessToolStripButton.Text = "toolStripButton1";
             // 
             // wellnessToolStripLabel
             // 
@@ -1166,34 +1106,30 @@
             // 
             // coopGroupBox
             // 
-            this.coopGroupBox.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.coopGroupBox.BackColor = System.Drawing.Color.DarkViolet;
             this.coopGroupBox.Controls.Add(this.coopGroupBoxToolStrip);
             this.coopGroupBox.Controls.Add(this.coopFlowLayoutPanel);
-            this.coopGroupBox.Location = new System.Drawing.Point(3, 414);
+            this.coopGroupBox.ForeColor = System.Drawing.Color.White;
+            this.coopGroupBox.Location = new System.Drawing.Point(3, 427);
             this.coopGroupBox.Name = "coopGroupBox";
-            this.coopGroupBox.Size = new System.Drawing.Size(333, 41);
+            this.coopGroupBox.Size = new System.Drawing.Size(333, 47);
             this.coopGroupBox.TabIndex = 2;
             this.coopGroupBox.TabStop = false;
             this.coopGroupBox.Text = "Co-op Classes";
             // 
             // coopGroupBoxToolStrip
             // 
+            this.coopGroupBoxToolStrip.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.coopGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.coopGroupBoxToolStripButton});
+            this.coopGroupBoxToolStripButton,
+            this.toolStripSeparator9,
+            this.coopAddClassToolStripLabel,
+            this.coopAddClassToolStripButton});
             this.coopGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.coopGroupBoxToolStrip.Name = "coopGroupBoxToolStrip";
             this.coopGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.coopGroupBoxToolStrip.TabIndex = 1;
             this.coopGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // coopGroupBoxToolStripButton
-            // 
-            this.coopGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.coopGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.coopGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.coopGroupBoxToolStripButton.Name = "coopGroupBoxToolStripButton";
-            this.coopGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.coopGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // coopFlowLayoutPanel
             // 
@@ -1206,13 +1142,14 @@
             // 
             // coopPanel
             // 
+            this.coopPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.coopPanel.Controls.Add(this.coopClassTypeLabel);
             this.coopPanel.Controls.Add(this.coopClassCreditLabel);
             this.coopPanel.Controls.Add(this.coopClassNameLabel);
             this.coopPanel.Controls.Add(this.coopPanelToolStrip);
             this.coopPanel.Location = new System.Drawing.Point(3, 3);
             this.coopPanel.Name = "coopPanel";
-            this.coopPanel.Size = new System.Drawing.Size(330, 103);
+            this.coopPanel.Size = new System.Drawing.Size(330, 27);
             this.coopPanel.TabIndex = 0;
             // 
             // coopClassTypeLabel
@@ -1244,6 +1181,7 @@
             // 
             // coopPanelToolStrip
             // 
+            this.coopPanelToolStrip.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.coopPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.coopToolStripButton,
             this.coopToolStripLabel});
@@ -1252,15 +1190,6 @@
             this.coopPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.coopPanelToolStrip.TabIndex = 0;
             this.coopPanelToolStrip.Text = "toolStrip1";
-            // 
-            // coopToolStripButton
-            // 
-            this.coopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.coopToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.coopToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.coopToolStripButton.Name = "coopToolStripButton";
-            this.coopToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.coopToolStripButton.Text = "toolStripButton1";
             // 
             // coopToolStripLabel
             // 
@@ -1271,34 +1200,30 @@
             // 
             // otherGroupBox
             // 
-            this.otherGroupBox.BackColor = System.Drawing.Color.Violet;
+            this.otherGroupBox.BackColor = System.Drawing.Color.DarkMagenta;
             this.otherGroupBox.Controls.Add(this.otherGroupBoxToolStrip);
             this.otherGroupBox.Controls.Add(this.otherFlowLayoutPanel);
-            this.otherGroupBox.Location = new System.Drawing.Point(3, 461);
+            this.otherGroupBox.ForeColor = System.Drawing.Color.White;
+            this.otherGroupBox.Location = new System.Drawing.Point(3, 480);
             this.otherGroupBox.Name = "otherGroupBox";
-            this.otherGroupBox.Size = new System.Drawing.Size(333, 208);
+            this.otherGroupBox.Size = new System.Drawing.Size(333, 47);
             this.otherGroupBox.TabIndex = 2;
             this.otherGroupBox.TabStop = false;
             this.otherGroupBox.Text = "Other Classes";
             // 
             // otherGroupBoxToolStrip
             // 
+            this.otherGroupBoxToolStrip.BackColor = System.Drawing.Color.Violet;
             this.otherGroupBoxToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.otherGroupBoxToolStripButton});
+            this.otherGroupBoxToolStripButton,
+            this.toolStripSeparator10,
+            this.otherAddClassToolStripLabel,
+            this.otherAddClassToolStripButton});
             this.otherGroupBoxToolStrip.Location = new System.Drawing.Point(3, 16);
             this.otherGroupBoxToolStrip.Name = "otherGroupBoxToolStrip";
             this.otherGroupBoxToolStrip.Size = new System.Drawing.Size(327, 25);
             this.otherGroupBoxToolStrip.TabIndex = 1;
             this.otherGroupBoxToolStrip.Text = "toolStrip1";
-            // 
-            // otherGroupBoxToolStripButton
-            // 
-            this.otherGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.otherGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.otherGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otherGroupBoxToolStripButton.Name = "otherGroupBoxToolStripButton";
-            this.otherGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.otherGroupBoxToolStripButton.Text = "toolStripButton2";
             // 
             // otherFlowLayoutPanel
             // 
@@ -1311,13 +1236,14 @@
             // 
             // otherPanel
             // 
+            this.otherPanel.BackColor = System.Drawing.Color.Violet;
             this.otherPanel.Controls.Add(this.otherClassTypeLabel);
             this.otherPanel.Controls.Add(this.otherClassCreditLabel);
             this.otherPanel.Controls.Add(this.otherClassNameLabel);
             this.otherPanel.Controls.Add(this.otherPanelToolStrip);
             this.otherPanel.Location = new System.Drawing.Point(3, 3);
             this.otherPanel.Name = "otherPanel";
-            this.otherPanel.Size = new System.Drawing.Size(330, 103);
+            this.otherPanel.Size = new System.Drawing.Size(330, 27);
             this.otherPanel.TabIndex = 0;
             // 
             // otherClassTypeLabel
@@ -1349,6 +1275,7 @@
             // 
             // otherPanelToolStrip
             // 
+            this.otherPanelToolStrip.BackColor = System.Drawing.Color.Violet;
             this.otherPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.otherToolStripButton,
             this.otherToolStripLabel});
@@ -1357,15 +1284,6 @@
             this.otherPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             this.otherPanelToolStrip.TabIndex = 0;
             this.otherPanelToolStrip.Text = "toolStrip1";
-            // 
-            // otherToolStripButton
-            // 
-            this.otherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.otherToolStripButton.Image = global::classCourse.Properties.Resources.plus;
-            this.otherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.otherToolStripButton.Name = "otherToolStripButton";
-            this.otherToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.otherToolStripButton.Text = "toolStripButton1";
             // 
             // otherToolStripLabel
             // 
@@ -1376,26 +1294,17 @@
             // 
             // infoButton
             // 
-            this.infoButton.Location = new System.Drawing.Point(49, 56);
+            this.infoButton.Location = new System.Drawing.Point(53, 19);
             this.infoButton.Name = "infoButton";
             this.infoButton.Size = new System.Drawing.Size(100, 23);
             this.infoButton.TabIndex = 16;
             this.infoButton.Text = "Add Personal Info";
             this.infoButton.UseVisualStyleBackColor = true;
             // 
-            // addClassButton
-            // 
-            this.addClassButton.Location = new System.Drawing.Point(59, 14);
-            this.addClassButton.Name = "addClassButton";
-            this.addClassButton.Size = new System.Drawing.Size(75, 23);
-            this.addClassButton.TabIndex = 15;
-            this.addClassButton.Text = "Add a Class";
-            this.addClassButton.UseVisualStyleBackColor = true;
-            // 
             // MMILabel
             // 
             this.MMILabel.AutoSize = true;
-            this.MMILabel.Location = new System.Drawing.Point(233, 58);
+            this.MMILabel.Location = new System.Drawing.Point(50, 70);
             this.MMILabel.Name = "MMILabel";
             this.MMILabel.Size = new System.Drawing.Size(162, 13);
             this.MMILabel.TabIndex = 14;
@@ -1671,6 +1580,386 @@
             this.freshFallPanel.Size = new System.Drawing.Size(147, 23);
             this.freshFallPanel.TabIndex = 0;
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // majorAddClassToolStripLabel
+            // 
+            this.majorAddClassToolStripLabel.Name = "majorAddClassToolStripLabel";
+            this.majorAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.majorAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // minorAddClassToolStripLabel
+            // 
+            this.minorAddClassToolStripLabel.Name = "minorAddClassToolStripLabel";
+            this.minorAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.minorAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // immersionAddClassToolStripLabel
+            // 
+            this.immersionAddClassToolStripLabel.Name = "immersionAddClassToolStripLabel";
+            this.immersionAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.immersionAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // genEdPerAddClassToolStripLabel
+            // 
+            this.genEdPerAddClassToolStripLabel.Name = "genEdPerAddClassToolStripLabel";
+            this.genEdPerAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.genEdPerAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // genEdAddClassToolStripLabel
+            // 
+            this.genEdAddClassToolStripLabel.Name = "genEdAddClassToolStripLabel";
+            this.genEdAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.genEdAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // freeAddClassToolStripLabel
+            // 
+            this.freeAddClassToolStripLabel.Name = "freeAddClassToolStripLabel";
+            this.freeAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.freeAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // adElAddClassToolStripLabel
+            // 
+            this.adElAddClassToolStripLabel.Name = "adElAddClassToolStripLabel";
+            this.adElAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.adElAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // wellnessAddClassToolStripLabel
+            // 
+            this.wellnessAddClassToolStripLabel.Name = "wellnessAddClassToolStripLabel";
+            this.wellnessAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.wellnessAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
+            // 
+            // coopAddClassToolStripLabel
+            // 
+            this.coopAddClassToolStripLabel.Name = "coopAddClassToolStripLabel";
+            this.coopAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.coopAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
+            // 
+            // otherAddClassToolStripLabel
+            // 
+            this.otherAddClassToolStripLabel.Name = "otherAddClassToolStripLabel";
+            this.otherAddClassToolStripLabel.Size = new System.Drawing.Size(59, 22);
+            this.otherAddClassToolStripLabel.Text = "Add Class";
+            // 
+            // majorGroupBoxToolStripButton
+            // 
+            this.majorGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.majorGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.majorGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.majorGroupBoxToolStripButton.Name = "majorGroupBoxToolStripButton";
+            this.majorGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.majorGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // majorAddClassToolStripButton
+            // 
+            this.majorAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.majorAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.majorAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.majorAddClassToolStripButton.Name = "majorAddClassToolStripButton";
+            this.majorAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.majorAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // majorToolStripButton
+            // 
+            this.majorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.majorToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.majorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.majorToolStripButton.Name = "majorToolStripButton";
+            this.majorToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.majorToolStripButton.Text = "toolStripButton1";
+            // 
+            // minorGroupBoxToolStripButton
+            // 
+            this.minorGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.minorGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.minorGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.minorGroupBoxToolStripButton.Name = "minorGroupBoxToolStripButton";
+            this.minorGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.minorGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // minorAddClassToolStripButton
+            // 
+            this.minorAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.minorAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.minorAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.minorAddClassToolStripButton.Name = "minorAddClassToolStripButton";
+            this.minorAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.minorAddClassToolStripButton.Text = "toolStripButton2";
+            // 
+            // minorToolStripButton
+            // 
+            this.minorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.minorToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.minorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.minorToolStripButton.Name = "minorToolStripButton";
+            this.minorToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.minorToolStripButton.Text = "toolStripButton1";
+            // 
+            // immersionGroupBoxToolStripButton
+            // 
+            this.immersionGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.immersionGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.immersionGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.immersionGroupBoxToolStripButton.Name = "immersionGroupBoxToolStripButton";
+            this.immersionGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.immersionGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // immersionAddClassToolStripButton
+            // 
+            this.immersionAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.immersionAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.immersionAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.immersionAddClassToolStripButton.Name = "immersionAddClassToolStripButton";
+            this.immersionAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.immersionAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // immersionToolStripButton
+            // 
+            this.immersionToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.immersionToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.immersionToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.immersionToolStripButton.Name = "immersionToolStripButton";
+            this.immersionToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.immersionToolStripButton.Text = "toolStripButton1";
+            // 
+            // genEdPerGroupBoxToolStripButton
+            // 
+            this.genEdPerGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genEdPerGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.genEdPerGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genEdPerGroupBoxToolStripButton.Name = "genEdPerGroupBoxToolStripButton";
+            this.genEdPerGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.genEdPerGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // genEdPerAddClassToolStripButton
+            // 
+            this.genEdPerAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genEdPerAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.genEdPerAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genEdPerAddClassToolStripButton.Name = "genEdPerAddClassToolStripButton";
+            this.genEdPerAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.genEdPerAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // genEdPerToolStripButton
+            // 
+            this.genEdPerToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genEdPerToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.genEdPerToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genEdPerToolStripButton.Name = "genEdPerToolStripButton";
+            this.genEdPerToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.genEdPerToolStripButton.Text = "toolStripButton1";
+            // 
+            // genEdGroupBoxToolStripButton
+            // 
+            this.genEdGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genEdGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.genEdGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genEdGroupBoxToolStripButton.Name = "genEdGroupBoxToolStripButton";
+            this.genEdGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.genEdGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // genEdAddClassToolStripButton
+            // 
+            this.genEdAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genEdAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.genEdAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genEdAddClassToolStripButton.Name = "genEdAddClassToolStripButton";
+            this.genEdAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.genEdAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // genEdToolStripButton
+            // 
+            this.genEdToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.genEdToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.genEdToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.genEdToolStripButton.Name = "genEdToolStripButton";
+            this.genEdToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.genEdToolStripButton.Text = "toolStripButton1";
+            // 
+            // freeGroupBoxToolStripButton
+            // 
+            this.freeGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.freeGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.freeGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.freeGroupBoxToolStripButton.Name = "freeGroupBoxToolStripButton";
+            this.freeGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.freeGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // freeAddClassToolStripButton
+            // 
+            this.freeAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.freeAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.freeAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.freeAddClassToolStripButton.Name = "freeAddClassToolStripButton";
+            this.freeAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.freeAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // freeToolStripButton
+            // 
+            this.freeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.freeToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.freeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.freeToolStripButton.Name = "freeToolStripButton";
+            this.freeToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.freeToolStripButton.Text = "toolStripButton1";
+            // 
+            // adElGroupBoxToolStripButton
+            // 
+            this.adElGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.adElGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.adElGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adElGroupBoxToolStripButton.Name = "adElGroupBoxToolStripButton";
+            this.adElGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.adElGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // adElAddClassToolStripButton
+            // 
+            this.adElAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.adElAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.adElAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adElAddClassToolStripButton.Name = "adElAddClassToolStripButton";
+            this.adElAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.adElAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // adElToolStripButton
+            // 
+            this.adElToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.adElToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.adElToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.adElToolStripButton.Name = "adElToolStripButton";
+            this.adElToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.adElToolStripButton.Text = "toolStripButton1";
+            // 
+            // wellnessGroupBoxToolStripButton
+            // 
+            this.wellnessGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.wellnessGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.wellnessGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.wellnessGroupBoxToolStripButton.Name = "wellnessGroupBoxToolStripButton";
+            this.wellnessGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.wellnessGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // wellnessAddClassToolStripButton
+            // 
+            this.wellnessAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.wellnessAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.wellnessAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.wellnessAddClassToolStripButton.Name = "wellnessAddClassToolStripButton";
+            this.wellnessAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.wellnessAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // wellnessToolStripButton
+            // 
+            this.wellnessToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.wellnessToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.wellnessToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.wellnessToolStripButton.Name = "wellnessToolStripButton";
+            this.wellnessToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.wellnessToolStripButton.Text = "toolStripButton1";
+            // 
+            // coopGroupBoxToolStripButton
+            // 
+            this.coopGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.coopGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.coopGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.coopGroupBoxToolStripButton.Name = "coopGroupBoxToolStripButton";
+            this.coopGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.coopGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // coopAddClassToolStripButton
+            // 
+            this.coopAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.coopAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.coopAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.coopAddClassToolStripButton.Name = "coopAddClassToolStripButton";
+            this.coopAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.coopAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // coopToolStripButton
+            // 
+            this.coopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.coopToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.coopToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.coopToolStripButton.Name = "coopToolStripButton";
+            this.coopToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.coopToolStripButton.Text = "toolStripButton1";
+            // 
+            // otherGroupBoxToolStripButton
+            // 
+            this.otherGroupBoxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.otherGroupBoxToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.otherGroupBoxToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otherGroupBoxToolStripButton.Name = "otherGroupBoxToolStripButton";
+            this.otherGroupBoxToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.otherGroupBoxToolStripButton.Text = "toolStripButton2";
+            // 
+            // otherAddClassToolStripButton
+            // 
+            this.otherAddClassToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.otherAddClassToolStripButton.Image = global::classCourse.Properties.Resources.addClassSign;
+            this.otherAddClassToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otherAddClassToolStripButton.Name = "otherAddClassToolStripButton";
+            this.otherAddClassToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.otherAddClassToolStripButton.Text = "toolStripButton1";
+            // 
+            // otherToolStripButton
+            // 
+            this.otherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.otherToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            this.otherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.otherToolStripButton.Name = "otherToolStripButton";
+            this.otherToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.otherToolStripButton.Text = "toolStripButton1";
+            // 
             // classCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1944,8 +2233,37 @@
         private System.Windows.Forms.Panel sophSpringPanel;
         private System.Windows.Forms.Panel sophFallPanel;
         private System.Windows.Forms.Panel freshSpringPanel;
-        private System.Windows.Forms.Button addClassButton;
         private System.Windows.Forms.Button infoButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel majorAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton majorAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel minorAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton minorAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripLabel immersionAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton immersionAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripLabel genEdPerAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton genEdPerAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripLabel genEdAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton genEdAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripLabel freeAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton freeAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripLabel adElAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton adElAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripLabel wellnessAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton wellnessAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripLabel coopAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton coopAddClassToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripLabel otherAddClassToolStripLabel;
+        private System.Windows.Forms.ToolStripButton otherAddClassToolStripButton;
     }
 }
 

@@ -9,9 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using classCourseLibrary;
 
-//classValue = department
-//classNumber = courseCode
-//in case I forget to switch them all over
+
+/*
+ * Issues:
+ * 
+ * 1) Don't know how to select the type (functions: ToolStripLabels__Click and AddPanelToClassType)
+ * I tried using .Tag, but I don't think thats right, but I didn't know how else to call it
+ * 
+ * 2) In forms 2 and 3 I loading the reference variables into the form fields and it's coming up as an error
+ * 
+ * 3) I am getting an error in program.cs
+ * 
+ * 4) in the function AddClassButton__Click like 194 is saying classInfo isn't correct and
+ * I am getting that same error in the multipe AddClassToPanel functions
+ * (well I am getting them in one, but that if because I didn't do the if else statement correctly earlier in the code)
+ * 
+ * All the errors have comments sticking out so they should be easy to locate,
+ * I also have null in all the error comments if that makes it easier to search
+ */
+
 
 namespace classCourse
 {
@@ -21,7 +37,6 @@ namespace classCourse
         {
             InitializeComponent();
 
-            this.addClassButton.Click += new EventHandler(AddClassButton__Click);
             this.infoButton.Click += new EventHandler(InfoButton__Click);
 
             this.majorToolStripButton.Click += new EventHandler(classToolStripButton__Click);
@@ -48,13 +63,47 @@ namespace classCourse
 
             this.majorToolStripButton.Tag = this.majorPanel;
             this.minorToolStripButton.Tag = this.minorPanel;
+            this.immersionToolStripButton.Tag = this.immersionPanel;
+            this.genEdPerToolStripButton.Tag = this.genEdPerPanel;
+            this.genEdToolStripButton.Tag = this.genEdPanel;
+            this.freeToolStripButton.Tag = this.freePanel;
+            this.adElToolStripButton.Tag = this.adElPanel;
+            this.wellnessToolStripButton.Tag = this.wellnessPanel;
+            this.coopToolStripButton.Tag = this.coopPanel;
+            this.otherToolStripButton.Tag = this.otherPanel;
 
             this.majorGroupBoxToolStripButton.Tag = this.majorGroupBox;
-            //continue these
+            this.minorGroupBoxToolStripButton.Tag = this.minorGroupBox;
+            this.immersionGroupBoxToolStripButton.Tag = this.immersionGroupBox;
+            this.genEdPerGroupBoxToolStripButton.Tag = this.genEdPerGroupBox;
+            this.genEdGroupBoxToolStripButton.Tag = this.genEdGroupBox;
+            this.freeGroupBoxToolStripButton.Tag = this.freeGroupBox;
+            this.adElGroupBoxToolStripButton.Tag = this.adElGroupBox;
+            this.wellnessGroupBoxToolStripButton.Tag = this.wellnessGroupBox;
+            this.coopGroupBoxToolStripButton.Tag = this.coopGroupBox;
+            this.otherGroupBoxToolStripButton.Tag = this.otherGroupBox;
 
-            //addClassButton - connect button to panels, if statements for type
+            this.majorAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.minorAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.immersionAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.genEdPerAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.genEdAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.freeAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.adElAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.wellnessAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.coopAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
+            this.otherAddClassToolStripButton.Click += new EventHandler(AddClassButton__Click);
 
-
+            this.majorAddClassToolStripButton.Tag = this.majorPanel;
+            this.minorAddClassToolStripButton.Tag = this.minorPanel;
+            this.immersionAddClassToolStripButton.Tag = this.immersionPanel;
+            this.genEdPerAddClassToolStripButton.Tag = this.genEdPerPanel;
+            this.genEdAddClassToolStripButton.Tag = this.genEdPanel;
+            this.freeAddClassToolStripButton.Tag = this.freePanel;
+            this.adElAddClassToolStripButton.Tag = this.adElPanel;
+            this.wellnessAddClassToolStripButton.Tag = this.wellnessPanel;
+            this.coopAddClassToolStripButton.Tag = this.coopPanel;
+            this.otherAddClassToolStripButton.Tag = this.otherPanel;
 
             /*
             this.nameTextBox.Text = basicInfo.name;
@@ -78,15 +127,6 @@ namespace classCourse
 
         //Buttons
 
-        private void AddClassButton__Click(object sender, EventArgs e)  //LC
-        {
-            Button b = (Button)sender;
-            Panel p = (Panel)b.Tag;
-
-            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this); //System.NullReferenceException: 'Object reference not set to an instance of an object.' p was null
-            addEditClass.ShowDialog();
-        }
-
         private void InfoButton__Click(object sender, EventArgs e)  //LC
         {
             Button b = (Button)sender;
@@ -101,7 +141,7 @@ namespace classCourse
             */
         }
 
-        private void classToolStripButton__Click(object sender, EventArgs e) // different sizes for class // initally shrink panels
+        private void classToolStripButton__Click(object sender, EventArgs e)  //LC
         {
             ToolStripButton tsb = (ToolStripButton)sender;
             Panel p = (Panel)tsb.Tag;
@@ -115,14 +155,14 @@ namespace classCourse
             else
             {
                 tsb.Image = global::classCourse.Properties.Resources.minus;
-                p.Size = new System.Drawing.Size(330, 103); // System.NullReferenceException: 'Object reference not set to an instance of an object.'    p was null 
+                p.Size = new System.Drawing.Size(330, 103);
                 tsb.Checked = true;
             }
 
             p.Refresh();
         }
 
-        private void typesToolStripButton__Click(object sender, EventArgs e) // different sizes for class types - figure out based on number of classes
+        private void typesToolStripButton__Click(object sender, EventArgs e)  //LC
         {
             ToolStripButton tsb = (ToolStripButton)sender;
             GroupBox gb = (GroupBox)tsb.Tag;
@@ -130,38 +170,104 @@ namespace classCourse
             if (tsb.Checked)
             {
                 tsb.Image = global::classCourse.Properties.Resources.plus;
-                gb.Size = new System.Drawing.Size(333, 47); //edit size - smaller
+                gb.Size = new System.Drawing.Size(333, 47);
                 tsb.Checked = false;
             }
             else
             {
                 tsb.Image = global::classCourse.Properties.Resources.minus;
-                gb.Size = new System.Drawing.Size(333, 500); //edit size - bigger  System.NullReferenceException: 'Object reference not set to an instance of an object.'
+                gb.Size = new System.Drawing.Size(333, 500);
                 tsb.Checked = true;
             }
 
             gb.Refresh();
         }
 
+        private void AddClassButton__Click(object sender, EventArgs e)  //LC
+        {
+            /*
+            Button b = (Button)sender;
+            Panel p = (Panel)b.Tag;
+
+            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this);
+            addEditClass.ShowDialog();
+            */
+
+            ToolStripButton tsb = (ToolStripButton)sender;
+            Panel p = (Panel)tsb.Tag;
+
+            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this); //System.NullReferenceException: 'Object reference not set to an instance of an object.'
+            addEditClass.Visible = false;
+
+            addEditClass.ShowDialog();
+
+            ClassInfo classInfo = addEditClass.formClass;
+
+            //p.Controls.Clear();
+
+            AddPanelToClassType(sender, e, classInfo);
+
+            //p.Refresh();
+        }
+
 
         //labels
 
-        
-        private void ToolStripLabels__Click(object sender, EventArgs e) // when clicked = edit class  - want to come back to this after library
+
+        private void ToolStripLabels__Click(object sender, EventArgs e)  //LC  If/else statements aren't working as intended (null- to help find error)
         {
             ToolStripLabel tsl = (ToolStripLabel)sender;
             Panel p = (Panel)tsl.Tag;
 
-            AddEditClass cef = new AddEditClass((ClassInfo)p.Tag, this);
-            cef.Visible = false;
+            AddEditClass addEditClass = new AddEditClass((ClassInfo)p.Tag, this);
+            addEditClass.Visible = false;
 
-            cef.ShowDialog();
+            addEditClass.ShowDialog();
 
-            ClassInfo classInfo = cef.formClass;
+            ClassInfo classInfo = addEditClass.formClass;
 
             p.Controls.Clear();
 
-            AddClassToPanel(ref p, classInfo);
+            if (tsl.Tag == majorToolStripLabel)
+            {
+                MajorAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == minorToolStripLabel)
+            {
+                MinorAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == immersionToolStripLabel)
+            {
+                ImmersionAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == genEdPerToolStripLabel)
+            {
+                GenEdPerAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == genEdToolStripLabel)
+            {
+                GenEdAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == freeToolStripLabel)
+            {
+                FreeAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == adElToolStripLabel)
+            {
+                AdElAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == wellnessToolStripLabel)
+            {
+                WellnessAddClassToPanel(ref p, classInfo);
+            }
+            else if (tsl.Tag == coopToolStripLabel)
+            {
+                CoopAddClassToPanel(ref p, classInfo);
+            }
+            else //if (tsl.Tag == otherToolStripLabel)
+            {
+                OtherAddClassToPanel(ref p, classInfo);
+            }
 
             p.Refresh();
         }
@@ -170,20 +276,771 @@ namespace classCourse
 
         //panels
         
-        private void AddPanelToClassType(ClassInfo classInfo)  //LC
+        private void AddPanelToClassType(object sender, EventArgs e, ClassInfo classInfo)  //LC  If/else statements aren't working as intended (null- to help find error)
         {
+            ToolStripButton tsb = (ToolStripButton)sender;
             Panel panel = new System.Windows.Forms.Panel();
-            //this.otherPanel = new System.Windows.Forms.Panel();
 
-            AddClassToPanel(ref panel, classInfo);
-            
-            this.otherFlowLayoutPanel.Controls.Add(panel); //flowLayoutPanel depends on class type
-            this.otherFlowLayoutPanel.Controls.SetChildIndex(panel, otherFlowLayoutPanel.Controls.Count);
+            if (tsb.Tag == majorAddClassToolStripButton)
+            {
+                MajorAddClassToPanel(ref panel, classInfo);
+
+                this.majorFlowLayoutPanel.Controls.Add(panel);
+                this.majorFlowLayoutPanel.Controls.SetChildIndex(panel, majorFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == minorAddClassToolStripButton)
+            {
+                MinorAddClassToPanel(ref panel, classInfo);
+
+                this.minorFlowLayoutPanel.Controls.Add(panel);
+                this.minorFlowLayoutPanel.Controls.SetChildIndex(panel, minorFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == immersionAddClassToolStripButton)
+            {
+                ImmersionAddClassToPanel(ref panel, classInfo);
+
+                this.immersionFlowLayoutPanel.Controls.Add(panel);
+                this.immersionFlowLayoutPanel.Controls.SetChildIndex(panel, immersionFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == genEdPerAddClassToolStripButton)
+            {
+                GenEdPerAddClassToPanel(ref panel, classInfo);
+
+                this.genEdPerFlowLayoutPanel.Controls.Add(panel);
+                this.genEdPerFlowLayoutPanel.Controls.SetChildIndex(panel, genEdPerFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == genEdAddClassToolStripButton)
+            {
+                GenEdAddClassToPanel(ref panel, classInfo);
+
+                this.genEdFlowLayoutPanel.Controls.Add(panel);
+                this.genEdFlowLayoutPanel.Controls.SetChildIndex(panel, genEdFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == freeAddClassToolStripButton)
+            {
+                FreeAddClassToPanel(ref panel, classInfo);
+
+                this.freeFlowLayoutPanel.Controls.Add(panel);
+                this.freeFlowLayoutPanel.Controls.SetChildIndex(panel, freeFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == adElAddClassToolStripButton)
+            {
+                AdElAddClassToPanel(ref panel, classInfo);
+
+                this.adElFlowLayoutPanel.Controls.Add(panel);
+                this.adElFlowLayoutPanel.Controls.SetChildIndex(panel, adElFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == wellnessAddClassToolStripButton)
+            {
+                WellnessAddClassToPanel(ref panel, classInfo);
+
+                this.wellnessFlowLayoutPanel.Controls.Add(panel);
+                this.wellnessFlowLayoutPanel.Controls.SetChildIndex(panel, wellnessFlowLayoutPanel.Controls.Count);
+            }
+            else if (tsb.Tag == coopAddClassToolStripButton)
+            {
+                CoopAddClassToPanel(ref panel, classInfo);
+
+                this.coopFlowLayoutPanel.Controls.Add(panel);
+                this.coopFlowLayoutPanel.Controls.SetChildIndex(panel, coopFlowLayoutPanel.Controls.Count);
+            }
+            else //if (tsb.Tag == otherAddClassToolStripButton)
+            {
+                OtherAddClassToPanel(ref panel, classInfo);
+
+                this.otherFlowLayoutPanel.Controls.Add(panel);
+                this.otherFlowLayoutPanel.Controls.SetChildIndex(panel, otherFlowLayoutPanel.Controls.Count);
+            }
+
         }
 
-        private void AddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        private void MajorAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
         {
             
+            Label majorClassTypeLabel = new System.Windows.Forms.Label();
+            Label majorClassCreditLabel = new System.Windows.Forms.Label();
+            Label majorClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip majorPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel majorToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton majorToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            majorPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            majorPanel.Controls.Add(majorClassTypeLabel);
+            majorPanel.Controls.Add(majorClassCreditLabel);
+            majorPanel.Controls.Add(majorClassNameLabel);
+            majorPanel.Controls.Add(majorPanelToolStrip);
+            majorPanel.Location = new System.Drawing.Point(3, 3);
+            majorPanel.Name = "majorPanel";
+            majorPanel.Size = new System.Drawing.Size(330, 27);
+            majorPanel.TabIndex = 0;
+            majorPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            majorClassTypeLabel.AutoSize = true;
+            majorClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            majorClassTypeLabel.Name = "majorClassTypeLabel";
+            majorClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            majorClassTypeLabel.TabIndex = 3;
+            majorClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+            
+            // ClassCreditLabel
+            majorClassCreditLabel.AutoSize = true;
+            majorClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            majorClassCreditLabel.Name = "majorClassCreditLabel";
+            majorClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            majorClassCreditLabel.TabIndex = 2;
+            majorClassCreditLabel.Text = classInfo.classCredit;
+            
+            // ClassNameLabel
+            majorClassNameLabel.AutoSize = true;
+            majorClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            majorClassNameLabel.Name = "majorClassNameLabel";
+            majorClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            majorClassNameLabel.TabIndex = 1;
+            majorClassNameLabel.Text = classInfo.className;
+            
+            // PanelToolStrip
+            majorPanelToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
+            majorPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            majorToolStripButton,
+            majorToolStripLabel});
+            majorPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            majorPanelToolStrip.Name = "majorPanelToolStrip";
+            majorPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            majorPanelToolStrip.TabIndex = 0;
+            majorPanelToolStrip.Text = "toolStrip1";
+            
+            // ToolStripLabel
+            majorToolStripLabel.IsLink = true;
+            majorToolStripLabel.Name = "majorToolStripLabel";
+            majorToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            majorToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            majorToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            majorToolStripLabel.Tag = panel;
+            
+            // ToolStripButton
+            majorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            majorToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            majorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            majorToolStripButton.Name = "majorToolStripButton";
+            majorToolStripButton.Size = new System.Drawing.Size(23, 22);
+            majorToolStripButton.Text = "toolStripButton1";
+            majorToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            majorToolStripButton.Tag = panel;
+        }
+
+        private void MinorAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label minorClassTypeLabel = new System.Windows.Forms.Label();
+            Label minorClassCreditLabel = new System.Windows.Forms.Label();
+            Label minorClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip minorPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel minorToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton minorToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            minorPanel.BackColor = System.Drawing.Color.MediumTurquoise;
+            minorPanel.Controls.Add(minorClassTypeLabel);
+            minorPanel.Controls.Add(minorClassCreditLabel);
+            minorPanel.Controls.Add(minorClassNameLabel);
+            minorPanel.Controls.Add(minorPanelToolStrip);
+            minorPanel.Location = new System.Drawing.Point(3, 3);
+            minorPanel.Name = "minorPanel";
+            minorPanel.Size = new System.Drawing.Size(330, 27);
+            minorPanel.TabIndex = 0;
+            minorPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            minorClassTypeLabel.AutoSize = true;
+            minorClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            minorClassTypeLabel.Name = "minorClassTypeLabel";
+            minorClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            minorClassTypeLabel.TabIndex = 3;
+            minorClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            minorClassCreditLabel.AutoSize = true;
+            minorClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            minorClassCreditLabel.Name = "minorClassCreditLabel";
+            minorClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            minorClassCreditLabel.TabIndex = 2;
+            minorClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            minorClassNameLabel.AutoSize = true;
+            minorClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            minorClassNameLabel.Name = "minorClassNameLabel";
+            minorClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            minorClassNameLabel.TabIndex = 1;
+            minorClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            minorPanelToolStrip.BackColor = System.Drawing.Color.MediumTurquoise;
+            minorPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            minorToolStripButton,
+            minorToolStripLabel});
+            minorPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            minorPanelToolStrip.Name = "minorPanelToolStrip";
+            minorPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            minorPanelToolStrip.TabIndex = 0;
+            minorPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            minorToolStripLabel.IsLink = true;
+            minorToolStripLabel.Name = "minorToolStripLabel";
+            minorToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            minorToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            minorToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            minorToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            minorToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            minorToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            minorToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            minorToolStripButton.Name = "minorToolStripButton";
+            minorToolStripButton.Size = new System.Drawing.Size(23, 22);
+            minorToolStripButton.Text = "toolStripButton1";
+            minorToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            minorToolStripButton.Tag = panel;
+        }
+
+        private void ImmersionAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label immersionClassTypeLabel = new System.Windows.Forms.Label();
+            Label immersionClassCreditLabel = new System.Windows.Forms.Label();
+            Label immersionClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip immersionPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel immersionToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton immersionToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            immersionPanel.BackColor = System.Drawing.Color.LightGreen;
+            immersionPanel.Controls.Add(immersionClassTypeLabel);
+            immersionPanel.Controls.Add(immersionClassCreditLabel);
+            immersionPanel.Controls.Add(immersionClassNameLabel);
+            immersionPanel.Controls.Add(immersionPanelToolStrip);
+            immersionPanel.Location = new System.Drawing.Point(3, 3);
+            immersionPanel.Name = "immersionPanel";
+            immersionPanel.Size = new System.Drawing.Size(330, 27);
+            immersionPanel.TabIndex = 0;
+            immersionPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            immersionClassTypeLabel.AutoSize = true;
+            immersionClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            immersionClassTypeLabel.Name = "immersionClassTypeLabel";
+            immersionClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            immersionClassTypeLabel.TabIndex = 3;
+            immersionClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            immersionClassCreditLabel.AutoSize = true;
+            immersionClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            immersionClassCreditLabel.Name = "immersionClassCreditLabel";
+            immersionClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            immersionClassCreditLabel.TabIndex = 2;
+            immersionClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            immersionClassNameLabel.AutoSize = true;
+            immersionClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            immersionClassNameLabel.Name = "immersionClassNameLabel";
+            immersionClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            immersionClassNameLabel.TabIndex = 1;
+            immersionClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            immersionPanelToolStrip.BackColor = System.Drawing.Color.LightGreen;
+            immersionPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            immersionToolStripButton,
+            immersionToolStripLabel});
+            immersionPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            immersionPanelToolStrip.Name = "immersionPanelToolStrip";
+            immersionPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            immersionPanelToolStrip.TabIndex = 0;
+            immersionPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            immersionToolStripLabel.IsLink = true;
+            immersionToolStripLabel.Name = "immersionToolStripLabel";
+            immersionToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            immersionToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            immersionToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            immersionToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            immersionToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            immersionToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            immersionToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            immersionToolStripButton.Name = "immersionToolStripButton";
+            immersionToolStripButton.Size = new System.Drawing.Size(23, 22);
+            immersionToolStripButton.Text = "toolStripButton1";
+            immersionToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            immersionToolStripButton.Tag = panel;
+        }
+
+        private void GenEdPerAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label genEdPerClassTypeLabel = new System.Windows.Forms.Label();
+            Label genEdPerClassCreditLabel = new System.Windows.Forms.Label();
+            Label genEdPerClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip genEdPerPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel genEdPerToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton genEdPerToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            genEdPerPanel.BackColor = System.Drawing.Color.LightPink;
+            genEdPerPanel.Controls.Add(genEdPerClassTypeLabel);
+            genEdPerPanel.Controls.Add(genEdPerClassCreditLabel);
+            genEdPerPanel.Controls.Add(genEdPerClassNameLabel);
+            genEdPerPanel.Controls.Add(genEdPerPanelToolStrip);
+            genEdPerPanel.Location = new System.Drawing.Point(3, 3);
+            genEdPerPanel.Name = "genEdPerPanel";
+            genEdPerPanel.Size = new System.Drawing.Size(330, 27);
+            genEdPerPanel.TabIndex = 0;
+            genEdPerPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            genEdPerClassTypeLabel.AutoSize = true;
+            genEdPerClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            genEdPerClassTypeLabel.Name = "genEdPerClassTypeLabel";
+            genEdPerClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            genEdPerClassTypeLabel.TabIndex = 3;
+            genEdPerClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            genEdPerClassCreditLabel.AutoSize = true;
+            genEdPerClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            genEdPerClassCreditLabel.Name = "genEdPerClassCreditLabel";
+            genEdPerClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            genEdPerClassCreditLabel.TabIndex = 2;
+            genEdPerClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            genEdPerClassNameLabel.AutoSize = true;
+            genEdPerClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            genEdPerClassNameLabel.Name = "genEdPerClassNameLabel";
+            genEdPerClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            genEdPerClassNameLabel.TabIndex = 1;
+            genEdPerClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            genEdPerPanelToolStrip.BackColor = System.Drawing.Color.LightPink;
+            genEdPerPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            genEdPerToolStripButton,
+            genEdPerToolStripLabel});
+            genEdPerPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            genEdPerPanelToolStrip.Name = "genEdPerPanelToolStrip";
+            genEdPerPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            genEdPerPanelToolStrip.TabIndex = 0;
+            genEdPerPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            genEdPerToolStripLabel.IsLink = true;
+            genEdPerToolStripLabel.Name = "genEdPerToolStripLabel";
+            genEdPerToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            genEdPerToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            genEdPerToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            genEdPerToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            genEdPerToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            genEdPerToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            genEdPerToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            genEdPerToolStripButton.Name = "genEdPerToolStripButton";
+            genEdPerToolStripButton.Size = new System.Drawing.Size(23, 22);
+            genEdPerToolStripButton.Text = "toolStripButton1";
+            genEdPerToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            genEdPerToolStripButton.Tag = panel;
+        }
+
+        private void GenEdAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label genEdClassTypeLabel = new System.Windows.Forms.Label();
+            Label genEdClassCreditLabel = new System.Windows.Forms.Label();
+            Label genEdClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip genEdPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel genEdToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton genEdToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            genEdPanel.BackColor = System.Drawing.Color.IndianRed;
+            genEdPanel.Controls.Add(genEdClassTypeLabel);
+            genEdPanel.Controls.Add(genEdClassCreditLabel);
+            genEdPanel.Controls.Add(genEdClassNameLabel);
+            genEdPanel.Controls.Add(genEdPanelToolStrip);
+            genEdPanel.Location = new System.Drawing.Point(3, 3);
+            genEdPanel.Name = "genEdPanel";
+            genEdPanel.Size = new System.Drawing.Size(330, 27);
+            genEdPanel.TabIndex = 0;
+            genEdPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            genEdClassTypeLabel.AutoSize = true;
+            genEdClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            genEdClassTypeLabel.Name = "genEdClassTypeLabel";
+            genEdClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            genEdClassTypeLabel.TabIndex = 3;
+            genEdClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            genEdClassCreditLabel.AutoSize = true;
+            genEdClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            genEdClassCreditLabel.Name = "genEdClassCreditLabel";
+            genEdClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            genEdClassCreditLabel.TabIndex = 2;
+            genEdClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            genEdClassNameLabel.AutoSize = true;
+            genEdClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            genEdClassNameLabel.Name = "genEdClassNameLabel";
+            genEdClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            genEdClassNameLabel.TabIndex = 1;
+            genEdClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            genEdPanelToolStrip.BackColor = System.Drawing.Color.IndianRed;
+            genEdPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            genEdToolStripButton,
+            genEdToolStripLabel});
+            genEdPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            genEdPanelToolStrip.Name = "genEdPanelToolStrip";
+            genEdPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            genEdPanelToolStrip.TabIndex = 0;
+            genEdPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            genEdToolStripLabel.IsLink = true;
+            genEdToolStripLabel.Name = "genEdToolStripLabel";
+            genEdToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            genEdToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            genEdToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            genEdToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            genEdToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            genEdToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            genEdToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            genEdToolStripButton.Name = "genEdToolStripButton";
+            genEdToolStripButton.Size = new System.Drawing.Size(23, 22);
+            genEdToolStripButton.Text = "toolStripButton1";
+            genEdToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            genEdToolStripButton.Tag = panel;
+        }
+
+        private void FreeAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label freeClassTypeLabel = new System.Windows.Forms.Label();
+            Label freeClassCreditLabel = new System.Windows.Forms.Label();
+            Label freeClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip freePanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel freeToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton freeToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            freePanel.BackColor = System.Drawing.Color.Coral;
+            freePanel.Controls.Add(freeClassTypeLabel);
+            freePanel.Controls.Add(freeClassCreditLabel);
+            freePanel.Controls.Add(freeClassNameLabel);
+            freePanel.Controls.Add(freePanelToolStrip);
+            freePanel.Location = new System.Drawing.Point(3, 3);
+            freePanel.Name = "freePanel";
+            freePanel.Size = new System.Drawing.Size(330, 27);
+            freePanel.TabIndex = 0;
+            freePanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            freeClassTypeLabel.AutoSize = true;
+            freeClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            freeClassTypeLabel.Name = "freeClassTypeLabel";
+            freeClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            freeClassTypeLabel.TabIndex = 3;
+            freeClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            freeClassCreditLabel.AutoSize = true;
+            freeClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            freeClassCreditLabel.Name = "freeClassCreditLabel";
+            freeClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            freeClassCreditLabel.TabIndex = 2;
+            freeClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            freeClassNameLabel.AutoSize = true;
+            freeClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            freeClassNameLabel.Name = "freeClassNameLabel";
+            freeClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            freeClassNameLabel.TabIndex = 1;
+            freeClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            freePanelToolStrip.BackColor = System.Drawing.Color.Coral;
+            freePanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            freeToolStripButton,
+            freeToolStripLabel});
+            freePanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            freePanelToolStrip.Name = "freePanelToolStrip";
+            freePanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            freePanelToolStrip.TabIndex = 0;
+            freePanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            freeToolStripLabel.IsLink = true;
+            freeToolStripLabel.Name = "freeToolStripLabel";
+            freeToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            freeToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            freeToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            freeToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            freeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            freeToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            freeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            freeToolStripButton.Name = "freeToolStripButton";
+            freeToolStripButton.Size = new System.Drawing.Size(23, 22);
+            freeToolStripButton.Text = "toolStripButton1";
+            freeToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            freeToolStripButton.Tag = panel;
+        }
+
+        private void AdElAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label adElClassTypeLabel = new System.Windows.Forms.Label();
+            Label adElClassCreditLabel = new System.Windows.Forms.Label();
+            Label adElClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip adElPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel adElToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton adElToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            adElPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            adElPanel.Controls.Add(adElClassTypeLabel);
+            adElPanel.Controls.Add(adElClassCreditLabel);
+            adElPanel.Controls.Add(adElClassNameLabel);
+            adElPanel.Controls.Add(adElPanelToolStrip);
+            adElPanel.Location = new System.Drawing.Point(3, 3);
+            adElPanel.Name = "adElPanel";
+            adElPanel.Size = new System.Drawing.Size(330, 27);
+            adElPanel.TabIndex = 0;
+            adElPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            adElClassTypeLabel.AutoSize = true;
+            adElClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            adElClassTypeLabel.Name = "adElClassTypeLabel";
+            adElClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            adElClassTypeLabel.TabIndex = 3;
+            adElClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            adElClassCreditLabel.AutoSize = true;
+            adElClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            adElClassCreditLabel.Name = "adElClassCreditLabel";
+            adElClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            adElClassCreditLabel.TabIndex = 2;
+            adElClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            adElClassNameLabel.AutoSize = true;
+            adElClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            adElClassNameLabel.Name = "adElClassNameLabel";
+            adElClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            adElClassNameLabel.TabIndex = 1;
+            adElClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            adElPanelToolStrip.BackColor = System.Drawing.Color.MediumSeaGreen;
+            adElPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            adElToolStripButton,
+            adElToolStripLabel});
+            adElPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            adElPanelToolStrip.Name = "adElPanelToolStrip";
+            adElPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            adElPanelToolStrip.TabIndex = 0;
+            adElPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            adElToolStripLabel.IsLink = true;
+            adElToolStripLabel.Name = "adElToolStripLabel";
+            adElToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            adElToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            adElToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            adElToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            adElToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            adElToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            adElToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            adElToolStripButton.Name = "adElToolStripButton";
+            adElToolStripButton.Size = new System.Drawing.Size(23, 22);
+            adElToolStripButton.Text = "toolStripButton1";
+            adElToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            adElToolStripButton.Tag = panel;
+        }
+
+        private void WellnessAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label wellnessClassTypeLabel = new System.Windows.Forms.Label();
+            Label wellnessClassCreditLabel = new System.Windows.Forms.Label();
+            Label wellnessClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip wellnessPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel wellnessToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton wellnessToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            wellnessPanel.BackColor = System.Drawing.Color.Khaki;
+            wellnessPanel.Controls.Add(wellnessClassTypeLabel);
+            wellnessPanel.Controls.Add(wellnessClassCreditLabel);
+            wellnessPanel.Controls.Add(wellnessClassNameLabel);
+            wellnessPanel.Controls.Add(wellnessPanelToolStrip);
+            wellnessPanel.Location = new System.Drawing.Point(3, 3);
+            wellnessPanel.Name = "wellnessPanel";
+            wellnessPanel.Size = new System.Drawing.Size(330, 27);
+            wellnessPanel.TabIndex = 0;
+            wellnessPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            wellnessClassTypeLabel.AutoSize = true;
+            wellnessClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            wellnessClassTypeLabel.Name = "wellnessClassTypeLabel";
+            wellnessClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            wellnessClassTypeLabel.TabIndex = 3;
+            wellnessClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            wellnessClassCreditLabel.AutoSize = true;
+            wellnessClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            wellnessClassCreditLabel.Name = "wellnessClassCreditLabel";
+            wellnessClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            wellnessClassCreditLabel.TabIndex = 2;
+            wellnessClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            wellnessClassNameLabel.AutoSize = true;
+            wellnessClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            wellnessClassNameLabel.Name = "wellnessClassNameLabel";
+            wellnessClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            wellnessClassNameLabel.TabIndex = 1;
+            wellnessClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            wellnessPanelToolStrip.BackColor = System.Drawing.Color.Khaki;
+            wellnessPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            wellnessToolStripButton,
+            wellnessToolStripLabel});
+            wellnessPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            wellnessPanelToolStrip.Name = "wellnessPanelToolStrip";
+            wellnessPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            wellnessPanelToolStrip.TabIndex = 0;
+            wellnessPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            wellnessToolStripLabel.IsLink = true;
+            wellnessToolStripLabel.Name = "wellnessToolStripLabel";
+            wellnessToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            wellnessToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            wellnessToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            wellnessToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            wellnessToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            wellnessToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            wellnessToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            wellnessToolStripButton.Name = "wellnessToolStripButton";
+            wellnessToolStripButton.Size = new System.Drawing.Size(23, 22);
+            wellnessToolStripButton.Text = "toolStripButton1";
+            wellnessToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            wellnessToolStripButton.Tag = panel;
+        }
+
+        private void CoopAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
+            Label coopClassTypeLabel = new System.Windows.Forms.Label();
+            Label coopClassCreditLabel = new System.Windows.Forms.Label();
+            Label coopClassNameLabel = new System.Windows.Forms.Label();
+            ToolStrip coopPanelToolStrip = new System.Windows.Forms.ToolStrip();
+            ToolStripLabel coopToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            ToolStripButton coopToolStripButton = new System.Windows.Forms.ToolStripButton();
+
+            // Panel
+            coopPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
+            coopPanel.Controls.Add(coopClassTypeLabel);
+            coopPanel.Controls.Add(coopClassCreditLabel);
+            coopPanel.Controls.Add(coopClassNameLabel);
+            coopPanel.Controls.Add(coopPanelToolStrip);
+            coopPanel.Location = new System.Drawing.Point(3, 3);
+            coopPanel.Name = "coopPanel";
+            coopPanel.Size = new System.Drawing.Size(330, 27);
+            coopPanel.TabIndex = 0;
+            coopPanel.Tag = classInfo;
+
+            // ClassTypeLabel
+            coopClassTypeLabel.AutoSize = true;
+            coopClassTypeLabel.Location = new System.Drawing.Point(7, 77);
+            coopClassTypeLabel.Name = "coopClassTypeLabel";
+            coopClassTypeLabel.Size = new System.Drawing.Size(112, 13);
+            coopClassTypeLabel.TabIndex = 3;
+            coopClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
+
+            // ClassCreditLabel
+            coopClassCreditLabel.AutoSize = true;
+            coopClassCreditLabel.Location = new System.Drawing.Point(7, 51);
+            coopClassCreditLabel.Name = "coopClassCreditLabel";
+            coopClassCreditLabel.Size = new System.Drawing.Size(48, 13);
+            coopClassCreditLabel.TabIndex = 2;
+            coopClassCreditLabel.Text = classInfo.classCredit;
+
+            // ClassNameLabel
+            coopClassNameLabel.AutoSize = true;
+            coopClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            coopClassNameLabel.Name = "coopClassNameLabel";
+            coopClassNameLabel.Size = new System.Drawing.Size(60, 13);
+            coopClassNameLabel.TabIndex = 1;
+            coopClassNameLabel.Text = classInfo.className;
+
+            // PanelToolStrip
+            coopPanelToolStrip.BackColor = System.Drawing.Color.MediumSlateBlue;
+            coopPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            coopToolStripButton,
+            coopToolStripLabel});
+            coopPanelToolStrip.Location = new System.Drawing.Point(0, 0);
+            coopPanelToolStrip.Name = "coopPanelToolStrip";
+            coopPanelToolStrip.Size = new System.Drawing.Size(330, 25);
+            coopPanelToolStrip.TabIndex = 0;
+            coopPanelToolStrip.Text = "toolStrip1";
+
+            // ToolStripLabel
+            coopToolStripLabel.IsLink = true;
+            coopToolStripLabel.Name = "coopToolStripLabel";
+            coopToolStripLabel.Size = new System.Drawing.Size(134, 22);
+            coopToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            coopToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
+            coopToolStripLabel.Tag = panel;
+
+            // ToolStripButton
+            coopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            coopToolStripButton.Image = global::classCourse.Properties.Resources.plus;
+            coopToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            coopToolStripButton.Name = "coopToolStripButton";
+            coopToolStripButton.Size = new System.Drawing.Size(23, 22);
+            coopToolStripButton.Text = "toolStripButton1";
+            coopToolStripButton.Click += new EventHandler(classToolStripButton__Click);
+            coopToolStripButton.Tag = panel;
+        }
+
+        private void OtherAddClassToPanel(ref Panel panel, ClassInfo classInfo)  //LC
+        {
+
             Label otherClassTypeLabel = new System.Windows.Forms.Label();
             Label otherClassCreditLabel = new System.Windows.Forms.Label();
             Label otherClassNameLabel = new System.Windows.Forms.Label();
@@ -191,10 +1048,8 @@ namespace classCourse
             ToolStripLabel otherToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             ToolStripButton otherToolStripButton = new System.Windows.Forms.ToolStripButton();
 
-            // edit background based on class type
-
             // otherPanel
-            // 
+            otherPanel.BackColor = System.Drawing.Color.Violet;
             otherPanel.Controls.Add(otherClassTypeLabel);
             otherPanel.Controls.Add(otherClassCreditLabel);
             otherPanel.Controls.Add(otherClassNameLabel);
@@ -204,36 +1059,33 @@ namespace classCourse
             otherPanel.Size = new System.Drawing.Size(330, 27);
             otherPanel.TabIndex = 0;
             otherPanel.Tag = classInfo;
-            // 
+
             // otherClassTypeLabel
-            // 
             otherClassTypeLabel.AutoSize = true;
             otherClassTypeLabel.Location = new System.Drawing.Point(7, 77);
             otherClassTypeLabel.Name = "otherClassTypeLabel";
             otherClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             otherClassTypeLabel.TabIndex = 3;
-            otherClassTypeLabel.Text = "Counts towards: " + classInfo.classType; //library variables
-            // 
+            otherClassTypeLabel.Text = "Counts towards: " + classInfo.classType; //System.NullReferenceException: 'Object reference not set to an instance of an object.' classInfo was null
+
             // otherClassCreditLabel
-            // 
             otherClassCreditLabel.AutoSize = true;
             otherClassCreditLabel.Location = new System.Drawing.Point(7, 51);
             otherClassCreditLabel.Name = "otherClassCreditLabel";
             otherClassCreditLabel.Size = new System.Drawing.Size(48, 13);
             otherClassCreditLabel.TabIndex = 2;
-            otherClassCreditLabel.Text = classInfo.classCredit; //library variables
-            // 
+            otherClassCreditLabel.Text = classInfo.classCredit;
+
             // otherClassNameLabel
-            // 
             otherClassNameLabel.AutoSize = true;
             otherClassNameLabel.Location = new System.Drawing.Point(4, 29);
             otherClassNameLabel.Name = "otherClassNameLabel";
             otherClassNameLabel.Size = new System.Drawing.Size(60, 13);
             otherClassNameLabel.TabIndex = 1;
-            otherClassNameLabel.Text = classInfo.className; //library variables
-            // 
+            otherClassNameLabel.Text = classInfo.className;
+
             // otherPanelToolStrip
-            // 
+            otherPanelToolStrip.BackColor = System.Drawing.Color.Violet;
             otherPanelToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             otherToolStripButton,
             otherToolStripLabel});
@@ -242,18 +1094,16 @@ namespace classCourse
             otherPanelToolStrip.Size = new System.Drawing.Size(330, 25);
             otherPanelToolStrip.TabIndex = 0;
             otherPanelToolStrip.Text = "toolStrip1";
-            // 
+
             // otherToolStripLabel
-            // 
             otherToolStripLabel.IsLink = true;
             otherToolStripLabel.Name = "otherToolStripLabel";
             otherToolStripLabel.Size = new System.Drawing.Size(134, 22);
-            otherToolStripLabel.Text = classInfo.department + classInfo.courseCode; //library variables
-            otherToolStripLabel.Click += new EventHandler(ToolStripLabels__Click); //potentially edit name of event after write this
+            otherToolStripLabel.Text = classInfo.department + classInfo.courseCode;
+            otherToolStripLabel.Click += new EventHandler(ToolStripLabels__Click);
             otherToolStripLabel.Tag = panel;
-            //
+
             // otherToolStripButton
-            // 
             otherToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             otherToolStripButton.Image = global::classCourse.Properties.Resources.plus;
             otherToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -262,7 +1112,6 @@ namespace classCourse
             otherToolStripButton.Text = "toolStripButton1";
             otherToolStripButton.Click += new EventHandler(classToolStripButton__Click);
             otherToolStripButton.Tag = panel;
-            
         }
 
 

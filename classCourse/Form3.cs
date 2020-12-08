@@ -20,9 +20,6 @@ namespace classCourse
 
             this.formInfo = basicInfo;
 
-            this.majorComboBox.SelectedIndexChanged += new EventHandler(MajorComboBox__SelectedIndexChanged);
-            this.minorComboBox.SelectedIndexChanged += new EventHandler(MinorComboBox__SelectedIndexChanged);
-            this.extraClassComboBox.SelectedIndexChanged += new EventHandler(ExtraClassComboBox__SelectedIndexChanged);
 
             this.minorCheckBox.CheckedChanged += new EventHandler(this.minorCheckBox__CheckedChanged);
 
@@ -34,10 +31,16 @@ namespace classCourse
 
             this.okButton.Click += new EventHandler(OkButton__Click);
 
-            this.minorClassLabel.Visible = false;
-            this.minorComboBox.Visible = false;
             this.minorLabel.Visible = false;
             this.minorTextBox.Visible = false;
+
+            
+            this.nameTextBox.Text = basicInfo.name; //System.NullReferenceException: 'Object reference not set to an instance of an object.'  basicInfo was null.
+            this.majorTextBox.Text = basicInfo.major;
+            this.immersionTextBox.Text = basicInfo.immersion;
+            this.minorTextBox.Text = basicInfo.minor;
+            this.creditTextBox.Text = basicInfo.credit;
+            
         }
 
         //Checkboxes
@@ -47,193 +50,42 @@ namespace classCourse
 
             if (cb.Checked)
             {
-                this.minorClassLabel.Visible = true;
-                this.minorComboBox.Visible = true;
                 this.minorLabel.Visible = true;
                 this.minorTextBox.Visible = true;
             }
             else
             {
-                this.minorClassLabel.Visible = false;
-                this.minorComboBox.Visible = false;
                 this.minorLabel.Visible = false;
                 this.minorTextBox.Visible = false;
             }
 
         }
 
-        //ComboBoxes
-        private void MajorComboBox__SelectedIndexChanged(object sender, EventArgs e) //LC
-        {
-            ComboBox cb = (ComboBox)sender;
-        }
-
-        private void MinorComboBox__SelectedIndexChanged(object sender, EventArgs e) //LC
-        {
-            ComboBox cb = (ComboBox)sender;
-        }
-
-        private void ExtraClassComboBox__SelectedIndexChanged(object sender, EventArgs e) //LC
-        {
-            ComboBox cb = (ComboBox)sender;
-        }
 
         //Text Boxes
         private void NameTextBox__TextChanged(object sender, EventArgs e)  //LC
         {
-            // add error provider
-
-
-
             TextBox tb = (TextBox)sender;
-
-            tb.Text = formInfo.name;
-
-            //if empty
-            if (tb.Text.Length == 0)
-            {
-                // show error
-                //this.errorProvider.SetError(tb, "This field cannot be empty.");
-
-                // invalidate the control
-                tb.Tag = false;
-            }
-            else
-            {
-                // else there is data in the field
-                // clear the error
-                //this.errorProvider.SetError(tb, null);
-
-                // set the control to being valid
-                tb.Tag = true;
-            }
         }
 
         private void MajorTextBox__TextChanged(object sender, EventArgs e)  //LC
         {
-            // add error provider
-
-
-
-
             TextBox tb = (TextBox)sender;
-
-            tb.Text = formInfo.major;
-
-            //if empty
-            if (tb.Text.Length == 0)
-            {
-                // show error
-                //this.errorProvider.SetError(tb, "This field cannot be empty.");
-
-                // invalidate the control
-                tb.Tag = false;
-            }
-            else
-            {
-                // else there is data in the field
-                // clear the error
-                //this.errorProvider.SetError(tb, null);
-
-                // set the control to being valid
-                tb.Tag = true;
-            }
         }
 
         private void ImmersionTextBox__TextChanged(object sender, EventArgs e)  //LC
         {
-            // add error provider
-
-
-
-
             TextBox tb = (TextBox)sender;
-
-            tb.Text = formInfo.immersion;
-
-            //if empty
-            if (tb.Text.Length == 0)
-            {
-                // show error
-                //this.errorProvider.SetError(tb, "This field cannot be empty.");
-
-                // invalidate the control
-                tb.Tag = false;
-            }
-            else
-            {
-                // else there is data in the field
-                // clear the error
-                //this.errorProvider.SetError(tb, null);
-
-                // set the control to being valid
-                tb.Tag = true;
-            }
         }
 
         private void MinorTextBox__TextChanged(object sender, EventArgs e)  //LC
         {
-            // add error provider
-
-
-
-
             TextBox tb = (TextBox)sender;
-
-            tb.Text = formInfo.minor;
-
-            //if empty
-            if (tb.Text.Length == 0)
-            {
-                // show error
-                //this.errorProvider.SetError(tb, "This field cannot be empty.");
-
-                // invalidate the control
-                tb.Tag = false;
-            }
-            else
-            {
-                // else there is data in the field
-                // clear the error
-                //this.errorProvider.SetError(tb, null);
-
-                // set the control to being valid
-                tb.Tag = true;
-            }
         }
 
         private void CreditTextBox__TextChanged(object sender, EventArgs e)  //LC
         {
-            // add error provider
-
-
-
-            
             TextBox tb = (TextBox)sender;
-
-            tb.Text = formInfo.credit;
-
-            //convert to number
-            int tbNum = Int32.Parse(tb.Text);
-
-            //if empty or less than 123
-            if (tb.Text.Length == 0 || tbNum < 123)
-            {
-                // show error
-                //this.errorProvider.SetError(tb, "This field cannot be empty.");
-
-                // invalidate the control
-                tb.Tag = false;
-            }
-            else
-            {
-                // else there is data in the field
-                // clear the error
-                //this.errorProvider.SetError(tb, null);
-
-                // set the control to being valid
-                tb.Tag = true;
-            }
         }
 
         //Buttons

@@ -107,5 +107,8 @@
   <ItemGroup>
     <None Include="images\plus.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\addClassSign.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
