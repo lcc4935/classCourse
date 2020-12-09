@@ -14,13 +14,11 @@ namespace classCourse
     public partial class AddEditClass : Form
     {
         public ClassInfo formClass;
-        public AddEditClass(ClassInfo classInfo, Form parentForm)
+        public AddEditClass(ClassInfo classInfo, Form parentForm)  //LC
         {
             InitializeComponent();
 
             this.formClass = classInfo;
-
-            this.newClassCreditComboBox.SelectedIndexChanged += new EventHandler(NewClassCreditComboBox__SelectedIndexChanged);
 
             this.newDepartmentTextBox.TextChanged += new EventHandler(NewDepartmentTextBox__TextChanged);
             this.newCourseCodeTextBox.TextChanged += new EventHandler(NewCourseCodeTextBox__TextChanged);
@@ -68,12 +66,6 @@ namespace classCourse
             }
         }
 
-        //Comboboxes
-        private void NewClassCreditComboBox__SelectedIndexChanged(object sender, EventArgs e) //LC
-        {
-            ComboBox cb = (ComboBox)sender;
-        }
-
         //Textboxes
         private void NewDepartmentTextBox__TextChanged(object sender, EventArgs e)  //LC
         {
@@ -92,7 +84,7 @@ namespace classCourse
 
         //Buttons
 
-        private void SubmitButton__Click(object sender, EventArgs e)  //LC
+        private void SubmitButton__Click(object sender, EventArgs e)  //LC and JLH
         {
             if (this.undecidedRadioButton.Checked)
             {
@@ -135,7 +127,6 @@ namespace classCourse
             formClass.courseCode = this.newCourseCodeTextBox.Text;
             formClass.className = this.newClassNameTextBox.Text;
 
-            this.newClassCreditComboBox.SelectedItem = formClass.classCredit;
 
             if (gradeCheckBox.Checked) {
                 string letterGrade = txtGrade.Text;

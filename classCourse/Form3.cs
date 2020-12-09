@@ -14,7 +14,7 @@ namespace classCourse
     public partial class PersonalInfo : Form
     {
         BasicInfo formInfo;
-        public PersonalInfo(BasicInfo basicInfo, Form parentForm)
+        public PersonalInfo(BasicInfo basicInfo, Form parentForm)  // LC
         {
             InitializeComponent();
 

@@ -12,13 +12,13 @@ namespace MinorGenerator
 {
     public partial class MinorGenerator : Form
     {
-        public MinorGenerator()
+        public MinorGenerator()  //Sam
         {
             InitializeComponent();
             this.minorComBox.SelectedIndex = 0;
             showButton.Click += new EventHandler(showMinors);
         }
-        private void showMinors(object s, EventArgs e)
+        private void showMinors(object s, EventArgs e)  //Sam
         {//makes the minor recommendations visible
             int arrItem = minorComBox.SelectedIndex;
             String[] artMinors = { "Drawing I", "Drawing for Non-Majors", "Drawing II", "Introduction to Painting", "Painting", "Watercolors", "Painting the Figure", "Fine Art Drawing", "Printmaking", "Figure Drawing" };
@@ -81,7 +81,7 @@ namespace MinorGenerator
             }
 */
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) //Sam
         {
 
         }

@@ -10,18 +10,6 @@ using System.Windows.Forms;
 using classCourseLibrary;
 
 
-/*
- * 
- * remove credit count 
- *  
- *  adding others contributions
- *  
- *  
- *  invisible first panels, so not behind
- *  panel for colors and initial panels
- */
-
-
 namespace classCourse
 {
     public partial class classCourse : Form
@@ -84,8 +72,6 @@ namespace classCourse
             this.coopToolStripButton.Tag = this.coopPanel;
             this.otherToolStripButton.Tag = this.otherPanel;
 
-            //add button to flowPanel?
-
             this.majorToolStripLabel.Tag = this.majorPanel;
             this.minorToolStripLabel.Tag = this.minorPanel;
             this.immersionToolStripLabel.Tag = this.immersionPanel;
@@ -139,9 +125,7 @@ namespace classCourse
             this.coopAddClassToolStripButton.Tag = this.coopPanel;
             this.otherAddClassToolStripButton.Tag = this.otherPanel;
 
-            /*
-             * uncomment after everything works
-             * 
+ 
             majorPanel.Visible = false;
             minorPanel.Visible = false;
             immersionPanel.Visible = false;
@@ -161,14 +145,13 @@ namespace classCourse
             juniorSpringPanel.Visible = false;
             seniorFallPanel.Visible = false;
             seniorSpringPanel.Visible = false;
-            */
 
         }
 
 
         //Buttons
 
-        private void InfoButton__Click(object sender, EventArgs e)  //LC
+        private void InfoButton__Click(object sender, EventArgs e)  //LC and JLH
         {
             Button b = (Button)sender;
 
@@ -179,7 +162,7 @@ namespace classCourse
 
 
             this.yourNameLabel.Text = basicInfo.name;
-            this.MMILabel.Text = basicInfo.major + basicInfo.minor + basicInfo.immersion;
+            this.MMILabel.Text = "Major: " + basicInfo.major + " | " + "Immersion: " + basicInfo.immersion + " | " + "Minor: " + basicInfo.minor;
             this.yourCreditLabel.Text = basicInfo.credit;
 
             this.yourNameLabel.Visible = true;
@@ -230,7 +213,7 @@ namespace classCourse
             gb.Refresh();
         }
 
-        private void AddClassButton__Click(object sender, EventArgs e)  //LC
+        private void AddClassButton__Click(object sender, EventArgs e)  //LC and JLH
         {
             ToolStripButton tsb = (ToolStripButton)sender;
 
@@ -245,6 +228,14 @@ namespace classCourse
 
             GPA = totalGradePoints / totalClassesTaken;
             lblGPA.Text = (Math.Round(GPA, 2).ToString());
+            if (GPA >= 2.4) {
+                lblAcademicStanding.Text = "You are in good academic standing. ";
+                lblAcademicStanding.ForeColor = Color.SeaGreen;
+            }
+            else if (GPA < 2.4) {
+                lblAcademicStanding.Text = "You are at risk of suspension. ";
+                lblAcademicStanding.ForeColor = Color.IndianRed;
+            }
 
             AddPanelToClassType(sender, e, classInfo);
 
@@ -255,7 +246,7 @@ namespace classCourse
         //labels
 
 
-        private void ToolStripLabels__Click(object sender, EventArgs e)  //LC  If/else statements aren't working as intended (null- to help find error)
+        private void ToolStripLabels__Click(object sender, EventArgs e)  //LC
         {
             ToolStripLabel tsl = (ToolStripLabel)sender;
             Panel p = (Panel)tsl.Tag;
@@ -329,7 +320,7 @@ namespace classCourse
 
         //panels
         
-        private void AddPanelToClassType(object sender, EventArgs e, ClassInfo classInfo)  //LC  If/else statements aren't working as intended (null- to help find error)
+        private void AddPanelToClassType(object sender, EventArgs e, ClassInfo classInfo)  //LC
         {
             ToolStripButton tsb = (ToolStripButton)sender;
             Panel panel = new System.Windows.Forms.Panel();
@@ -433,8 +424,6 @@ namespace classCourse
 
                 this.freshFallFlowLayoutPanel.Controls.Add(panel);
                 this.freshFallFlowLayoutPanel.Controls.SetChildIndex(panel, freshFallFlowLayoutPanel.Controls.Count);
-
-                //panel.Tag = this.freshFallFlowLayoutPanel;
             }
             else if (classInfo.semester == semesters.freshSpring)
             {
@@ -487,13 +476,13 @@ namespace classCourse
             }
             else
             {
-                //UndecidedRemoveClassToPanel(ref panel, classInfo);
+                //undecided is selected
             }
 
             panel.Refresh();
 
         }
-        private void FreshFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void FreshFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             freshFallLabel = new System.Windows.Forms.Label();
 
@@ -556,7 +545,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void FreshSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void FreshSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             freshSpringLabel = new System.Windows.Forms.Label();
 
@@ -575,7 +564,7 @@ namespace classCourse
             freshSpringLabel.Name = "freshSpringLabel";
             freshSpringLabel.Size = new System.Drawing.Size(82, 13);
             freshSpringLabel.TabIndex = 0;
-            freshSpringLabel.Text = classInfo.department + " " + classInfo.courseCode + " " + classInfo.classCredit;
+            freshSpringLabel.Text = classInfo.department + classInfo.courseCode;
             freshSpringLabel.Tag = panel;
 
             if (classInfo.classType == types.major)
@@ -619,7 +608,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void SophFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void SophFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             sophFallLabel = new System.Windows.Forms.Label();
 
@@ -682,7 +671,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void SophSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void SophSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             sophSpringLabel = new System.Windows.Forms.Label();
 
@@ -701,7 +690,7 @@ namespace classCourse
             sophSpringLabel.Name = "sophSpringLabel";
             sophSpringLabel.Size = new System.Drawing.Size(82, 13);
             sophSpringLabel.TabIndex = 0;
-            sophSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            sophSpringLabel.Text = classInfo.department + classInfo.courseCode;
             sophSpringLabel.Tag = panel;
 
             if (classInfo.classType == types.major)
@@ -745,7 +734,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void JuniorFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void JuniorFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             juniorFallLabel = new System.Windows.Forms.Label();
 
@@ -764,7 +753,7 @@ namespace classCourse
             juniorFallLabel.Name = "juniorFallLabel";
             juniorFallLabel.Size = new System.Drawing.Size(82, 13);
             juniorFallLabel.TabIndex = 0;
-            juniorFallLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            juniorFallLabel.Text = classInfo.department + classInfo.courseCode;
             juniorFallLabel.Tag = panel;
 
             if (classInfo.classType == types.major)
@@ -808,7 +797,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void JuniorSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void JuniorSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             juniorSpringLabel = new System.Windows.Forms.Label();
 
@@ -827,7 +816,7 @@ namespace classCourse
             juniorSpringLabel.Name = "juniorSpringLabel";
             juniorSpringLabel.Size = new System.Drawing.Size(82, 13);
             juniorSpringLabel.TabIndex = 0;
-            juniorSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            juniorSpringLabel.Text = classInfo.department + classInfo.courseCode;
             juniorSpringLabel.Tag = panel;
 
             if (classInfo.classType == types.major)
@@ -871,7 +860,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void SeniorFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void SeniorFallAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             seniorFallLabel = new System.Windows.Forms.Label();
 
@@ -890,7 +879,7 @@ namespace classCourse
             seniorFallLabel.Name = "seniorFallLabel";
             seniorFallLabel.Size = new System.Drawing.Size(82, 13);
             seniorFallLabel.TabIndex = 0;
-            seniorFallLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            seniorFallLabel.Text = classInfo.department + classInfo.courseCode;
             seniorFallLabel.Tag = panel;
 
             if (classInfo.classType == types.major)
@@ -934,7 +923,7 @@ namespace classCourse
                 panel.BackColor = System.Drawing.Color.Violet;
             }
         }
-        private void SeniorSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)
+        private void SeniorSpringAddClassToPanel(ref Panel panel, ClassInfo classInfo)  // LC
         {
             seniorSpringLabel = new System.Windows.Forms.Label();
 
@@ -953,7 +942,7 @@ namespace classCourse
             seniorSpringLabel.Name = "seniorSpringLabel";
             seniorSpringLabel.Size = new System.Drawing.Size(82, 13);
             seniorSpringLabel.TabIndex = 0;
-            seniorSpringLabel.Text = classInfo.department + classInfo.courseCode + classInfo.classCredit;
+            seniorSpringLabel.Text = classInfo.department + classInfo.courseCode;
             seniorSpringLabel.Tag = panel;
 
             if (classInfo.classType == types.major)
@@ -1003,7 +992,6 @@ namespace classCourse
         {
             
             Label majorClassTypeLabel = new System.Windows.Forms.Label();
-            Label majorClassCreditLabel = new System.Windows.Forms.Label();
             Label majorClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip majorPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel majorToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1012,7 +1000,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.DodgerBlue;
             panel.Controls.Add(majorClassTypeLabel);
-            panel.Controls.Add(majorClassCreditLabel);
             panel.Controls.Add(majorClassNameLabel);
             panel.Controls.Add(majorPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1028,14 +1015,6 @@ namespace classCourse
             majorClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             majorClassTypeLabel.TabIndex = 3;
             majorClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-            
-            // ClassCreditLabel
-            majorClassCreditLabel.AutoSize = true;
-            majorClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            majorClassCreditLabel.Name = "majorClassCreditLabel";
-            majorClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            majorClassCreditLabel.TabIndex = 2;
-            majorClassCreditLabel.Text = classInfo.classCredit;
             
             // ClassNameLabel
             majorClassNameLabel.AutoSize = true;
@@ -1079,7 +1058,6 @@ namespace classCourse
         {
 
             Label minorClassTypeLabel = new System.Windows.Forms.Label();
-            Label minorClassCreditLabel = new System.Windows.Forms.Label();
             Label minorClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip minorPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel minorToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1088,7 +1066,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.MediumTurquoise;
             panel.Controls.Add(minorClassTypeLabel);
-            panel.Controls.Add(minorClassCreditLabel);
             panel.Controls.Add(minorClassNameLabel);
             panel.Controls.Add(minorPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1104,14 +1081,6 @@ namespace classCourse
             minorClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             minorClassTypeLabel.TabIndex = 3;
             minorClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            minorClassCreditLabel.AutoSize = true;
-            minorClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            minorClassCreditLabel.Name = "minorClassCreditLabel";
-            minorClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            minorClassCreditLabel.TabIndex = 2;
-            minorClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             minorClassNameLabel.AutoSize = true;
@@ -1155,7 +1124,6 @@ namespace classCourse
         {
 
             Label immersionClassTypeLabel = new System.Windows.Forms.Label();
-            Label immersionClassCreditLabel = new System.Windows.Forms.Label();
             Label immersionClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip immersionPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel immersionToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1164,7 +1132,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.LightGreen;
             panel.Controls.Add(immersionClassTypeLabel);
-            panel.Controls.Add(immersionClassCreditLabel);
             panel.Controls.Add(immersionClassNameLabel);
             panel.Controls.Add(immersionPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1180,14 +1147,6 @@ namespace classCourse
             immersionClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             immersionClassTypeLabel.TabIndex = 3;
             immersionClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            immersionClassCreditLabel.AutoSize = true;
-            immersionClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            immersionClassCreditLabel.Name = "immersionClassCreditLabel";
-            immersionClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            immersionClassCreditLabel.TabIndex = 2;
-            immersionClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             immersionClassNameLabel.AutoSize = true;
@@ -1231,7 +1190,6 @@ namespace classCourse
         {
 
             Label genEdPerClassTypeLabel = new System.Windows.Forms.Label();
-            Label genEdPerClassCreditLabel = new System.Windows.Forms.Label();
             Label genEdPerClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip genEdPerPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel genEdPerToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1240,7 +1198,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.LightPink;
             panel.Controls.Add(genEdPerClassTypeLabel);
-            panel.Controls.Add(genEdPerClassCreditLabel);
             panel.Controls.Add(genEdPerClassNameLabel);
             panel.Controls.Add(genEdPerPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1256,14 +1213,6 @@ namespace classCourse
             genEdPerClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             genEdPerClassTypeLabel.TabIndex = 3;
             genEdPerClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            genEdPerClassCreditLabel.AutoSize = true;
-            genEdPerClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            genEdPerClassCreditLabel.Name = "genEdPerClassCreditLabel";
-            genEdPerClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            genEdPerClassCreditLabel.TabIndex = 2;
-            genEdPerClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             genEdPerClassNameLabel.AutoSize = true;
@@ -1307,7 +1256,6 @@ namespace classCourse
         {
 
             Label genEdClassTypeLabel = new System.Windows.Forms.Label();
-            Label genEdClassCreditLabel = new System.Windows.Forms.Label();
             Label genEdClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip genEdPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel genEdToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1316,7 +1264,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.IndianRed;
             panel.Controls.Add(genEdClassTypeLabel);
-            panel.Controls.Add(genEdClassCreditLabel);
             panel.Controls.Add(genEdClassNameLabel);
             panel.Controls.Add(genEdPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1332,14 +1279,6 @@ namespace classCourse
             genEdClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             genEdClassTypeLabel.TabIndex = 3;
             genEdClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            genEdClassCreditLabel.AutoSize = true;
-            genEdClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            genEdClassCreditLabel.Name = "genEdClassCreditLabel";
-            genEdClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            genEdClassCreditLabel.TabIndex = 2;
-            genEdClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             genEdClassNameLabel.AutoSize = true;
@@ -1383,7 +1322,6 @@ namespace classCourse
         {
 
             Label freeClassTypeLabel = new System.Windows.Forms.Label();
-            Label freeClassCreditLabel = new System.Windows.Forms.Label();
             Label freeClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip freePanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel freeToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1392,7 +1330,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.Coral;
             panel.Controls.Add(freeClassTypeLabel);
-            panel.Controls.Add(freeClassCreditLabel);
             panel.Controls.Add(freeClassNameLabel);
             panel.Controls.Add(freePanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1408,14 +1345,6 @@ namespace classCourse
             freeClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             freeClassTypeLabel.TabIndex = 3;
             freeClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            freeClassCreditLabel.AutoSize = true;
-            freeClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            freeClassCreditLabel.Name = "freeClassCreditLabel";
-            freeClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            freeClassCreditLabel.TabIndex = 2;
-            freeClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             freeClassNameLabel.AutoSize = true;
@@ -1459,7 +1388,6 @@ namespace classCourse
         {
 
             Label adElClassTypeLabel = new System.Windows.Forms.Label();
-            Label adElClassCreditLabel = new System.Windows.Forms.Label();
             Label adElClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip adElPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel adElToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1468,7 +1396,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.MediumSeaGreen;
             panel.Controls.Add(adElClassTypeLabel);
-            panel.Controls.Add(adElClassCreditLabel);
             panel.Controls.Add(adElClassNameLabel);
             panel.Controls.Add(adElPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1484,14 +1411,6 @@ namespace classCourse
             adElClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             adElClassTypeLabel.TabIndex = 3;
             adElClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            adElClassCreditLabel.AutoSize = true;
-            adElClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            adElClassCreditLabel.Name = "adElClassCreditLabel";
-            adElClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            adElClassCreditLabel.TabIndex = 2;
-            adElClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             adElClassNameLabel.AutoSize = true;
@@ -1535,7 +1454,6 @@ namespace classCourse
         {
 
             Label wellnessClassTypeLabel = new System.Windows.Forms.Label();
-            Label wellnessClassCreditLabel = new System.Windows.Forms.Label();
             Label wellnessClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip wellnessPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel wellnessToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1544,7 +1462,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.Khaki;
             panel.Controls.Add(wellnessClassTypeLabel);
-            panel.Controls.Add(wellnessClassCreditLabel);
             panel.Controls.Add(wellnessClassNameLabel);
             panel.Controls.Add(wellnessPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1560,14 +1477,6 @@ namespace classCourse
             wellnessClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             wellnessClassTypeLabel.TabIndex = 3;
             wellnessClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            wellnessClassCreditLabel.AutoSize = true;
-            wellnessClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            wellnessClassCreditLabel.Name = "wellnessClassCreditLabel";
-            wellnessClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            wellnessClassCreditLabel.TabIndex = 2;
-            wellnessClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             wellnessClassNameLabel.AutoSize = true;
@@ -1611,7 +1520,6 @@ namespace classCourse
         {
 
             Label coopClassTypeLabel = new System.Windows.Forms.Label();
-            Label coopClassCreditLabel = new System.Windows.Forms.Label();
             Label coopClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip coopPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel coopToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1620,7 +1528,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.MediumSlateBlue;
             panel.Controls.Add(coopClassTypeLabel);
-            panel.Controls.Add(coopClassCreditLabel);
             panel.Controls.Add(coopClassNameLabel);
             panel.Controls.Add(coopPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1636,14 +1543,6 @@ namespace classCourse
             coopClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             coopClassTypeLabel.TabIndex = 3;
             coopClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            coopClassCreditLabel.AutoSize = true;
-            coopClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            coopClassCreditLabel.Name = "coopClassCreditLabel";
-            coopClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            coopClassCreditLabel.TabIndex = 2;
-            coopClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             coopClassNameLabel.AutoSize = true;
@@ -1687,7 +1586,6 @@ namespace classCourse
         {
 
             Label otherClassTypeLabel = new System.Windows.Forms.Label();
-            Label otherClassCreditLabel = new System.Windows.Forms.Label();
             Label otherClassNameLabel = new System.Windows.Forms.Label();
             ToolStrip otherPanelToolStrip = new System.Windows.Forms.ToolStrip();
             ToolStripLabel otherToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -1696,7 +1594,6 @@ namespace classCourse
             // Panel
             panel.BackColor = System.Drawing.Color.Violet;
             panel.Controls.Add(otherClassTypeLabel);
-            panel.Controls.Add(otherClassCreditLabel);
             panel.Controls.Add(otherClassNameLabel);
             panel.Controls.Add(otherPanelToolStrip);
             panel.Location = new System.Drawing.Point(3, 3);
@@ -1712,14 +1609,6 @@ namespace classCourse
             otherClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             otherClassTypeLabel.TabIndex = 3;
             otherClassTypeLabel.Text = "Counts towards: " + classInfo.classType;
-
-            // ClassCreditLabel
-            otherClassCreditLabel.AutoSize = true;
-            otherClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            otherClassCreditLabel.Name = "otherClassCreditLabel";
-            otherClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            otherClassCreditLabel.TabIndex = 2;
-            otherClassCreditLabel.Text = classInfo.classCredit;
 
             // ClassNameLabel
             otherClassNameLabel.AutoSize = true;
@@ -1759,27 +1648,12 @@ namespace classCourse
             otherToolStripButton.Tag = panel;
         }
 
-        private void btnMinors_Click(object sender, EventArgs e)
+        private void btnMinors_Click(object sender, EventArgs e)  //JLH
         {
             MinorGenerator.MinorGenerator minorGenerator = new MinorGenerator.MinorGenerator();
             minorGenerator.ShowDialog();
         }
 
-
-
-
-        /*
-         * this.FlowLayoutPanel.Controls.Clear();
-            foreach(KeyValuePair<string,Class> keyValuePair in Globals.people.sortedList)
-            {
-                if (keyValuePair.Value.GetType() == typeof("type"))
-                {
-                    AddPanel(keyValuePair.Value);
-                }
-            }
-
-            teacherButton.Text = this.flowLayoutPanel1.Controls.Count.ToString(); -- ?
-         */
 
     }
 }

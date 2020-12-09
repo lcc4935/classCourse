@@ -93,7 +93,6 @@
             this.genEdFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.genEdPanel = new System.Windows.Forms.Panel();
             this.genEdClassTypeLabel = new System.Windows.Forms.Label();
-            this.genEdClassCreditLabel = new System.Windows.Forms.Label();
             this.genEdClassNameLabel = new System.Windows.Forms.Label();
             this.genEdPanelToolStrip = new System.Windows.Forms.ToolStrip();
             this.genEdToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -107,7 +106,6 @@
             this.freeFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.freePanel = new System.Windows.Forms.Panel();
             this.freeClassTypeLabel = new System.Windows.Forms.Label();
-            this.freeClassCreditLabel = new System.Windows.Forms.Label();
             this.freeClassNameLabel = new System.Windows.Forms.Label();
             this.freePanelToolStrip = new System.Windows.Forms.ToolStrip();
             this.freeToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -121,7 +119,6 @@
             this.adElFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.adElPanel = new System.Windows.Forms.Panel();
             this.adElClassTypeLabel = new System.Windows.Forms.Label();
-            this.adElClassCreditLabel = new System.Windows.Forms.Label();
             this.adElClassNameLabel = new System.Windows.Forms.Label();
             this.adElPanelToolStrip = new System.Windows.Forms.ToolStrip();
             this.adElToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -135,7 +132,6 @@
             this.wellnessFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.wellnessPanel = new System.Windows.Forms.Panel();
             this.wellnessClassTypeLabel = new System.Windows.Forms.Label();
-            this.wellnessClassCreditLabel = new System.Windows.Forms.Label();
             this.wellnessClassNameLabel = new System.Windows.Forms.Label();
             this.wellnessPanelToolStrip = new System.Windows.Forms.ToolStrip();
             this.wellnessToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -149,7 +145,6 @@
             this.coopFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.coopPanel = new System.Windows.Forms.Panel();
             this.coopClassTypeLabel = new System.Windows.Forms.Label();
-            this.coopClassCreditLabel = new System.Windows.Forms.Label();
             this.coopClassNameLabel = new System.Windows.Forms.Label();
             this.coopPanelToolStrip = new System.Windows.Forms.ToolStrip();
             this.coopToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -163,7 +158,6 @@
             this.otherFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.otherPanel = new System.Windows.Forms.Panel();
             this.otherClassTypeLabel = new System.Windows.Forms.Label();
-            this.otherClassCreditLabel = new System.Windows.Forms.Label();
             this.otherClassNameLabel = new System.Windows.Forms.Label();
             this.otherPanelToolStrip = new System.Windows.Forms.ToolStrip();
             this.otherToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -210,6 +204,7 @@
             this.freshFallLabel = new System.Windows.Forms.Label();
             this.freshFallFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblAcademicStanding = new System.Windows.Forms.Label();
             this.lblGPA = new System.Windows.Forms.Label();
             this.lblYCGI = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
@@ -347,7 +342,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.freshSpringGroupBox);
             this.splitContainer1.Panel2.Controls.Add(this.freshFallGroupBox);
             this.splitContainer1.Size = new System.Drawing.Size(1269, 658);
-            this.splitContainer1.SplitterDistance = 339;
+            this.splitContainer1.SplitterDistance = 338;
             this.splitContainer1.TabIndex = 0;
             // 
             // flowLayoutPanelLeft
@@ -366,7 +361,7 @@
             this.flowLayoutPanelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelLeft.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelLeft.Name = "flowLayoutPanelLeft";
-            this.flowLayoutPanelLeft.Size = new System.Drawing.Size(339, 658);
+            this.flowLayoutPanelLeft.Size = new System.Drawing.Size(338, 658);
             this.flowLayoutPanelLeft.TabIndex = 0;
             // 
             // majorGroupBox
@@ -450,7 +445,7 @@
             // majorClassTypeLabel
             // 
             this.majorClassTypeLabel.AutoSize = true;
-            this.majorClassTypeLabel.Location = new System.Drawing.Point(7, 58);
+            this.majorClassTypeLabel.Location = new System.Drawing.Point(7, 77);
             this.majorClassTypeLabel.Name = "majorClassTypeLabel";
             this.majorClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             this.majorClassTypeLabel.TabIndex = 3;
@@ -459,7 +454,7 @@
             // majorClassNameLabel
             // 
             this.majorClassNameLabel.AutoSize = true;
-            this.majorClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.majorClassNameLabel.Location = new System.Drawing.Point(4, 45);
             this.majorClassNameLabel.Name = "majorClassNameLabel";
             this.majorClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.majorClassNameLabel.TabIndex = 1;
@@ -576,7 +571,7 @@
             // minorClassTypeLabel
             // 
             this.minorClassTypeLabel.AutoSize = true;
-            this.minorClassTypeLabel.Location = new System.Drawing.Point(4, 51);
+            this.minorClassTypeLabel.Location = new System.Drawing.Point(4, 61);
             this.minorClassTypeLabel.Name = "minorClassTypeLabel";
             this.minorClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             this.minorClassTypeLabel.TabIndex = 3;
@@ -585,7 +580,7 @@
             // minorClassNameLabel
             // 
             this.minorClassNameLabel.AutoSize = true;
-            this.minorClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.minorClassNameLabel.Location = new System.Drawing.Point(3, 38);
             this.minorClassNameLabel.Name = "minorClassNameLabel";
             this.minorClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.minorClassNameLabel.TabIndex = 1;
@@ -629,7 +624,7 @@
             this.immersionGroupBox.ForeColor = System.Drawing.Color.White;
             this.immersionGroupBox.Location = new System.Drawing.Point(3, 109);
             this.immersionGroupBox.Name = "immersionGroupBox";
-            this.immersionGroupBox.Size = new System.Drawing.Size(333, 172);
+            this.immersionGroupBox.Size = new System.Drawing.Size(333, 47);
             this.immersionGroupBox.TabIndex = 2;
             this.immersionGroupBox.TabStop = false;
             this.immersionGroupBox.Text = "Immersion Classes";
@@ -702,7 +697,7 @@
             // immersionClassTypeLabel
             // 
             this.immersionClassTypeLabel.AutoSize = true;
-            this.immersionClassTypeLabel.Location = new System.Drawing.Point(4, 58);
+            this.immersionClassTypeLabel.Location = new System.Drawing.Point(4, 72);
             this.immersionClassTypeLabel.Name = "immersionClassTypeLabel";
             this.immersionClassTypeLabel.Size = new System.Drawing.Size(112, 13);
             this.immersionClassTypeLabel.TabIndex = 3;
@@ -711,7 +706,7 @@
             // immersionClassNameLabel
             // 
             this.immersionClassNameLabel.AutoSize = true;
-            this.immersionClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.immersionClassNameLabel.Location = new System.Drawing.Point(3, 45);
             this.immersionClassNameLabel.Name = "immersionClassNameLabel";
             this.immersionClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.immersionClassNameLabel.TabIndex = 1;
@@ -753,7 +748,7 @@
             this.genEdPerGroupBox.Controls.Add(this.genEdPerGroupBoxToolStrip);
             this.genEdPerGroupBox.Controls.Add(this.genEdPerFlowLayoutPanel);
             this.genEdPerGroupBox.ForeColor = System.Drawing.Color.White;
-            this.genEdPerGroupBox.Location = new System.Drawing.Point(3, 287);
+            this.genEdPerGroupBox.Location = new System.Drawing.Point(3, 162);
             this.genEdPerGroupBox.Name = "genEdPerGroupBox";
             this.genEdPerGroupBox.Size = new System.Drawing.Size(333, 47);
             this.genEdPerGroupBox.TabIndex = 2;
@@ -879,7 +874,7 @@
             this.genEdGroupBox.Controls.Add(this.genEdGroupBoxToolStrip);
             this.genEdGroupBox.Controls.Add(this.genEdFlowLayoutPanel);
             this.genEdGroupBox.ForeColor = System.Drawing.Color.White;
-            this.genEdGroupBox.Location = new System.Drawing.Point(3, 340);
+            this.genEdGroupBox.Location = new System.Drawing.Point(3, 215);
             this.genEdGroupBox.Name = "genEdGroupBox";
             this.genEdGroupBox.Size = new System.Drawing.Size(333, 47);
             this.genEdGroupBox.TabIndex = 2;
@@ -944,7 +939,6 @@
             // 
             this.genEdPanel.BackColor = System.Drawing.Color.IndianRed;
             this.genEdPanel.Controls.Add(this.genEdClassTypeLabel);
-            this.genEdPanel.Controls.Add(this.genEdClassCreditLabel);
             this.genEdPanel.Controls.Add(this.genEdClassNameLabel);
             this.genEdPanel.Controls.Add(this.genEdPanelToolStrip);
             this.genEdPanel.Location = new System.Drawing.Point(3, 3);
@@ -961,19 +955,10 @@
             this.genEdClassTypeLabel.TabIndex = 3;
             this.genEdClassTypeLabel.Text = "Counts towards: blank";
             // 
-            // genEdClassCreditLabel
-            // 
-            this.genEdClassCreditLabel.AutoSize = true;
-            this.genEdClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            this.genEdClassCreditLabel.Name = "genEdClassCreditLabel";
-            this.genEdClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            this.genEdClassCreditLabel.TabIndex = 2;
-            this.genEdClassCreditLabel.Text = "# credits";
-            // 
             // genEdClassNameLabel
             // 
             this.genEdClassNameLabel.AutoSize = true;
-            this.genEdClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.genEdClassNameLabel.Location = new System.Drawing.Point(4, 43);
             this.genEdClassNameLabel.Name = "genEdClassNameLabel";
             this.genEdClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.genEdClassNameLabel.TabIndex = 1;
@@ -1015,7 +1000,7 @@
             this.freeGroupBox.Controls.Add(this.freeGroupBoxToolStrip);
             this.freeGroupBox.Controls.Add(this.freeFlowLayoutPanel);
             this.freeGroupBox.ForeColor = System.Drawing.Color.White;
-            this.freeGroupBox.Location = new System.Drawing.Point(3, 393);
+            this.freeGroupBox.Location = new System.Drawing.Point(3, 268);
             this.freeGroupBox.Name = "freeGroupBox";
             this.freeGroupBox.Size = new System.Drawing.Size(333, 47);
             this.freeGroupBox.TabIndex = 2;
@@ -1080,7 +1065,6 @@
             // 
             this.freePanel.BackColor = System.Drawing.Color.Coral;
             this.freePanel.Controls.Add(this.freeClassTypeLabel);
-            this.freePanel.Controls.Add(this.freeClassCreditLabel);
             this.freePanel.Controls.Add(this.freeClassNameLabel);
             this.freePanel.Controls.Add(this.freePanelToolStrip);
             this.freePanel.Location = new System.Drawing.Point(3, 3);
@@ -1097,19 +1081,10 @@
             this.freeClassTypeLabel.TabIndex = 3;
             this.freeClassTypeLabel.Text = "Counts towards: blank";
             // 
-            // freeClassCreditLabel
-            // 
-            this.freeClassCreditLabel.AutoSize = true;
-            this.freeClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            this.freeClassCreditLabel.Name = "freeClassCreditLabel";
-            this.freeClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            this.freeClassCreditLabel.TabIndex = 2;
-            this.freeClassCreditLabel.Text = "# credits";
-            // 
             // freeClassNameLabel
             // 
             this.freeClassNameLabel.AutoSize = true;
-            this.freeClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.freeClassNameLabel.Location = new System.Drawing.Point(4, 49);
             this.freeClassNameLabel.Name = "freeClassNameLabel";
             this.freeClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.freeClassNameLabel.TabIndex = 1;
@@ -1151,7 +1126,7 @@
             this.adElGroupBox.Controls.Add(this.adElGroupBoxToolStrip);
             this.adElGroupBox.Controls.Add(this.adElFlowLayoutPanel);
             this.adElGroupBox.ForeColor = System.Drawing.Color.White;
-            this.adElGroupBox.Location = new System.Drawing.Point(3, 446);
+            this.adElGroupBox.Location = new System.Drawing.Point(3, 321);
             this.adElGroupBox.Name = "adElGroupBox";
             this.adElGroupBox.Size = new System.Drawing.Size(333, 47);
             this.adElGroupBox.TabIndex = 2;
@@ -1216,7 +1191,6 @@
             // 
             this.adElPanel.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.adElPanel.Controls.Add(this.adElClassTypeLabel);
-            this.adElPanel.Controls.Add(this.adElClassCreditLabel);
             this.adElPanel.Controls.Add(this.adElClassNameLabel);
             this.adElPanel.Controls.Add(this.adElPanelToolStrip);
             this.adElPanel.Location = new System.Drawing.Point(3, 3);
@@ -1233,19 +1207,10 @@
             this.adElClassTypeLabel.TabIndex = 3;
             this.adElClassTypeLabel.Text = "Counts towards: blank";
             // 
-            // adElClassCreditLabel
-            // 
-            this.adElClassCreditLabel.AutoSize = true;
-            this.adElClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            this.adElClassCreditLabel.Name = "adElClassCreditLabel";
-            this.adElClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            this.adElClassCreditLabel.TabIndex = 2;
-            this.adElClassCreditLabel.Text = "# credits";
-            // 
             // adElClassNameLabel
             // 
             this.adElClassNameLabel.AutoSize = true;
-            this.adElClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.adElClassNameLabel.Location = new System.Drawing.Point(9, 51);
             this.adElClassNameLabel.Name = "adElClassNameLabel";
             this.adElClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.adElClassNameLabel.TabIndex = 1;
@@ -1287,7 +1252,7 @@
             this.wellnessGroupBox.Controls.Add(this.wellnessGroupBoxToolStrip);
             this.wellnessGroupBox.Controls.Add(this.wellnessFlowLayoutPanel);
             this.wellnessGroupBox.ForeColor = System.Drawing.Color.White;
-            this.wellnessGroupBox.Location = new System.Drawing.Point(3, 499);
+            this.wellnessGroupBox.Location = new System.Drawing.Point(3, 374);
             this.wellnessGroupBox.Name = "wellnessGroupBox";
             this.wellnessGroupBox.Size = new System.Drawing.Size(333, 47);
             this.wellnessGroupBox.TabIndex = 2;
@@ -1352,7 +1317,6 @@
             // 
             this.wellnessPanel.BackColor = System.Drawing.Color.Khaki;
             this.wellnessPanel.Controls.Add(this.wellnessClassTypeLabel);
-            this.wellnessPanel.Controls.Add(this.wellnessClassCreditLabel);
             this.wellnessPanel.Controls.Add(this.wellnessClassNameLabel);
             this.wellnessPanel.Controls.Add(this.wellnessPanelToolStrip);
             this.wellnessPanel.Location = new System.Drawing.Point(3, 3);
@@ -1369,19 +1333,10 @@
             this.wellnessClassTypeLabel.TabIndex = 3;
             this.wellnessClassTypeLabel.Text = "Counts towards: blank";
             // 
-            // wellnessClassCreditLabel
-            // 
-            this.wellnessClassCreditLabel.AutoSize = true;
-            this.wellnessClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            this.wellnessClassCreditLabel.Name = "wellnessClassCreditLabel";
-            this.wellnessClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            this.wellnessClassCreditLabel.TabIndex = 2;
-            this.wellnessClassCreditLabel.Text = "# credits";
-            // 
             // wellnessClassNameLabel
             // 
             this.wellnessClassNameLabel.AutoSize = true;
-            this.wellnessClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.wellnessClassNameLabel.Location = new System.Drawing.Point(4, 49);
             this.wellnessClassNameLabel.Name = "wellnessClassNameLabel";
             this.wellnessClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.wellnessClassNameLabel.TabIndex = 1;
@@ -1423,7 +1378,7 @@
             this.coopGroupBox.Controls.Add(this.coopGroupBoxToolStrip);
             this.coopGroupBox.Controls.Add(this.coopFlowLayoutPanel);
             this.coopGroupBox.ForeColor = System.Drawing.Color.White;
-            this.coopGroupBox.Location = new System.Drawing.Point(3, 552);
+            this.coopGroupBox.Location = new System.Drawing.Point(3, 427);
             this.coopGroupBox.Name = "coopGroupBox";
             this.coopGroupBox.Size = new System.Drawing.Size(333, 47);
             this.coopGroupBox.TabIndex = 2;
@@ -1488,7 +1443,6 @@
             // 
             this.coopPanel.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.coopPanel.Controls.Add(this.coopClassTypeLabel);
-            this.coopPanel.Controls.Add(this.coopClassCreditLabel);
             this.coopPanel.Controls.Add(this.coopClassNameLabel);
             this.coopPanel.Controls.Add(this.coopPanelToolStrip);
             this.coopPanel.Location = new System.Drawing.Point(3, 3);
@@ -1505,19 +1459,10 @@
             this.coopClassTypeLabel.TabIndex = 3;
             this.coopClassTypeLabel.Text = "Counts towards: blank";
             // 
-            // coopClassCreditLabel
-            // 
-            this.coopClassCreditLabel.AutoSize = true;
-            this.coopClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            this.coopClassCreditLabel.Name = "coopClassCreditLabel";
-            this.coopClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            this.coopClassCreditLabel.TabIndex = 2;
-            this.coopClassCreditLabel.Text = "# credits";
-            // 
             // coopClassNameLabel
             // 
             this.coopClassNameLabel.AutoSize = true;
-            this.coopClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.coopClassNameLabel.Location = new System.Drawing.Point(3, 52);
             this.coopClassNameLabel.Name = "coopClassNameLabel";
             this.coopClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.coopClassNameLabel.TabIndex = 1;
@@ -1559,7 +1504,7 @@
             this.otherGroupBox.Controls.Add(this.otherGroupBoxToolStrip);
             this.otherGroupBox.Controls.Add(this.otherFlowLayoutPanel);
             this.otherGroupBox.ForeColor = System.Drawing.Color.White;
-            this.otherGroupBox.Location = new System.Drawing.Point(3, 605);
+            this.otherGroupBox.Location = new System.Drawing.Point(3, 480);
             this.otherGroupBox.Name = "otherGroupBox";
             this.otherGroupBox.Size = new System.Drawing.Size(333, 47);
             this.otherGroupBox.TabIndex = 2;
@@ -1624,7 +1569,6 @@
             // 
             this.otherPanel.BackColor = System.Drawing.Color.Violet;
             this.otherPanel.Controls.Add(this.otherClassTypeLabel);
-            this.otherPanel.Controls.Add(this.otherClassCreditLabel);
             this.otherPanel.Controls.Add(this.otherClassNameLabel);
             this.otherPanel.Controls.Add(this.otherPanelToolStrip);
             this.otherPanel.Location = new System.Drawing.Point(3, 3);
@@ -1641,19 +1585,10 @@
             this.otherClassTypeLabel.TabIndex = 3;
             this.otherClassTypeLabel.Text = "Counts towards: blank";
             // 
-            // otherClassCreditLabel
-            // 
-            this.otherClassCreditLabel.AutoSize = true;
-            this.otherClassCreditLabel.Location = new System.Drawing.Point(7, 51);
-            this.otherClassCreditLabel.Name = "otherClassCreditLabel";
-            this.otherClassCreditLabel.Size = new System.Drawing.Size(48, 13);
-            this.otherClassCreditLabel.TabIndex = 2;
-            this.otherClassCreditLabel.Text = "# credits";
-            // 
             // otherClassNameLabel
             // 
             this.otherClassNameLabel.AutoSize = true;
-            this.otherClassNameLabel.Location = new System.Drawing.Point(4, 29);
+            this.otherClassNameLabel.Location = new System.Drawing.Point(4, 46);
             this.otherClassNameLabel.Name = "otherClassNameLabel";
             this.otherClassNameLabel.Size = new System.Drawing.Size(60, 13);
             this.otherClassNameLabel.TabIndex = 1;
@@ -2078,6 +2013,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblAcademicStanding);
             this.tabPage1.Controls.Add(this.lblGPA);
             this.tabPage1.Controls.Add(this.lblYCGI);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -2088,6 +2024,18 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "GPA Calculator";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblAcademicStanding
+            // 
+            this.lblAcademicStanding.AutoSize = true;
+            this.lblAcademicStanding.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcademicStanding.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.lblAcademicStanding.Location = new System.Drawing.Point(157, 240);
+            this.lblAcademicStanding.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAcademicStanding.Name = "lblAcademicStanding";
+            this.lblAcademicStanding.Size = new System.Drawing.Size(737, 37);
+            this.lblAcademicStanding.TabIndex = 2;
+            this.lblAcademicStanding.Text = "Not enough data to determine academic standing. ";
             // 
             // lblGPA
             // 
@@ -2319,7 +2267,6 @@
         private System.Windows.Forms.FlowLayoutPanel genEdFlowLayoutPanel;
         private System.Windows.Forms.Panel genEdPanel;
         private System.Windows.Forms.Label genEdClassTypeLabel;
-        private System.Windows.Forms.Label genEdClassCreditLabel;
         private System.Windows.Forms.Label genEdClassNameLabel;
         private System.Windows.Forms.ToolStrip genEdPanelToolStrip;
         private System.Windows.Forms.ToolStripButton genEdToolStripButton;
@@ -2330,7 +2277,6 @@
         private System.Windows.Forms.FlowLayoutPanel freeFlowLayoutPanel;
         private System.Windows.Forms.Panel freePanel;
         private System.Windows.Forms.Label freeClassTypeLabel;
-        private System.Windows.Forms.Label freeClassCreditLabel;
         private System.Windows.Forms.Label freeClassNameLabel;
         private System.Windows.Forms.ToolStrip freePanelToolStrip;
         private System.Windows.Forms.ToolStripButton freeToolStripButton;
@@ -2341,7 +2287,6 @@
         private System.Windows.Forms.FlowLayoutPanel adElFlowLayoutPanel;
         private System.Windows.Forms.Panel adElPanel;
         private System.Windows.Forms.Label adElClassTypeLabel;
-        private System.Windows.Forms.Label adElClassCreditLabel;
         private System.Windows.Forms.Label adElClassNameLabel;
         private System.Windows.Forms.ToolStrip adElPanelToolStrip;
         private System.Windows.Forms.ToolStripButton adElToolStripButton;
@@ -2352,7 +2297,6 @@
         private System.Windows.Forms.FlowLayoutPanel wellnessFlowLayoutPanel;
         private System.Windows.Forms.Panel wellnessPanel;
         private System.Windows.Forms.Label wellnessClassTypeLabel;
-        private System.Windows.Forms.Label wellnessClassCreditLabel;
         private System.Windows.Forms.Label wellnessClassNameLabel;
         private System.Windows.Forms.ToolStrip wellnessPanelToolStrip;
         private System.Windows.Forms.ToolStripButton wellnessToolStripButton;
@@ -2363,7 +2307,6 @@
         private System.Windows.Forms.FlowLayoutPanel coopFlowLayoutPanel;
         private System.Windows.Forms.Panel coopPanel;
         private System.Windows.Forms.Label coopClassTypeLabel;
-        private System.Windows.Forms.Label coopClassCreditLabel;
         private System.Windows.Forms.Label coopClassNameLabel;
         private System.Windows.Forms.ToolStrip coopPanelToolStrip;
         private System.Windows.Forms.ToolStripButton coopToolStripButton;
@@ -2374,7 +2317,6 @@
         private System.Windows.Forms.FlowLayoutPanel otherFlowLayoutPanel;
         private System.Windows.Forms.Panel otherPanel;
         private System.Windows.Forms.Label otherClassTypeLabel;
-        private System.Windows.Forms.Label otherClassCreditLabel;
         private System.Windows.Forms.Label otherClassNameLabel;
         private System.Windows.Forms.ToolStrip otherPanelToolStrip;
         private System.Windows.Forms.ToolStripButton otherToolStripButton;
@@ -2438,6 +2380,7 @@
         private System.Windows.Forms.Label lblGPA;
         private System.Windows.Forms.Label lblYCGI;
         private System.Windows.Forms.Button btnMinors;
+        private System.Windows.Forms.Label lblAcademicStanding;
     }
 }
 

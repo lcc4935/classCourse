@@ -42,8 +42,6 @@
             this.newDepartmentTextBox = new System.Windows.Forms.TextBox();
             this.newCourseCodeLabel = new System.Windows.Forms.Label();
             this.newDepartmentLabel = new System.Windows.Forms.Label();
-            this.newClassCreditComboBox = new System.Windows.Forms.ComboBox();
-            this.newClassCreditLabel = new System.Windows.Forms.Label();
             this.newClassNameLabel = new System.Windows.Forms.Label();
             this.newClassNameTextBox = new System.Windows.Forms.TextBox();
             this.addClassLabel = new System.Windows.Forms.Label();
@@ -191,28 +189,6 @@
             this.newDepartmentLabel.TabIndex = 64;
             this.newDepartmentLabel.Text = "Department";
             // 
-            // newClassCreditComboBox
-            // 
-            this.newClassCreditComboBox.FormattingEnabled = true;
-            this.newClassCreditComboBox.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "3",
-            "4"});
-            this.newClassCreditComboBox.Location = new System.Drawing.Point(113, 126);
-            this.newClassCreditComboBox.Name = "newClassCreditComboBox";
-            this.newClassCreditComboBox.Size = new System.Drawing.Size(121, 21);
-            this.newClassCreditComboBox.TabIndex = 61;
-            // 
-            // newClassCreditLabel
-            // 
-            this.newClassCreditLabel.AutoSize = true;
-            this.newClassCreditLabel.Location = new System.Drawing.Point(12, 126);
-            this.newClassCreditLabel.Name = "newClassCreditLabel";
-            this.newClassCreditLabel.Size = new System.Drawing.Size(91, 13);
-            this.newClassCreditLabel.TabIndex = 60;
-            this.newClassCreditLabel.Text = "Number of Credits";
-            // 
             // newClassNameLabel
             // 
             this.newClassNameLabel.AutoSize = true;
@@ -301,8 +277,6 @@
             this.Controls.Add(this.newDepartmentTextBox);
             this.Controls.Add(this.newCourseCodeLabel);
             this.Controls.Add(this.newDepartmentLabel);
-            this.Controls.Add(this.newClassCreditComboBox);
-            this.Controls.Add(this.newClassCreditLabel);
             this.Controls.Add(this.newClassNameLabel);
             this.Controls.Add(this.newClassNameTextBox);
             this.Controls.Add(this.addClassLabel);
@@ -329,8 +303,6 @@
         private System.Windows.Forms.TextBox newDepartmentTextBox;
         private System.Windows.Forms.Label newCourseCodeLabel;
         private System.Windows.Forms.Label newDepartmentLabel;
-        private System.Windows.Forms.ComboBox newClassCreditComboBox;
-        private System.Windows.Forms.Label newClassCreditLabel;
         private System.Windows.Forms.Label newClassNameLabel;
         private System.Windows.Forms.TextBox newClassNameTextBox;
         private System.Windows.Forms.Label addClassLabel;

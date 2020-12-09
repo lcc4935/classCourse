@@ -43,3 +43,5 @@ C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCo
 C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.csproj.CopyComplete
 C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.exe
 C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\classCourse.pdb
+C:\Users\jhors\Source\Repos\lcc4935\classCourse\classCourse\obj\Debug\MinorGenerator.MinorGenerator.resources
+C:\Users\Lauren Casale\Desktop\IGME201\classCourse\classCourse\obj\Debug\MinorGenerator.MinorGenerator.resources
