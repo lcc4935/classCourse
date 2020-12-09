@@ -137,6 +137,18 @@ namespace classCourse
 
             this.newClassCreditComboBox.SelectedItem = formClass.classCredit;
 
+            if (gradeCheckBox.Checked) {
+                string letterGrade = txtGrade.Text;
+                int internalIndex;
+
+                letterGrade = letterGrade.ToUpper();
+                internalIndex = Array.IndexOf(classCourse.grades, letterGrade);
+                if (internalIndex != -1) {
+                    classCourse.totalGradePoints += classCourse.gradePoints[internalIndex];
+                    formClass.classGP = classCourse.gradePoints[internalIndex];
+                    classCourse.totalClassesTaken++;
+                }
+            }
             this.Hide();
         }
 

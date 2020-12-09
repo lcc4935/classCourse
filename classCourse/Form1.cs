@@ -26,6 +26,14 @@ namespace classCourse
 {
     public partial class classCourse : Form
     {
+        //Used for GPA Calculations. JLH
+        static public double totalGradePoints = 0.0;
+        static public int totalClassesTaken = 0;
+        static protected double GPA;
+        static public string[] grades = new string[] { "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D", "F" };
+        static public double[] gradePoints = new double[] { 4, 3.67, 3.33, 3, 2.67, 2.33, 2, 1.67, 1, 0 };
+        //end of GPA calc tools
+
         public classCourse() //LC
         {
             InitializeComponent();
@@ -234,6 +242,9 @@ namespace classCourse
             addEditClass.ShowDialog(this);
 
             ClassInfo classInfo = addEditClass.formClass;
+
+            GPA = totalGradePoints / totalClassesTaken;
+            lblGPA.Text = (Math.Round(GPA, 2).ToString());
 
             AddPanelToClassType(sender, e, classInfo);
 
@@ -1748,9 +1759,10 @@ namespace classCourse
             otherToolStripButton.Tag = panel;
         }
 
-        private void infoButton_Click(object sender, EventArgs e)
+        private void btnMinors_Click(object sender, EventArgs e)
         {
-            
+            MinorGenerator.MinorGenerator minorGenerator = new MinorGenerator.MinorGenerator();
+            minorGenerator.ShowDialog();
         }
 
 
