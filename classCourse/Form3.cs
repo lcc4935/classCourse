@@ -34,15 +34,6 @@ namespace classCourse
             this.minorLabel.Visible = false;
             this.minorTextBox.Visible = false;
 
-            
-            this.nameTextBox.Text = basicInfo.name; //System.NullReferenceException: 'Object reference not set to an instance of an object.'  basicInfo was null.
-            this.majorTextBox.Text = basicInfo.major;
-            this.immersionTextBox.Text = basicInfo.immersion;
-            this.minorTextBox.Text = basicInfo.minor;
-            this.creditTextBox.Text = basicInfo.credit;
-
-            this.Show();
-
         }
 
         //Checkboxes
@@ -94,6 +85,12 @@ namespace classCourse
 
         private void OkButton__Click(object sender, EventArgs e)  //LC
         {
+            formInfo.name = this.nameTextBox.Text;
+            formInfo.major = this.majorTextBox.Text;
+            formInfo.immersion = this.immersionTextBox.Text;
+            formInfo.minor = this.minorTextBox.Text;
+            formInfo.credit = this.creditTextBox.Text;
+
             this.Hide();
 
         }

@@ -42,8 +42,6 @@
             this.newDepartmentTextBox = new System.Windows.Forms.TextBox();
             this.newCourseCodeLabel = new System.Windows.Forms.Label();
             this.newDepartmentLabel = new System.Windows.Forms.Label();
-            this.newClassTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.typeLabel = new System.Windows.Forms.Label();
             this.newClassCreditComboBox = new System.Windows.Forms.ComboBox();
             this.newClassCreditLabel = new System.Windows.Forms.Label();
             this.newClassNameLabel = new System.Windows.Forms.Label();
@@ -154,7 +152,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(371, 287);
+            this.submitButton.Location = new System.Drawing.Point(441, 297);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 68;
@@ -193,34 +191,6 @@
             this.newDepartmentLabel.TabIndex = 64;
             this.newDepartmentLabel.Text = "Department";
             // 
-            // newClassTypeComboBox
-            // 
-            this.newClassTypeComboBox.FormattingEnabled = true;
-            this.newClassTypeComboBox.Items.AddRange(new object[] {
-            "Major",
-            "Minor",
-            "Immersion",
-            "Gen Ed Perspective",
-            "Gen Ed Elective",
-            "Free Elective",
-            "Advance Elective",
-            "Wellness",
-            "Co-op",
-            "Other"});
-            this.newClassTypeComboBox.Location = new System.Drawing.Point(113, 132);
-            this.newClassTypeComboBox.Name = "newClassTypeComboBox";
-            this.newClassTypeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.newClassTypeComboBox.TabIndex = 63;
-            // 
-            // typeLabel
-            // 
-            this.typeLabel.AutoSize = true;
-            this.typeLabel.Location = new System.Drawing.Point(12, 132);
-            this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(59, 13);
-            this.typeLabel.TabIndex = 62;
-            this.typeLabel.Text = "Class Type";
-            // 
             // newClassCreditComboBox
             // 
             this.newClassCreditComboBox.FormattingEnabled = true;
@@ -229,7 +199,7 @@
             "1",
             "3",
             "4"});
-            this.newClassCreditComboBox.Location = new System.Drawing.Point(113, 168);
+            this.newClassCreditComboBox.Location = new System.Drawing.Point(113, 126);
             this.newClassCreditComboBox.Name = "newClassCreditComboBox";
             this.newClassCreditComboBox.Size = new System.Drawing.Size(121, 21);
             this.newClassCreditComboBox.TabIndex = 61;
@@ -237,7 +207,7 @@
             // newClassCreditLabel
             // 
             this.newClassCreditLabel.AutoSize = true;
-            this.newClassCreditLabel.Location = new System.Drawing.Point(12, 168);
+            this.newClassCreditLabel.Location = new System.Drawing.Point(12, 126);
             this.newClassCreditLabel.Name = "newClassCreditLabel";
             this.newClassCreditLabel.Size = new System.Drawing.Size(91, 13);
             this.newClassCreditLabel.TabIndex = 60;
@@ -271,7 +241,7 @@
             // gradeCheckBox
             // 
             this.gradeCheckBox.AutoSize = true;
-            this.gradeCheckBox.Location = new System.Drawing.Point(15, 218);
+            this.gradeCheckBox.Location = new System.Drawing.Point(15, 176);
             this.gradeCheckBox.Name = "gradeCheckBox";
             this.gradeCheckBox.Size = new System.Drawing.Size(158, 17);
             this.gradeCheckBox.TabIndex = 78;
@@ -282,7 +252,7 @@
             // lblLetterGrade
             // 
             this.lblLetterGrade.AutoSize = true;
-            this.lblLetterGrade.Location = new System.Drawing.Point(31, 247);
+            this.lblLetterGrade.Location = new System.Drawing.Point(31, 205);
             this.lblLetterGrade.Name = "lblLetterGrade";
             this.lblLetterGrade.Size = new System.Drawing.Size(69, 13);
             this.lblLetterGrade.TabIndex = 79;
@@ -291,7 +261,7 @@
             // 
             // txtGrade
             // 
-            this.txtGrade.Location = new System.Drawing.Point(105, 245);
+            this.txtGrade.Location = new System.Drawing.Point(105, 203);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(75, 20);
             this.txtGrade.TabIndex = 80;
@@ -331,8 +301,6 @@
             this.Controls.Add(this.newDepartmentTextBox);
             this.Controls.Add(this.newCourseCodeLabel);
             this.Controls.Add(this.newDepartmentLabel);
-            this.Controls.Add(this.newClassTypeComboBox);
-            this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.newClassCreditComboBox);
             this.Controls.Add(this.newClassCreditLabel);
             this.Controls.Add(this.newClassNameLabel);
@@ -361,8 +329,6 @@
         private System.Windows.Forms.TextBox newDepartmentTextBox;
         private System.Windows.Forms.Label newCourseCodeLabel;
         private System.Windows.Forms.Label newDepartmentLabel;
-        private System.Windows.Forms.ComboBox newClassTypeComboBox;
-        private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.ComboBox newClassCreditComboBox;
         private System.Windows.Forms.Label newClassCreditLabel;
         private System.Windows.Forms.Label newClassNameLabel;

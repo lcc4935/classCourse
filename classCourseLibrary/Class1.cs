@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace classCourseLibrary
 {
-    public abstract class BasicInfo
+    public class BasicInfo
     {
         public string name;
         public string major;
@@ -15,7 +15,7 @@ namespace classCourseLibrary
         public string credit;
     }
 
-    public abstract class ClassInfo
+    public class ClassInfo
     {
         public string department; // ex: IGME
         public string courseCode; // ex: 201

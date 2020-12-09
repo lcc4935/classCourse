@@ -21,7 +21,6 @@ namespace classCourse
             this.formClass = classInfo;
 
             this.newClassCreditComboBox.SelectedIndexChanged += new EventHandler(NewClassCreditComboBox__SelectedIndexChanged);
-            this.newClassTypeComboBox.SelectedIndexChanged += new EventHandler(NewClassTypeComboBox__SelectedIndexChanged);
 
             this.newDepartmentTextBox.TextChanged += new EventHandler(NewDepartmentTextBox__TextChanged);
             this.newCourseCodeTextBox.TextChanged += new EventHandler(NewCourseCodeTextBox__TextChanged);
@@ -30,17 +29,7 @@ namespace classCourse
             this.submitButton.Click += new EventHandler(SubmitButton__Click);
 
 
-            this.newDepartmentTextBox.Text = classInfo.department; //System.NullReferenceException: 'Object reference not set to an instance of an object.' classInfo was null.
-            this.newCourseCodeTextBox.Text = classInfo.courseCode;
-            this.newClassNameTextBox.Text = classInfo.className;
-
-            this.newClassCreditComboBox.SelectedItem = classInfo.classCredit;
-            this.newClassTypeComboBox.SelectedItem = classInfo.classType;
-
-            // if a new person
-            if (classInfo.department == null)
-            {
-                // default to them
+            if (classInfo.department == null) {
                 this.undecidedRadioButton.Checked = true;
             }
             else
@@ -76,17 +65,11 @@ namespace classCourse
                         break;
                 }
 
-                this.Show();
             }
         }
 
         //Comboboxes
         private void NewClassCreditComboBox__SelectedIndexChanged(object sender, EventArgs e) //LC
-        {
-            ComboBox cb = (ComboBox)sender;
-        }
-
-        private void NewClassTypeComboBox__SelectedIndexChanged(object sender, EventArgs e) //LC
         {
             ComboBox cb = (ComboBox)sender;
         }
@@ -148,10 +131,16 @@ namespace classCourse
                 this.formClass.semester = semesters.seniorSpring;
             }
 
+            formClass.department = this.newDepartmentTextBox.Text;
+            formClass.courseCode = this.newCourseCodeTextBox.Text;
+            formClass.className = this.newClassNameTextBox.Text;
+
+            this.newClassCreditComboBox.SelectedItem = formClass.classCredit;
+
             this.Hide();
         }
 
-        private void gradeCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void gradeCheckBox_CheckedChanged(object sender, EventArgs e)  //JLH
         {
             if (gradeCheckBox.Checked) {
                 lblLetterGrade.Show();
