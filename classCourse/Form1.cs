@@ -245,6 +245,14 @@ namespace classCourse
 
             GPA = totalGradePoints / totalClassesTaken;
             lblGPA.Text = (Math.Round(GPA, 2).ToString());
+            if (GPA >= 2.4) {
+                lblAcademicStanding.Text = "You are in good academic standing. ";
+                lblAcademicStanding.ForeColor = Color.SeaGreen;
+            }
+            else if (GPA < 2.4) {
+                lblAcademicStanding.Text = "You are at risk of suspension. ";
+                lblAcademicStanding.ForeColor = Color.IndianRed;
+            }
 
             AddPanelToClassType(sender, e, classInfo);
 
